@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" href="/css/reset.css">
+    <link rel="stylesheet" href="/css/general.css">
+    <link rel="stylesheet" href="/css/subirFotoPerfil.css">
+    <link rel="stylesheet" href="/css/registroUsuarios.css">
+
+
+    <title>Registro Usuarios - Libreria</title>
+
+</head>
+<body>
+
+    <section class="sct cabeceraSeccion">
+
+        <div class="col-2">
+            <div class="tituloRegistrarse">
+                <div class="iconoCabecera">
+                    <i class="fas fa-user-circle"></i>
+                </div>
+                <h1>
+                    Sign up
+                </h1>
+            </div>
+
+            <div class="indicadorRegistro">
+                <span>Complete los campos requeridos</span>
+            </div>
+
+        </div>
+        <div class="col-2">
+            <div class="iniciarSesion">
+                <span>¿Ya tienes cuenta?</span>
+                <a href="">Iniciar Sesion</a>
+            </div>
+        </div>
+
+    </section>
+
+    <section class="sct sctFormulario flexContendor">
+        <form>
+            <div class="col-60">
+                <!--Contenedor de 2 Columnas-->
+                <div class="formControl flexContendor">
+                    
+                    <div class="col-2 labelContenedor">
+
+                        <label for="txt-primer-nombre"> Primer nombre </label>
+                        <input name="input" type="text" id="txt-primer-nombre">
+                        <div class="iconoInput">
+                            <i class="fas fa-user"></i>
+                        </div>
+                    </div>
+                    <div class="col-2 labelContenedor">
+
+                        <label for="txt-segundo-nombre"> Segundo nombre </label>
+                        <input name="input" type="text" id="txt-segundo-nombre">
+                        <div class="iconoInput">
+                            <i class="fas fa-user"></i>
+                        </div>
+                    </div>
+                    
+                </div>
+
+
+                <div class="formControl flexContendor">
+                    
+                    <div class="col-2 labelContenedor">
+
+                        <label for="txt-primer-apellido"> Primer apellido </label>
+                        <input name="input" type="text" id="txt-primer-apellido">
+                        <div class="iconoInput">
+                            <i class="fas fa-user"></i>
+                        </div>
+                    </div>
+                    <div class="col-2 labelContenedor">
+
+                        <label for="txt-segundo-apellido"> Segundo Apellido </label>
+                        <input name="input" type="text" id="txt-segundo-apellido">
+                        <div class="iconoInput">
+                            <i class="fas fa-user"></i>
+                        </div>
+                    </div>
+                    
+                </div>
+
+
+                <div class="formControl flexContendor">
+                    
+                    <div class="col-2 labelContenedor">
+
+                        <label for="slt-tipo-indentificacion"> Tipo de Indentificacion </label>
+                        <select name="input" id="slt-tipo-indentificacion">
+                            <option value="">Tipo</option>
+                            <option value="Cedula de Indentidad">Cedula de Indentidad</option>
+                            <option value="Pasaporte">Pasaporte</option>
+                        </select>
+                    </div>
+                    <div class="col-2 labelContenedor">
+
+                        <label for="txt-indentificacion"> Indentificacion </label>
+                        <input name="input" type="text" id="txt-indentificacion">
+                        <div class="iconoInput">
+                            <i class="fas fa-id-card-alt"></i>
+                        </div>
+                    </div>
+                    
+                </div>
+
+                <div class="formControl flexContendor">
+                    
+                    <div class="col-2 labelContenedor">
+
+                        <label for="txt-provincia"> Provincia </label>
+                        <input name="input" type="text" id="txt-provincia">
+                        <div class="iconoInput">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                    </div>
+                    <div class="col-2 labelContenedor">
+
+                        <label for="txt-distrito"> Distrito </label>
+                        <input name="input" type="text" id="txt-distrito">
+                        <div class="iconoInput">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                    </div>
+                    
+                </div>
+
+                <div class="formControl flexContendor">
+                    
+                    <div class="col-2 labelContenedor">
+
+                        <label for="txt-canton"> Canton </label>
+                        <input name="input" type="text" id="txt-canton">
+                        <div class="iconoInput">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                    </div>
+                    <div class="col-2 labelContenedor">
+
+                        <label for="txt-direccion"> Direccion Exacta </label>
+                        <input name="input" type="text" id="txt-direccion">
+                        <div class="iconoInput">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                    </div>
+                    
+                </div>
+
+                <!--Contenedor de Imput Completo-->
+                <div class="formControl">
+                    
+                    <div class="labelContenedor">
+
+                        <label for="txt-correo"> Correo Electronico </label>
+                        <input name="input" type="email" id="txt-correo">
+                        <div class="iconoInput">
+                            <i class="fas fa-at"></i>
+                        </div>
+                    </div>
+                    
+                </div>
+
+                <div class="formControl flexContendor">
+                    
+                    <div class="col-2 labelContenedor">
+
+                        <label for="txt-password"> Contraseña </label>
+                        <input name="input" type="password" id="txt-password">
+                        <div class="iconoInput">
+                            <i class="far fa-eye"></i>
+                        </div>
+                    </div>
+                    <div class="col-2 labelContenedor">
+
+                        <label for="txt-password-confirmacion"> Confirmación de Contraseña </label>
+                        <input name="input" type="password" id="txt-password-confirmacion">
+                        <div class="iconoInput">
+                            <i class="far fa-eye"></i>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+
+            <div class="col-40">
+
+                <div class="formControl ctn-subirFoto">
+                    <div class="labelSubiFoto">
+                        <label for="foto-perfil-usuario">Arrastre la imagen de perfil</label>
+                    </div>
+                    <div class="drop-zone">
+                        <span class="drop-zone__prompt"><i class="far fa-image"></i></span>
+                        <input name="input" type="file" id="foto-perfil-usuario" class="drop-zone__input">
+                    </div>
+                </div>
+
+                <div class="formControl">
+                    
+                    <div class="labelContenedor">
+
+                        <label for="txt-correo"> Correo Electronico </label>
+                        <select name="input" id="slt-genero">
+                            <option value="">Genero</option>
+                            <option value="Masculino">Masculino</option>
+                            <option value="Femenino">Femenino</option>
+                        </select>
+                    </div>
+                    
+                </div>
+
+                <div class="formControl formControlChexbox">
+
+                    <div class="listaChexbox">
+                        <div class="labelAutoresFavoritos">
+                            <label> Autores Favoritos</label>
+                        </div>
+                        <div class="ctn-chexboxs autoresFavoritos">
+                            <div class="checkbox-container">
+                                <input type="checkbox" id="autor1"/>
+                                <label class="checkbox" for="autor1">Autor 1</label>
+                            </div>
+                            <div class="checkbox-container">
+                                <input type="checkbox" id="autor2"/>
+                                <label class="checkbox" for="autor2">Autor 2</label>
+                            </div>
+                            <div class="checkbox-container">
+                                <input type="checkbox" id="autor3"/>
+                                <label class="checkbox" for="autor3">Autor 3</label>
+                            </div>
+                            <div class="checkbox-container">
+                                <input type="checkbox" id="autor4"/>
+                                <label class="checkbox" for="autor4">Autor 4</label>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+
+                <div class="formControl formControlChexbox">
+                    <div class="listaChexbox"> 
+                        <div class="labelAutoresFavoritos">
+                            <label> Generos Favoritos</label>
+                        </div>
+                        <div class="ctn-chexboxs autoresFavoritos">
+                            <div class="checkbox-container">
+                                <input type="checkbox" id="genero1"/>
+                                <label class="checkbox" for="genero1">Genero 1</label>
+                            </div>
+                            <div class="checkbox-container">
+                                <input type="checkbox" id="genero2"/>
+                                <label class="checkbox" for="genero2">Genero 2</label>
+                            </div>
+                            <div class="checkbox-container">
+                                <input type="checkbox" id="genero3"/>
+                                <label class="checkbox" for="genero3">Genero 3</label>
+                            </div>
+                            <div class="checkbox-container">
+                                <input type="checkbox" id="genero4"/>
+                                <label class="checkbox" for="genero4">Genero 4</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="formControl">
+                    <button id="btnGuardar" class="btnGuardar" style="margin-top: 1rem;" type="button"> Guardar Registro </button>
+                </div>
+
+            </div>
+        </form>
+    </section>
+
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="/js/subirFotoPerfil.js"></script>
+    <script src="/js/registroUsuarios.js"></script>
+</body>
+</html>
