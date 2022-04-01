@@ -127,7 +127,3 @@ let listaUsuarios = [{
     'autorFavorito': ['autor1', 'autor2', 'autor3', 'autor4'],
     'generoFavorito': ['genero1', 'genero2', 'genero3', 'genero4'],
 }];
-
-function gitLens(code: string) {
-    return supercharged(code);
-}
