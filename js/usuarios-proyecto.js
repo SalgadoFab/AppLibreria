@@ -128,6 +128,3 @@ let listaUsuarios = [{
     'generoFavorito': ['genero1', 'genero2', 'genero3', 'genero4'],
 }];
 
-function gitLens(code: string) {
-    return supercharged(code);
-}

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <link rel="stylesheet" href="/AppLibreria/css/reset.css">
+    <link rel="stylesheet" href="/AppLibreria/css/general.css">
+    <link rel="stylesheet" href="/AppLibreria/css/registroSocios.css">
+
+    <title>Registro Socios Comerciales</title>
+</head>
+
+<body>
+    <section id="sct-registro-socios">
+        <div id="titulo" class="titulo">
+            <h1>Agregar Socio Comercial</h1>
+
+        </div>
+
+        <section id="sct-casillas">
+            <div>
+                <label for="txt-nombreSocio">Nombre de Socio Comercial</label>
+                <input name="input" type="text" id="txt-nombreSocio">
+
+            </div>
+
+            <div>
+                <label for="txt-codigoSocio">Código</label>
+                <input name="input" type="text" id="txt-codigoSocio">
+            </div>
+
+            <div>
+                <label for="txt-direccion">Dirección de sede central:</label>
+                <input name="input" type="text" id="txt-direccion">
+            </div>
+        </section>
+
+        <div class="formControl ctn-subirFoto">
+            <div class="labelSubiFoto">
+                <label for="foto-perfil-usuario">Arrastre la imagen de perfil</label>
+            </div>
+            <div class="drop-zone">
+                <span class="drop-zone__prompt"><i class="far fa-image"></i></span>
+                <input name="input" type="file" id="foto-perfil-usuario" class="drop-zone__input">
+            </div>
+        </div>
+
+        <div>
+            <button id="btn-registrar" class="btnGuardar" style="margin-top: 1rem;" type="button"> Guardar Registro </button>
+
+        </div>
+
+
+    </section>
+
+
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="/AppLibreria/js/registroSocios.js"></script>
+
+</body>
+
+</html>
