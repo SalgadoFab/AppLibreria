@@ -6,61 +6,117 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer"
+    />
 
-    <link rel="stylesheet" href="/AppLibreria/css/reset.css">
-    <link rel="stylesheet" href="/AppLibreria/css/general.css">
-    <link rel="stylesheet" href="/AppLibreria/css/registroSocios.css">
+
+    <link rel="stylesheet" href="/css/reset.css">
+    <link rel="stylesheet" href="/css/general.css">
+    <link rel="stylesheet" href="/css/subirFotoPerfil.css">
+    <link rel="stylesheet" href="/css/registroSocios.css">
+
 
     <title>Registro Socios Comerciales</title>
-</head>
 
-<body>
-    <section id="sct-registro-socios">
-        <div id="titulo" class="titulo">
-            <h1>Agregar Socio Comercial</h1>
+    <body>
+        <section class="sct cabeceraSeccion">
 
-        </div>
+            <div class="col-2">
+                <div class="tituloRegistrarse">
+                    <div class="iconoCabecera">
+                        <i class="fas fa-user-circle"></i>
+                    </div>
+                    <h1>
+                        Registro de Socios Comerciales
+                    </h1>
+                </div>
 
-        <section id="sct-casillas">
-            <div>
-                <label for="txt-nombreSocio">Nombre de Socio Comercial</label>
-                <input name="input" type="text" id="txt-nombreSocio">
+                <div class="indicadorRegistro">
 
-            </div>
+                </div>
 
-            <div>
-                <label for="txt-codigoSocio">Código</label>
-                <input name="input" type="text" id="txt-codigoSocio">
-            </div>
-
-            <div>
-                <label for="txt-direccion">Dirección de sede central:</label>
-                <input name="input" type="text" id="txt-direccion">
-            </div>
         </section>
 
-        <div class="formControl ctn-subirFoto">
-            <div class="labelSubiFoto">
-                <label for="foto-perfil-usuario">Arrastre la imagen de perfil</label>
-            </div>
-            <div class="drop-zone">
-                <span class="drop-zone__prompt"><i class="far fa-image"></i></span>
-                <input name="input" type="file" id="foto-perfil-usuario" class="drop-zone__input">
-            </div>
-        </div>
+        <section class="sct sctFormulario flexContendor">
+            <form>
+                <div class="col-60">
+                    <!--Contenedor de 2 Columnas-->
+                    <div class="formControl flexContendor">
 
-        <div>
-            <button id="btn-registrar" class="btnGuardar" style="margin-top: 1rem;" type="button"> Guardar Registro </button>
+                        <div class="col-2 labelContenedor">
 
-        </div>
+                            <label for="txt-primer-nombre"> Nombre de Socio Comercial </label>
+                            <input name="input" type="text" id="txt-nombreSocio">
+                            <div class="iconoInput">
+                                <i class="fas fa-user"></i>
+                            </div>
+                        </div>
+                        <div class="col-2 labelContenedor">
+
+                            <label for="txt-segundo-nombre"> Código </label>
+                            <input name="input" type="text" id="txt-codigoSocio">
+                            <div class="iconoInput">
+                                <i class="fas fa-user"></i>
+                            </div>
+                        </div>
+
+                    </div>
 
 
-    </section>
+                    <div class="formControl flexContendor">
+
+                        <div class="col-2 labelContenedor">
+
+                            <label for="txt-primer-apellido"> Dirección de sede central: </label>
+                            <input name="input" type="text" id="txt-primer-apellido">
+                            <div class="iconoInput">
+                                <i class="fas fa-user"></i>
+                            </div>
+                        </div>
 
 
-    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-    <script src="/AppLibreria/js/registroSocios.js"></script>
+                    </div>
 
-</body>
+
+
+
+                </div>
+
+
+
+
+
+                <div class="col-40">
+
+                    <div class="formControl ctn-subirFoto">
+                        <div class="labelSubiFoto">
+                            <label for="foto-perfil-usuario">Arrastre el logo del Socio Comercial</label>
+                        </div>
+                        <div class="drop-zone">
+                            <span class="drop-zone__prompt"><i class="far fa-image"></i></span>
+                            <input name="input" type="file" id="foto-perfil-usuario" class="drop-zone__input">
+                        </div>
+                    </div>
+
+
+
+                    <div class="formControl">
+                        <button id="btnGuardar" class="btnGuardar" style="margin-top: 1rem;" type="button"> Guardar Registro </button>
+                    </div>
+
+                </div>
+            </form>
+        </section>
+
+        <script src="/js/subirFotoPerfil.js"></script>
+        <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+        <script src="/js/validarFormulario.js"></script>
+        <script src="/js/registroSocios.js"></script>
+
+
+
+    </body>
+
+
 
 </html>
