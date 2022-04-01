@@ -8,27 +8,11 @@ const btnRegistrar = document.getElementById('btnGuardar')
 //Funcion de Validacion
 
 const validarRegistroUsuario = () => {
-    //Variable para capturar errores en los inputs
-    let hayError;
+    
+    //Creamos la variable de error y le asignamos el valor que devuelva nuestra funcion de validacion de campos del formulario
+    //IMPORTANTE - Esta funcion valida solo si el campo se encuentra vacio, para casos mas espesificos crear una validaciones aparte
+    let hayError = validarFormulario();
 
-    //Obtemos todos los inputs que tengan la propiedad name="input"
-    let inputsTxt = document.getElementsByName('input');
-
-    //Hacemos un For, que se ejecutara mientras nuestra contador i se menor que la cantidad de inputsTexts obtenidos
-    for (let i = 0; i < inputsTxt.length; i++) {
-        
-        //Validamos si el contenido del input esta vacio, de estarlo pasamos la variable de error a true y añadimos la clase de indicador de error  
-        if (inputsTxt[i].value == '') {
-            
-            hayError = true 
-            inputsTxt[i].classList.add('inputError')
-
-        } else {
-            //Si no esta vacio quitamos la clase de error
-            inputsTxt[i].classList.remove('inputError')
-        }
-        
-    }
 
     //Validamos la igualdad entre campos de password
     if (txtPassword.value != txtPasswordConfirmacion.value) {
@@ -56,4 +40,5 @@ const validarRegistroUsuario = () => {
 
 } 
 
+//Referenciamos a nuestro boton registrar con el evento click para ejecutar nuestra funcion de validacion
 btnRegistrar.addEventListener('click', validarRegistroUsuario);
