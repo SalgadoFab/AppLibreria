@@ -1,6 +1,6 @@
 #tbl-identificacion {
     width: 100%;
-    border: 1px solid #000;
+    border: 1px solid black;
 }
 
 #tbl-identificacion thead {
@@ -13,7 +13,7 @@ td {
     width: 25%;
     text-align: left;
     vertical-align: top;
-    border: 1px solid #000;
+    border: 1px solid black;
     border-collapse: collapse;
     padding: 0.3em;
 }
