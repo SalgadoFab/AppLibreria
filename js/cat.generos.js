@@ -32,9 +32,6 @@ let categoriaGeneros = [{
     'categoria': 'Fantasía',
     'stock': 9,
 }, {
-
-
-}, {
     'nombre': 'El señor de los anillos, La comunidad del anillo',
     'Codigo': '978-84450-0-06-63',
     'categoria': 'Fantasía',
