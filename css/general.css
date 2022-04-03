@@ -14,10 +14,12 @@
 .col-60 {
     width: 60%;
 }
+
 .col-40 {
     width: 40%;
 }
-.col-40 .formControl { 
+
+.col-40 .formControl {
     padding-left: 4rem;
 }
 
@@ -33,7 +35,7 @@
     padding-bottom: 4rem;
 }
 
-.formControl label{
+.formControl label {
     font-size: 1.2rem;
     padding-bottom: 1rem;
 }
@@ -56,10 +58,9 @@
 }
 
 .col-40 .formControl select,
-.col-40 .formControl input { 
+.col-40 .formControl input {
     width: 100%
 }
-
 
 .iconoInput {
     text-align: right;
