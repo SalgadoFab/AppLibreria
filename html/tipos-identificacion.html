@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer"
+    />
+
+    <link rel="stylesheet" href="/css/reset.css">
+    <link rel="stylesheet" href="/css/general.css">
+    <link rel="stylesheet" href="/css/subirFotoPerfil.css">
+    <link rel="stylesheet" href="/css/registroUsuarios.css">
+    <link rel="stylesheet" href="/css/tipos-identificacion.css">
+
+
+    <title>Tipos de Identificacion - Libreria</title>
+
+</head>
+
+<body>
+
+    <section class="sct cabeceraSeccion">
+
+        <div class="col-2">
+            <div class="tituloRegistrarse">
+                <div class="iconoCabecera">
+                    <i class="fa-solid fa-address-card"></i>
+                </div>
+                <h1>Tipos de Identificacion</h1>
+            </div>
+
+    </section>
+
+    <section class="sct sctFormulario flexContendor">
+        <form>
+            <div class="col-60">
+
+                <div class="formControl">
+                    <table id="tbl-identificacion">
+                        <thead>
+                            <tr>
+                                <th>Codigo de Identificacion</th>
+                                <th>Nombre</th>
+                                <th>Cantidad de Digitos</th>
+                                <th>Fechas de Creacion</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td> 1238029523 </td>
+                                <td> Matias </td>
+                                <td> 9 </td>
+                                <td> 31/10/2004 </td>
+                            </tr>
+
+                            <tr>
+                                <td> 2320396823 </td>
+                                <td> Gabriel</td>
+                                <td> 12 </td>
+                                <td> 12/02/2020 </td>
+                            </tr>
+
+                            <tr>
+                                <td> 1309683241 </td>
+                                <td> Mateo </td>
+                                <td> 12 </td>
+                                <td> 29/03/2015</td>
+                            </tr>
+
+                            <tr>
+                                <td> 3409091570 </td>
+                                <td> Alvaro </td>
+                                <td> 9 </td>
+                                <td> 04/05/1990</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="formControl">
+
+                    <div class="labelContenedor">
+                        <label for="txt-Autores"> Nombre de Identificacion </label>
+                        <input name="input" type="text" id="txt-Autores">
+                    </div>
+
+                </div>
+
+                <div class="formControl flexContendor">
+
+                    <div class="col-2 labelContenedor">
+                        <label for="slt-idioma"> Codigo de Indetificacion </label>
+                        <input name="input" type="text" id="txt-Autores">
+                    </div>
+
+                    <div class="col-2 labelContenedor">
+
+                        <label for="slt-formato"> Digitos </label>
+                        <input name="input" type="text" id="txt-Autores">
+
+                    </div>
+
+                </div>
+
+                <div class="formControl">
+                    <button id="btnGuardar" class="btnGuardar" style="margin-top: 1rem;" type="button"> Guardar Tipo de Identificacion </button>
+                </div>
+
+            </div>
+
+            <div class="col-40">
+
+                <div class="btngrupo">
+                    <div class="btnEM">
+                        <button id="btnModificar" type="button"> Modificar </button>
+                        <button id="btnEliminar" type="button"> Eliminar </button>
+                    </div>
+
+                    <div class="btnEM">
+                        <button id="btnModificar" type="button"> Modificar </button>
+                        <button id="btnEliminar" type="button"> Eliminar </button>
+                    </div>
+
+                    <div class="btnEM">
+                        <button id="btnModificar" type="button"> Modificar </button>
+                        <button id="btnEliminar" type="button"> Eliminar </button>
+                    </div>
+
+                    <div class="btnEM">
+                        <button id="btnModificar" type="button"> Modificar </button>
+                        <button id="btnEliminar" type="button"> Eliminar </button>
+                    </div>
+                </div>
+
+
+                <div class="formControl ctn-subirFoto">
+                    <div class="drop-zone">
+                        <span class="drop-zone__prompt">
+                            <i class="far fa-image"></i>
+                        </span>
+                        <input name="input" type="file" id="foto-perfil-usuario" class="drop-zone__input">
+                    </div>
+                </div>
+            </div>
+        </form>
+    </section>
+
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="/js/subirFotoPerfil.js"></script>
+    <script src="/js/registroUsuarios.js"></script>
+
+</body>
+
+</html>
