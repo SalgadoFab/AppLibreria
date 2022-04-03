@@ -1,10 +1,9 @@
 /*
-Funcion GLOBAL de Validacion
 
+Funcion GLOBAL de Validacion
 Esta funcion es utilizada para la validacion global de cualquier campo donde se coloque la propiedad name="input"
 
 */
-
 const validarFormulario = () => {
     //Variable para capturar errores en los inputs
     let hayError;

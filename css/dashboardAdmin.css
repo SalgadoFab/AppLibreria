@@ -1,0 +1,178 @@
+/* HeaderAdmin */
+.headerDashboardAdmin {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 99;
+    height: 4rem;
+    background: white;
+    box-shadow: 0 0.46875rem 2.1875rem rgb(4 9 20 / 3%), 0 0.9375rem 1.40625rem rgb(4 9 20 / 3%), 0 0.25rem 0.53125rem rgb(4 9 20 / 5%), 0 0.125rem 0.1875rem rgb(4 9 20 / 3%); 
+}
+
+.contenidoHeaderAdmin {
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.tituloHeader h1 {
+    padding: 0 1rem;
+    font-size: 1.2rem;
+}
+
+.indicadoresHeader {
+    display: flex;
+    margin-right: 2rem;
+}
+
+.btnVolver a {
+    padding: 0.6rem;
+    font-size: 1rem;
+    color: #fff;
+    background: rgb(43,203,234);
+    background: linear-gradient(97deg, rgba(43,203,234,1) 51%, rgba(57,188,240,1) 100%);
+    border-radius: 0.3rem;
+    box-shadow: 0 4px 20px 0px rgb(0 0 0 / 14%), 0 7px 10px -5px #006675d1;
+}
+
+.imgAdmin {
+    margin: 0 1rem;
+}
+
+
+/* NavBarAdmin */
+.navBarAdmin {
+    position: fixed;
+    width: 20rem;
+    top: 4rem;
+    bottom: 0;
+    left: 0;
+    background: #ffffff;
+    color: #ddd !important;
+    box-shadow: 7px 0 60px rgb(0 0 0 / 5%);
+}
+
+.navBarAdmin-menu {
+    display: block;
+    width: 100%;
+    overflow: hidden;
+    margin: 0 auto;
+    position: relative;
+}
+.panel {
+    display: block;
+    background: white;
+    position:relative;
+    overflow: hidden;
+    color: #b5abab;
+    margin: 0 auto;
+}
+.panel.cerrado {
+    margin-bottom: -0.8rem;
+}
+
+
+.menuItem {
+    line-height: 2.2rem;
+    font-size: 0.9rem;
+    background: white;
+    cursor: pointer;
+    text-indent:1rem;
+    border-bottom: 0.1rem solid #e4e4e4;
+    border-top: 0.1rem solid #e4e4e4;
+    color: #006675;
+}
+
+/*Indicador de hover en cada item del menu*/
+.hoverMenuItem {
+    height: 0.1rem;
+    position: absolute;
+    width: 0;
+    display: block;
+    top: 2.2rem;
+    line-height: 2.3rem;
+    background: rgb(0,102,117);
+    background: linear-gradient(286deg, rgba(0,102,117,1) 22%, rgba(0,168,210,1) 89%);
+}
+
+.itemMenuContenido {
+    background: rgb(251 251 251 / 72%);
+    position: relative;
+    height: 0;
+    border: none;
+}
+.item {
+    display: block;
+    width: 100%;
+    cursor: pointer;
+    padding: 0.7rem 0;
+    font-size: 0.9rem;
+    text-decoration: none;
+    color: #006675;
+    text-indent: 1rem;
+    font-weight: 500;
+    border-bottom: 0.01rem solid rgba(0, 0, 0, 0.06);
+}
+.item:hover {
+    background-color: rgba(0, 0, 0, 0.06);
+}
+.panel i {
+    text-indent:0;  
+    padding-right: 0.5rem;
+}
+.panel span i {
+
+    padding-right: 0; 
+}
+.arrow {
+    text-indent:0; 
+    line-height: 3rem;
+    float: right;
+    position: relative;
+    right: 1rem;
+    font-weight: bold;
+    top: -0.5rem;
+}
+
+
+
+/*Contenido del AdminDashboard*/
+.mainDashboardAdmin {
+    margin: 4rem 0 1rem 20rem;
+}
+
+.mainDashboardAdmin:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+
+.redirigirDashboard a {
+    display: block;
+    color: #fff;
+    text-align: center;
+    text-transform: capitalize;
+    font-size: 1rem;
+    padding: 0.8rem;
+    border-radius: 3px;
+    background: linear-gradient(110deg, rgba(0,102,117,1) 22%, rgba(70,199,173,1) 89%);
+    box-shadow: 0 4px 20px 0px rgb(0 0 0 / 14%), 0 7px 10px -5px #006675d1;
+    margin: 1rem 2rem 0.5rem;
+}
+
+
+.separadorMenu span {
+    display: block;
+    font-size: 1rem;
+    border-radius: 0.3rem;
+    box-shadow: 0 4px 20px 0px rgb(0 0 0 / 14%), 0 7px 10px -5px #dfdfdfd1;
+    margin: 1rem;
+    color: #006675;
+    text-align: left;
+    padding: 0.5rem;
+    margin-left: 0.5rem;
+    margin-bottom: 0.8rem;
+}
