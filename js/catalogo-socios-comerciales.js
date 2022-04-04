@@ -31,47 +31,55 @@ const cambiarPagina = (pagina) => {
         //Cambiar variables
         contenedorItems.innerHTML += `
         <div class="cardItem">
-        <div class="ctnImagenItem">
-            <div class="cardImagen">
-                <img src="/media/img/portadaLibros/cuentos_completos_EAP.jpg" alt="Portada Libro">
-                <a class="btnEliminarItem" onclick="">
-                    <i class="fa-solid fa-trash-can"></i>
-                </a>
-            </div>
-        </div>
-
-        <div class="cardInfo-1">
-            <div class="col-1">
-                <div class="nombreLibro espacioInfoItem">
-                    <span>
-                        ID:
-                    </span>
-                </div>
-                <div class="nombreAutor">
-                    <span>
-                        Codigo:
-                    </span>
+            <div class="ctnImagenItem">
+                <div class="cardImagen">
+                    <img src="/media/img/portadaLibros/cuentos_completos_EAP.jpg" alt="Portada Libro">
+                    <a class="btnEliminarItem" onclick="">
+                        <i class="fa-solid fa-trash-can"></i>
+                    </a>
                 </div>
             </div>
-        </div>
 
-        <div class="cardBtns flexContendor">
-            <div class="col-2">
-                <button class="btnModificar">
-                    <a onclick="">
-                        <i class="fa-solid fa-pen-to-square"></i> Modificar
-                    </a>
-                </button>
+            <div class="cardInfo-1">
+                <div class="col-1">
+                    <div class="nombreLibro espacioInfoItem">
+                        <span>
+                            Nombre:
+                        </span>
+                    </div>
+                    <div class="nombreAutor">
+                        <div class="socio-ID">
+                            <span>
+                                ID:
+                            </span>
+                        </div>
+
+                        <div class="socio-codigo">
+                            <span>
+                                Codigo:
+                            </span>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="col-2">
-                <button class="btnOcultar">
-                    <a onclick="">
-                        <i class="fa-solid fa-eye-slash"></i> Ocultar
-                    </a>
-                </button>
+
+            <div class="cardBtns flexContendor">
+                <div class="col-2">
+                    <button class="btnModificar">
+                        <a onclick="">
+                            <i class="fa-solid fa-pen-to-square"></i> Modificar
+                        </a>
+                    </button>
+                </div>
+                <div class="col-2">
+                    <button class="btnOcultar">
+                        <a onclick="">
+                            <i class="fa-solid fa-eye-slash"></i> Ocultar
+                        </a>
+                    </button>
+                </div>
             </div>
-        </div>
-    </div>`
+        </div>`
     }
 }
 
