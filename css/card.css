@@ -1,0 +1,98 @@
+.cardContenedor {
+    padding: 5rem 5rem;
+    display: grid;
+    grid-gap: 4rem;
+    grid-template-columns: repeat(auto-fill, minmax(16rem, 1fr));
+}
+
+.cardItem {
+    box-shadow: 0px 0px 10px 0px rgb(0 0 0 / 25%);
+    border-radius: 1.2rem;
+}
+
+.cardImagen {
+    position: relative;
+}
+.cardImagen img {
+    width: 100%;
+    height: 10rem;
+    object-fit: cover;
+    object-position: top;
+    margin-bottom: -0.2rem;
+    border-radius: 1.2rem 1.2rem 0 0;
+}
+
+.btnEliminarItem {
+    position: absolute;
+    top: 1.5rem;
+    right: 0;
+    font-size: 1.3rem;
+    z-index: 3;
+    padding: 0 25px;
+    display: flex;
+    flex-direction: column;
+    color: #fff;
+    cursor: pointer;
+}
+
+.btnEliminarItem i {
+    box-shadow: 0px 2px 15px 0px rgb(255 255 255);
+}
+
+.cardInfo-2,
+.cardBtns,
+.cardInfo-1{
+    gap: 1rem;
+    align-items: flex-start;
+    padding: 1rem 1rem;
+    font-size: 0.85rem;
+}
+
+.cardInfo-1 .espacioInfoItem {
+    margin: 0.5rem 0 1.5rem;
+}
+.cardInfo-2 .espacioInfoItem {
+    margin: 0 0 1.5rem;
+}
+
+.cardBtns {
+    padding: 1.5rem 1rem;
+    box-shadow: 0px 0px 5px 0px rgb(0 0 0 / 20%);
+}
+.cardBtns button {
+    width: 100%;
+    height: 2.5rem;
+    font-size: 1rem;
+    background: #008576;
+    color: #fff;
+    border: none;
+    border-radius: 0.3rem;
+    box-shadow: 0 4px 20px 0px rgb(0 0 0 / 14%), 0 7px 10px -5px #006675d1;
+}
+
+.cardBtns button a {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cardInfo-2 {
+    padding-bottom: 1.5rem;
+}
+
+
+.paginaActiva a{
+    color: red !important;
+}
+
+ul#ctnPaginacion, ul#ctnPaginacion li {
+    display: inline-block;
+    padding: 0;
+}
+
+
+ul#ctnPaginacion > li {
+    margin: 0px 3px;
+}

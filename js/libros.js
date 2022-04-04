@@ -525,4 +525,4 @@ let lista_libros = [{
     'calificacion': 5,
     'premios': '',
     'nobel': false
-}, {}, {}, {}, {}, {}, {}, {}]
+}];
