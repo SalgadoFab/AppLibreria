@@ -4,16 +4,16 @@ let itemsPorPagina = 9;
 // Fijamos la pagina 1 activa por defecto
 let paginaActiva = 1;
 
-// Obtenemos el numero de paginas para nuestra paginacion
-let totalPaginas = obtenerNumeroPaginas(lista_libros)
-
 //Funcion para obtener el numero de paginas, recibe por parametro el array de elementos y lo divide por la cantidad que deseamos mostrar por pagina
-function obtenerNumeroPaginas(listaArray) {
+const obtenerNumeroPaginas = (listaArray) => {
     return Math.ceil(listaArray.length / itemsPorPagina)
 }
 
+// Obtenemos el numero de paginas para nuestra paginacion
+let totalPaginas = obtenerNumeroPaginas(lista_libros)
+
 //Funcion para cambiar entre paginas por cada item de paginacion
-function cambiarPagina(pagina) {
+const cambiarPagina = (pagina) => {
     //Obtenemos el contedor de los items
     let contenedorItems = document.getElementById("catalogoLibrosAdminCTN")
 
@@ -113,7 +113,7 @@ function cambiarPagina(pagina) {
 }
 
 //Funcion para el boton de pagina siguiente
-function paginaSiguiente() {
+const paginaSiguiente = () => {
     //Si no está en la última página, vaya a la página siguiente
     if (paginaActiva < totalPaginas) {
         cambiarPagina(++paginaActiva);
@@ -123,7 +123,7 @@ function paginaSiguiente() {
 }
 
 //Funcion para el boton de pagina anterior
-function paginaAnterior() {
+const paginaAnterior = () => {
     //Si no está en la primera página, devuelve una
     if (paginaActiva > 1) {
         cambiarPagina(--paginaActiva)
@@ -133,7 +133,7 @@ function paginaAnterior() {
 }
 
 //Funcion para cada item de la paginacion para cambiar entre paginas, recibe como parametro la pagina seleccionada en el frontend
-function irPaginaSeleccionada(pagina) {
+const irPaginaSeleccionada = (pagina) => {
     //Establece la página actual en la página seleccionada
     paginaActiva = pagina
 
@@ -144,7 +144,7 @@ function irPaginaSeleccionada(pagina) {
 }
 
 //Crea navegación de página individual
-function obtenerPaginacion() {
+const obtenerPaginacion = () => {
     
     //Obtenemos el contenedor de la paginacion
     let contenedorPaginacion = document.getElementById('ctnPaginacion')
@@ -160,7 +160,7 @@ function obtenerPaginacion() {
 }
 
 //Obtenemos la pagina activa y agregamos la clase paginaActiva para el estilo en frontend
-function obtenerPaginaActiva() {
+const obtenerPaginaActiva = () => {
     //Obtenemos todos los items de la paginacion en la variable
     let pagina = document.getElementsByClassName('item-paginacion');
     console.log(paginaActiva)
