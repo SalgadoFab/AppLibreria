@@ -9,7 +9,7 @@ const btnRegistrar = document.getElementById('btnGuardar')
 
 const validarRegistroUsuario = () => {
     
-    //Creamos la variable de error y le asignamos el valor que devuelva nuestra funcion de validacion de campos del formulario
+    //Creamos la letiable de error y le asignamos el valor que devuelva nuestra funcion de validacion de campos del formulario
     //IMPORTANTE - Esta funcion valida solo si el campo se encuentra vacio, para casos mas espesificos crear una validaciones aparte
     let hayError = validarFormulario();
 
@@ -30,7 +30,7 @@ const validarRegistroUsuario = () => {
             "text": "Compruebe que todos los campos estan correctamente llenados"
         });
 
-    } else { //Si la variable de error termina en false esto lanza un popup al usuario para indicar registro exitoso
+    } else { //Si la letiable de error termina en false esto lanza un popup al usuario para indicar registro exitoso
         Swal.fire({
             "icon": "success",
             "title": "Bienvenido",
