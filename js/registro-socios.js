@@ -5,7 +5,6 @@ const validarRegistroSocio = () => {
     let hayError = validarFormulario();
 
 
-
     //Mensaje del resultado de la validacion
     if (hayError == true) {
         Swal.fire({
