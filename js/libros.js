@@ -74,7 +74,7 @@ let lista_libros = [{
 }, {
     'isbn': '978-99924-67-80-0',
     'titulo': 'Los cuentos de tío Coyote y tío Conejo',
-    'autor': 'Nela Marín',
+    'autor': 'Pablo Antonio Cuadra',
     'genero': 'Infantil',
     'publicacion': 2018,
     'impreso': true,
@@ -256,6 +256,24 @@ let lista_libros = [{
     'premios': '',
     'nobel': false
 }, {
+    'isbn': '978-84-17743-28-4',
+    'titulo': 'Historia de Fantasmas',
+    'autor': 'Laura Freudenthaler',
+    'genero': 'Terror',
+    'publicacion': 2022,
+    'impreso': true,
+    'digital': false,
+    'audio': false,
+    'idioma': '',
+    'imagenLibro': 'media\img\portadaLibros\historia_de_fantasmas.jpg',
+    'stock': true,
+    'precio': 0,
+    'descuento': 0,
+    'infoLibro': 'Lo que empieza como un triángulo amoroso, o como una historia de traición conyugal se va tornando menos claro. ¿Es paranoia? ¿El hombre con el que vive Anne desde hace 20 años la está engañando con una jovencita? ¿O es todo un espejismo, la mente jugándole una mala pasada? Historia de fantasmas es una novela que explora la sutil frontera entre realidad y fantasía en un mundo donde los límites entre lo real y lo imaginario se desdibujan, y al final lo que nos queda es una historia de terror sobre los fantasmas que habitan en nuestro interior. La autora juega con una presencia real e imaginada al mismo tiempo y crea progresivamente una red de relaciones complejas que, por su propia naturaleza, acaban convirtiéndose en una pesadilla.',
+    'calificacion': 4,
+    'premios': '',
+    'nobel': false
+}, {
     'isbn': '978-84998-9-09-44',
     'titulo': '1984',
     'autor': 'George Orwell',
@@ -294,7 +312,7 @@ let lista_libros = [{
 }, {
     'isbn': '978-84156-1-87-13',
     'titulo': 'Alicia en el país de las maravillas',
-    'autor': 'Lewis Carrol',
+    'autor': 'Lewis Carroll',
     'genero': 'Clásicos',
     'publicacion': 2017,
     'impreso': true,
@@ -419,7 +437,7 @@ let lista_libros = [{
     'nobel': false
 }, {
     'isbn': '978-84979-3-30-56',
-    'titulo': 'Veite poemas de amor y una canción deseperada',
+    'titulo': 'Veinte poemas de amor y una canción desesperada',
     'autor': 'Pablo Neruda',
     'genero': 'Latinoamericanos',
     'publicacion': 2004,
@@ -485,7 +503,7 @@ let lista_libros = [{
     'stock': true,
     'precio': 0,
     'descuento': 0,
-    'infoLibro': 'Tal como afirma el propio J. J. Benítez, «adelantar el argumento y la naturaleza de Caballo de Troya 1 es quebrar el desconcertante misterio que encierran sus páginas». Podemos apuntar, eso sí, que para la elaboración de esta obra, el autor se ha basado en una documentación real, depositada hace años en Estados Unidos. Una documentación que pone al descubierto multitud de datos nuevos sobre la figura y la obra de Jesús de Nazaret. Podemos asegurar que ­tal y como sospecha buena parte de la Humanidad- las grandes potencias ocultan muchos de sus proyectos espaciales y militares, y «Caballo de Troya» es una prueba más de ello. Podemos revelar, por ejemplo, que en 1973 las Fuerzas Aéreas norteamericanas, después de varios años de preparación y tras un sinfín de peripecias, ejecutaron en pleno corazón de Israel uno de sus proyectos «supersecretos» que fue bautizado, precisamente, como Operación Caballo de Troya. Pero no podemos avanzar al lector cómo se consiguió esa fascinante documentación «confidencial» por parte de J. J. Benítez, ni tampoco el asombroso desarrollo de la referida Operación y su desconcertante final. Sería romper el encanto de Caballo de Troya 1, primer libro testimonio del periodista y escritor navarro. En palabras del autor:«… será el futuro, como sucedió con Julio Verne, quien pondrá de manifiesto si este relato fue o no verídico.»',
+    'infoLibro': 'Tal como afirma el propio J. J. Benítez, «adelantar el argumento y la naturaleza de Caballo de Troya 1 es quebrar el desconcertante misterio que encierran sus páginas». Podemos apuntar, eso sí, que para la elaboración de esta obra, el autor se ha basado en una documentación real, depositada hace años en Estados Unidos. Una documentación que pone al descubierto multitud de datos nuevos sobre la figura y la obra de Jesús de Nazaret. Podemos asegurar que tal y como sospecha buena parte de la Humanidad- las grandes potencias ocultan muchos de sus proyectos espaciales y militares, y «Caballo de Troya» es una prueba más de ello. Podemos revelar, por ejemplo, que en 1973 las Fuerzas Aéreas norteamericanas, después de varios años de preparación y tras un sinfín de peripecias, ejecutaron en pleno corazón de Israel uno de sus proyectos «supersecretos» que fue bautizado, precisamente, como Operación Caballo de Troya. Pero no podemos avanzar al lector cómo se consiguió esa fascinante documentación «confidencial» por parte de J. J. Benítez, ni tampoco el asombroso desarrollo de la referida Operación y su desconcertante final. Sería romper el encanto de Caballo de Troya 1, primer libro testimonio del periodista y escritor navarro. En palabras del autor:«… será el futuro, como sucedió con Julio Verne, quien pondrá de manifiesto si este relato fue o no verídico.»',
     'calificacion': 5,
     'premios': '',
     'nobel': false
