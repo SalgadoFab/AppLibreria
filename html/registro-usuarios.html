@@ -6,8 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer"
-    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
 
     <link rel="stylesheet" href="/css/reset.css">
     <link rel="stylesheet" href="/css/general.css">
@@ -178,10 +177,16 @@
                     <div class="col-2 labelContenedor">
 
                         <label for="txt-password"> Contraseña </label>
-                        <input name="input" type="password" id="txt-password">
+                        <input name="input" class="password" type="password" id="txt-password">
                         <div class="iconoInput">
                             <i class="far fa-eye"></i>
                         </div>
+                        <ul class="texto-ayuda">
+                            <li class="longitud">Debe tener al menos 8 caracteres de longitud.</li>
+                            <li class="minuscula">Debe contener una letra minúscula.</li>
+                            <li class="mayuscula">Debe contener una letra mayúscula.</li>
+                            <li class="caracter">Debe contener un número o carácter especial.</li>
+                        </ul>
                     </div>
                     <div class="col-2 labelContenedor">
 
