@@ -6,24 +6,26 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer"
-    />
-
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
     <link rel="stylesheet" href="/css/reset.css">
     <link rel="stylesheet" href="/css/general.css">
     <link rel="stylesheet" href="/css/subir-foto.css">
+    
+    <link rel="stylesheet" href="/css/registro-puntos.css">
 
 
-    <title>Registro Puntos Retiros </title>
+    <title>Registro Puntos de Retiro</title>
 
     <body>
         <section class="sct cabeceraSeccion">
 
             <div class="col-2">
                 <div class="tituloRegistrarse">
+                    <div class="iconoCabecera">
+                        <i class="fas fa-user-circle"></i>
+                    </div>
                     <h1>
-                        Registro de Puntos de Retiro
+                        Registro Puntos de Retiro
                     </h1>
                 </div>
 
@@ -37,51 +39,41 @@
             <form>
                 <div class="col-60">
                     <!--Contenedor de 2 Columnas-->
+                    <div class="formControl flexContendor">
+                        <div class="col-2 labelContenedor">
+
+                            <label for="slt-socio"> Socio Comercial Asociado </label>
+                            <select name="input" id="slt-socio">
+                                <option value="">Seleccionar</option>
+                                <option value="socio1">Socio 1</option>
+                                <option value="socio2">Socio 2</option>
+                            </select>
+                        </div>
+                    </div>
+
                     <div class="formControl">
 
                         <div class="labelContenedor">
-
-                            <label for="txt-socio"> Socio Comercial </label>
-                            <select name="input" id="slt-socio">
-                                        <option value=""></option>
-                                        <option value="nombre">Nombre</option>
-                                        <option value="nombre">Nombre</option>
-                                    </select>
+    
+                            <label for="txt-direccion"> Direccion </label>
+                            <input name="input" type="text" id="txt-direccion">
+                            <div class="iconoInput">
+                                <i class="fas fa-at"></i>
+                            </div>
                         </div>
-
+    
                     </div>
+    
                 </div>
-
-                <div class="formControl">
-
-                    <div class="labelContenedor">
-
-                        <label for="txt-direccion"> Dirección: </label>
-                        <input name="input" type="text" id="txt-direccion">
-                    </div>
-
-
-                </div>
-
-                </div>
-
 
                 <div class="col-40">
 
-                    <div class="formControl ctn-mapa">
-                        <div class="labelMapa">
-                            <label for="dirreccion-mapa">Dirección en mapa: </label>
-                        </div>
-                        <div class="drop-zone">
-                            <span class="drop-zone__prompt"><i class="fa-solid fa-map-location-dot"></i></span>
-                            <input name="input" type="file" id="foto-perfil-usuario" class="drop-zone__input">
-                        </div>
+                    <div class="formControl">
+ 
                     </div>
 
-
-
                     <div class="formControl">
-                        <button id="btnGuardar" class="btnGuardar" style="margin-top: 1rem;" type="button"> Guardar</button>
+                        <button id="btnGuardar" class="btnGuardar" style="margin-top: 1rem;" type="button"> Guardar Registro </button>
                     </div>
 
                 </div>
@@ -93,10 +85,6 @@
         <script src="/js/validar-formulario.js"></script>
         <script src="/js/registro-socios.js"></script>
 
-
-
     </body>
-
-
 
 </html>
