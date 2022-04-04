@@ -1,0 +1,87 @@
+.sct {
+    padding: 2rem 14em;
+    margin: auto;
+}
+
+.flexContendor {
+    display: flex;
+}
+
+.col-2 {
+    width: 50%;
+}
+
+.col-60 {
+    width: 60%;
+}
+
+.col-40 {
+    width: 40%;
+}
+
+.col-40 .formControl {
+    padding-left: 4rem;
+}
+
+.labelContenedor label {
+    display: block;
+}
+
+.labelContenedor {
+    position: relative;
+}
+
+.formControl {
+    padding-bottom: 4rem;
+}
+
+.formControl label {
+    font-size: 1.2rem;
+    padding-bottom: 1rem;
+}
+
+.formControl select,
+.formControl input {
+    width: calc(100% - 4rem);
+    height: 2.5rem;
+    border-radius: 15px;
+    padding: 0 1rem;
+    font-size: 1.2rem;
+    box-shadow: 0px 5px 8px 0px rgb(0 0 0 / 40%);
+    border: none;
+    outline: none;
+}
+
+.formControl select {
+    width: calc(100% - 2rem);
+    font-size: 1.1rem;
+}
+
+.col-40 .formControl select,
+.col-40 .formControl input {
+    width: 100%
+}
+
+.iconoInput {
+    text-align: right;
+    position: absolute;
+    top: 3rem;
+    right: 2.8rem;
+}
+
+.formControl .btnGuardar {
+    width: 100%;
+    border-radius: 10px;
+    height: 3rem;
+    margin-top: 1rem;
+    border: none;
+    box-shadow: 0px 5px 8px 0px rgb(0 0 0 / 40%);
+    background: #90b22e;
+    color: #fff;
+    font-size: 1.1rem;
+    cursor: pointer;
+}
+
+.inputError {
+    box-shadow: 0px 5px 12px 0px rgb(193 0 0) !important;
+}

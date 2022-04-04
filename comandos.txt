@@ -1,0 +1,18 @@
+Subir cambios: 
+
+1- git status = Mostrara la lista de archivos que presetan modificaciones en rojo
+2- git checkout -b feature/NombreDeLaRama = Crear nueva rama o branch
+3- git add . = Prepara todos los cambios hechos para subirlos a github
+4- git commit -m "Comentario de lo que esta subiendo" = Añade un comenario referente a los cambios que esta subiendo
+5- git push origin feature/NombreDeLaRama = Sube los cambios hechos a github
+6- Dirigirse a https://github.com/SalgadoFab/AppLibreria y realizar el pull request de su rama para ser aceptado por Fabricio, solo pull request, NO HACER MERGE, se debe revisar primero
+
+
+Obtener ultimos cambios del github:
+
+1- git status = Para revisar si tenemos algun archivo con cambios recientes, de ser asi, deberemos hacer los pasos de Subir Cambios del 2 hasta 4
+2- git status = Confirmamos que ya no aparezca ningun archivo con cambios recientes
+3- git push orign master = Obtenemos todos los nuevos cambios 
+
+Pagina de Iconos:
+https://fontawesome.com/v6/search?m=free

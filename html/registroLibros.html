@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer"
+    />
+
+    <link rel="stylesheet" href="/css/reset.css">
+    <link rel="stylesheet" href="/css/general.css">
+    <link rel="stylesheet" href="/css/subir-foto.css">
+    <link rel="stylesheet" href="/css/registro-usuarios.css">
+
+
+    <title>Registro de Libros - Libreria</title>
+
+</head>
+
+<body>
+
+    <section class="sct cabeceraSeccion">
+
+        <div class="col-2">
+            <div class="tituloRegistrarse">
+                <div class="iconoCabecera">
+                    <i class="fa-solid fa-address-book"></i>
+                </div>
+                <h1> Registrar Libros </h1>
+            </div>
+        </div>
+
+    </section>
+
+    <section class="sct sctFormulario flexContendor">
+        <form>
+            <div class="col-60">
+                <div class="formControl">
+
+                    <div class="labelContenedor">
+
+                        <label for="txt-nombre-libro"> Nombre de Libro </label>
+                        <input name="input" type="text" id="txt-nombre-libro">
+
+                        <div class="iconoInput">
+                            <i class="fa-solid fa-book"></i>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="formControl">
+
+                    <div class="labelContenedor">
+                        <label for="txt-ISBN"> ISBN </label>
+                        <input name="input" type="text" id="txt-ISBN">
+                        <div class="iconoInput">
+                            <i class="fa-solid fa-barcode"></i>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="formControl">
+
+                    <div class="labelContenedor">
+                        <label for="txt-Autores"> Autores </label>
+                        <input name="input" type="text" id="txt-Autores">
+                        <div class="iconoInput">
+                            <i class="fa-solid fa-pen-clip"></i>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="formControl flexContendor">
+
+                    <div class="col-2 labelContenedor">
+
+                        <label for="slt-idioma"> Idioma </label>
+                        <select name="input" id="slt-idioma">
+                            <option value=""> -- Selecione una opcion</option>
+                            <option value="Español"> Español </option>
+                            <option value="Ingles"> Ingles </option>
+                            <option value="Portugues"> Portugues </option>
+                        </select>
+                    </div>
+
+                    <div class="col-2 labelContenedor">
+
+                        <label for="slt-formato"> Formato </label>
+                        <select name="input" id="slt-formato">
+                            <option value=""> -- Selecione una opcion</option>
+                            <option value="Fisico"> Fisico</option>
+                            <option value="Digital"> Digital</option>
+                            <option value="Ebook"> Ebook</option>
+                        </select>
+                    </div>
+
+                </div>
+
+                <div class="formControl flexContendor">
+
+                    <div class="col-2 labelContenedor">
+
+                        <label for="txt-publicacion"> Fecha de Publicacion </label>
+                        <input name="input" type="date" id="txt-publicacion">
+                    </div>
+                    <div class="col-2 labelContenedor">
+
+                        <label for="slt-Generos"> Generos </label>
+                        <select name="input" id="slt-Generos">
+                            <option value=""> -- Selecione una opcion</option>
+                            <option value="Clasicos">Clasicos</option>
+                            <option value="Fantasia">Fantasia</option>
+                            <option value="Infantiles">Infantiles</option>
+                            <option value="Latinoamericanos">Latinoamericanos</option>
+                            <option value="Terror">Terror</option>
+                        </select>
+                    </div>
+
+                </div>
+
+                <div class="formControl flexContendor">
+
+                    <div class="col-2 labelContenedor">
+
+                        <label for="txt-Premios"> Premios Ganados </label>
+                        <input name="input" type="text" id="txt-Premios">
+                        <div class="iconoInput">
+                            <i class="fa-solid fa-trophy"></i>
+                        </div>
+                    </div>
+
+                    <div class="col-2 labelContenedor">
+
+                        <label for="txt-Precio"> Precio </label>
+                        <input name="input" type="text" id="txt-Precio">
+                        <div class="iconoInput">
+                            <i class="fa-solid fa-colon-sign"></i>
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="formControl flexContendor">
+
+                    <div class="col-2 labelContenedor">
+
+                        <label for="txt-stock"> En stock </label>
+                        <input name="input" type="number" id="txt-stock">
+
+                    </div>
+
+                    <div class="col-2 labelContenedor">
+
+                        <label for="txt-Descuento"> Descuento </label>
+                        <input name="input" type="text" id="txt-Descuento">
+                        <!-- en type="text" podira ser type="number" -->
+                        <div class="iconoInput">
+                            <i class="fa-solid fa-percent"></i>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!--Contenedor de Imput Completo-->
+                <div class="formControl">
+
+                    <div class="labelContenedor">
+
+                        <label for="txt-Reseña"> Reseña del Libro </label>
+                        <input name="input" type="email" id="txt-Reseña">
+                        <div class="iconoInput">
+                            <i class="fa-solid fa-align-left"></i>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="col-40">
+
+                <div class="formControl ctn-subirFoto">
+                    <div class="labelSubiFoto">
+                        <label for="foto-portada">Arrastre la imagen de Portadal</label>
+                    </div>
+                    <div class="drop-zone">
+                        <span class="drop-zone__prompt">
+                            <i class="far fa-image"></i>
+                        </span>
+                        <input name="input" type="file" id="foto-portada" class="drop-zone__input">
+                    </div>
+                </div>
+
+                <div class="formControl">
+                    <button id="btnGuardar" class="btnGuardar" type="button"> Guardar Libro </button>
+                </div>
+
+            </div>
+
+        </form>
+
+    </section>
+
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="/js/subir-foto.js"></script>
+    <script src="/js/registro-usuarios.js"></script>
+</body>
+
+</html>
