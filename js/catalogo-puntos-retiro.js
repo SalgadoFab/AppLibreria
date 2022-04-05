@@ -25,14 +25,14 @@ const cambiarPagina = (pagina) => {
     contenedorItems.innerHTML = ""
 
     //Hacemos un for, para cada elemento dentro del rango de la página actual
-    for (let i = (pagina - 1) * itemsPorPagina; i < (pagina * itemsPorPagina) && i < listaPuntosRetiro; i++) {
+    for (let i = (pagina - 1) * itemsPorPagina; i < (pagina * itemsPorPagina) && i < listaPuntosRetiro.length; i++) {
 
         //Al contenedor de items le pasamos la estrucutra html para cada item del array
         //Cambiar variables
         contenedorItems.innerHTML += `
         <div class="cardItem">
         <div class="ctnImagenItem">
-            <div class="cardImagen">
+            <div class="cardImagen imgPuntosRetiro">
                 <img src="/media/img/socios/automercado.jpg" alt="Portada Libro">
                 <a class="btnEliminarItem" onclick="">
                     <i class="fa-solid fa-trash-can"></i>
@@ -40,22 +40,22 @@ const cambiarPagina = (pagina) => {
             </div>
         </div>
 
-        <div class="cardInfo-1">
+        <div class="cardInfo-1 cardInfoPuntos">
             <div class="col-1">
                 <div class="nombreLibro espacioInfoItem">
                     <span>
-                        Nombre:
+                        Nombre:  ${listaPuntosRetiro[i].nombre}
                     </span>
                 </div>
                 <div class="nombreAutor">
                     <span>
-                        Dirección:
+                        Dirección: ${listaPuntosRetiro[i].direccion}
                     </span>
                 </div>
             </div>
         </div>
 
-        <div class="cardBtns flexContendor">
+        <div class="cardBtns bordesRedondosAbajo flexContendor">
             <div class="col-2">
                 <button class="btnModificar">
                     <a onclick="">
