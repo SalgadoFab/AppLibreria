@@ -1,18 +1,16 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer"
-    />
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
     <link rel="stylesheet" href="/css/reset.css">
     <link rel="stylesheet" href="/css/general.css">
-    <link rel="stylesheet" href="/css/subir-foto.css">
-    <link rel="stylesheet" href="/css/registro-usuarios.css">
+
+    <link rel="stylesheet" href="/css/inicio-sesion.css">
 
 
     <title>Login Usuarios - Libreria</title>
@@ -24,7 +22,7 @@
 
     <section class="sct cabeceraSeccion">
 
-        <div class="col-4">
+        <div class="col-40">
             <div class="tituloRegistrarse">
                 <div class="iconoCabecera">
                     <i class="fas fa-user-circle"></i>
@@ -39,10 +37,10 @@
             <div class="indicadorRegistro">
                 <span>Ingrese los datos de inicio de sesión</span>
             </div>
-            <div class="col-4">
+            <div id="mensajeRegistro">
                 <div class="registrarse">
                     <span>¿No tienes cuenta?</span>
-                    <a href="index.html">Registrate</a>
+                    <a href="registroUsuarios.html">Registrate</a>
                 </div>
             </div>
 
@@ -54,57 +52,77 @@
     </section>
 
     <section class="sct sctFormulario flexContendor">
-        <form>
-            <div class="col-60">
+
+        <div class="contenedorInput">
 
 
-                <!--Contenedor de Imput Completo-->
-                <div class="formControl">
+            <!--Contenedor de Imput Completo-->
+            <div class="formControl">
 
-                    <div class="labelContenedor">
+                <div class="labelContenedor">
 
-                        <label for="txt-correo"> Correo Electronico </label>
-                        <input name="input" type="email" id="txt-correo">
-                        <div class="iconoInput">
-                            <i class="fas fa-at"></i>
-                        </div>
+                    <label for="txt-correo"> Correo Electronico </label>
+                    <input name="input" type="email" id="txt-correo">
+                    <div class="iconoInput">
+                        <i class="fas fa-at"></i>
                     </div>
+                </div>
+
+            </div>
+
+            <div class="formControl flexContendor">
+
+                <div class="col-2 labelContenedor">
+
+                    <label for="txt-password"> Contraseña </label>
+
+                    <input name="input" type="password" id="txt-password">
+
+                </div>
+                <div id="divCheck">
+                    <!--hice este div para que no se confunideran los labels del formulario-->
+
+                    <input id="check" class="check" type="checkbox">
+                    <div id="labelCheck" for="check">Mostrar Contraseña</div>
 
                 </div>
 
-                <div class="formControl flexContendor">
-
-                    <div class="col-2 labelContenedor">
-
-                        <label for="txt-password"> Contraseña </label>
-                        <input name="input" type="password" id="txt-password">
-                        <div class="iconoInput">
-                            <i class="far fa-eye"></i>
-                        </div>
-                    </div>
-
-
-                </div>
-                <div class="col-60">
 
 
 
 
+            </div>
 
-                    <div class="formControl">
-                        <button id="btnGuardar" class="btnGuardar" style="margin-top: 1rem;" type="button"> Iniciar Sesión </button>
-                    </div>
-
+            <div>
+                <div class="olvidoContraseña">
+                    <span>¿Olvidó su contraseña?</span>
+                    <a href="registroUsuarios.html">Recuperar contraseña</a>
                 </div>
             </div>
 
 
-        </form>
+            <div class="col-60">
+
+
+
+
+
+                <div class="formControl">
+                    <button id="btnIngresar" class="btnIngresar" style="margin-top: 1rem;" type="button"> Iniciar Sesión </button>
+                </div>
+
+            </div>
+        </div>
+
+
+
     </section>
 
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-    <script src="/js/subir-foto.js"></script>
-    <script src="/js/registro-usuarios.js"></script>
+    <script src="/js/usuarios.js"></script>
+
+    <script src="/js/inicio-sesion.js"></script>
+
 </body>
 
 </html>

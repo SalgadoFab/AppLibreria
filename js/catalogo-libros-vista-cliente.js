@@ -1,5 +1,5 @@
 // Items a mostrar por pagina
-let itemsPorPagina = 5;
+let itemsPorPagina = 9;
 
 // Fijamos la pagina 1 activa por defecto
 let paginaActiva = 1;
@@ -10,12 +10,12 @@ const obtenerNumeroPaginas = (listaArray) => {
 }
 
 // Obtenemos el numero de paginas para nuestra paginacion
-let totalPaginas = obtenerNumeroPaginas(listaSocios)
+let totalPaginas = obtenerNumeroPaginas(lista_libros)
 
 //Funcion para cambiar entre paginas por cada item de paginacion
 const cambiarPagina = (pagina) => {
     //Obtenemos el contedor de los items
-    let contenedorItems = document.getElementById("catalogoLibrosAdminCTN")
+    let contenedorItems = document.getElementById("catalogoLibrosClienteCTN")
 
     // Revisamos que la página esté dentro de los límites
     if (pagina < 1) pagina = 1
@@ -25,7 +25,7 @@ const cambiarPagina = (pagina) => {
     contenedorItems.innerHTML = ""
 
     //Hacemos un for, para cada elemento dentro del rango de la página actual
-    for (let i = (pagina - 1) * itemsPorPagina; i < (pagina * itemsPorPagina) && i < listaSocios.length; i++) {
+    for (let i = (pagina - 1) * itemsPorPagina; i < (pagina * itemsPorPagina) && i < lista_libros.length; i++) {
 
         //Al contenedor de items le pasamos la estrucutra html para cada item del array
         //Cambiar variables
@@ -33,9 +33,9 @@ const cambiarPagina = (pagina) => {
         <div class="cardItem">
             <div class="ctnImagenItem">
                 <div class="cardImagen">
-                    <img src="/media/img/portadaLibros/cuentos_completos_EAP.jpg" alt="Portada Libro">
-                    <a class="btnEliminarItem" onclick="">
-                        <i class="fa-solid fa-trash-can"></i>
+                    <img src="/media/img/portadaLibros/alicia_en_el_pais_de_las_maravillas.jpg" alt="Portada Libro">
+                    <a class="btnFavorito" onclick="">
+                        <i class="fa-solid fa-heart"></i>
                     </a>
                 </div>
             </div>
@@ -44,40 +44,71 @@ const cambiarPagina = (pagina) => {
                 <div class="col-1">
                     <div class="nombreLibro espacioInfoItem">
                         <span>
-                            Nombre: ${listaSocios[i].nombre}
+                            Nombre de Libro: Alicia en el País de las Maravillas
                         </span>
                     </div>
-                    <div class="nombreAutor">
-                        <div class="socio-ID">
-                            <span>
-                                ID:
-                            </span>
-                        </div>
 
-                        <div class="socio-codigo">
-                            <span>
-                                Codigo: ${listaSocios[i].codigo}
-                            </span>
-                        </div>
+                </div>
+
+                <div class="col-1">
+                    <div class="nombreLibro espacioInfoItem">
+                        <span>
+                            Género: Fantasía
+                        </span>
                     </div>
+
+                </div>
+
+                <div class="col-1">
+                    <div class="nombreLibro espacioInfoItem">
+                        <span>
+                            Autor: Lewis Carroll
+                        </span>
+                    </div>
+
+                </div>
+                <div class="col-3">
+                    <div class="nombreLibro espacioInfoItem">
+                        <span>
+                            ₡25, 000
+                        </span>
+                    </div>
+
                 </div>
             </div>
 
             <div class="cardBtns flexContendor">
                 <div class="col-2">
-                    <button class="btnModificar">
+                    <button class="btnAgregar">
                         <a onclick="">
-                            <i class="fa-solid fa-pen-to-square"></i> Modificar
+                            <i class="fa-solid fa-cart-plus"></i> Añadir al carrito
                         </a>
                     </button>
                 </div>
                 <div class="col-2">
-                    <button class="btnOcultar">
+                    <button class="btnComprarAhora">
                         <a onclick="">
-                            <i class="fa-solid fa-eye-slash"></i> Ocultar
+                            <i class="fa-solid fa-bag-shopping"></i> Comprar ahora
                         </a>
                     </button>
                 </div>
+            </div>
+
+            <div class="cardInfo-3">
+                <div class="col-3">
+                    <div class="Plumas-espacioInfoItem">
+                        <span>    
+                            <i class="fa-solid fa-feather-pointed"></i>
+                            <i class="fa-solid fa-feather-pointed"></i>
+                            <i class="fa-solid fa-feather-pointed"></i>
+                            <i class="fa-solid fa-feather-pointed"></i>
+                            <i class="fa-solid fa-feather-pointed" id="plumavacia"></i>
+                        </span>
+                    </div>
+
+                </div>
+
+
             </div>
         </div>`
     }

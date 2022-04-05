@@ -1,5 +1,5 @@
 // Items a mostrar por pagina
-let itemsPorPagina = 5;
+let itemsPorPagina = 9;
 
 // Fijamos la pagina 1 activa por defecto
 let paginaActiva = 1;
@@ -10,12 +10,12 @@ const obtenerNumeroPaginas = (listaArray) => {
 }
 
 // Obtenemos el numero de paginas para nuestra paginacion
-let totalPaginas = obtenerNumeroPaginas(listaSocios)
+let totalPaginas = obtenerNumeroPaginas(listaAutores)
 
 //Funcion para cambiar entre paginas por cada item de paginacion
 const cambiarPagina = (pagina) => {
     //Obtenemos el contedor de los items
-    let contenedorItems = document.getElementById("catalogoLibrosAdminCTN")
+    let contenedorItems = document.getElementById("catalogoAutoresClienteCTN")
 
     // Revisamos que la página esté dentro de los límites
     if (pagina < 1) pagina = 1
@@ -25,61 +25,88 @@ const cambiarPagina = (pagina) => {
     contenedorItems.innerHTML = ""
 
     //Hacemos un for, para cada elemento dentro del rango de la página actual
-    for (let i = (pagina - 1) * itemsPorPagina; i < (pagina * itemsPorPagina) && i < listaSocios.length; i++) {
+    for (let i = (pagina - 1) * itemsPorPagina; i < (pagina * itemsPorPagina) && i < listaAutores.length; i++) {
 
         //Al contenedor de items le pasamos la estrucutra html para cada item del array
         //Cambiar variables
         contenedorItems.innerHTML += `
         <div class="cardItem">
-            <div class="ctnImagenItem">
-                <div class="cardImagen">
-                    <img src="/media/img/portadaLibros/cuentos_completos_EAP.jpg" alt="Portada Libro">
-                    <a class="btnEliminarItem" onclick="">
-                        <i class="fa-solid fa-trash-can"></i>
-                    </a>
-                </div>
+        <div class="ctnImagenItem">
+            <div class="cardImagen">
+                <img src="/media/img/imgAutores/isaac_asimov.jpg" alt="Portada Libro">
+                <a class="btnEliminarItem" onclick="">
+                    <i class="fa-regular fa-heart"></i>
+                </a>
             </div>
+        </div>
 
-            <div class="cardInfo-1">
-                <div class="col-1">
-                    <div class="nombreLibro espacioInfoItem">
+        <div class="cardInfo-1">
+            <div class="col-1">
+                <div class="nombreAutor espacioInfoItem">
+                    <span>
+                        Nombre del Autor:
+                    </span>
+                    <div class="nombreAutorItem">
                         <span>
-                            Nombre: ${listaSocios[i].nombre}
+                            <br>
+                            Isaac Asimov
                         </span>
                     </div>
-                    <div class="nombreAutor">
-                        <div class="socio-ID">
-                            <span>
-                                ID:
-                            </span>
-                        </div>
 
-                        <div class="socio-codigo">
-                            <span>
-                                Codigo: ${listaSocios[i].codigo}
-                            </span>
-                        </div>
-                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="cardBtns flexContendor">
+            <div class="col-2">
+                <div class="promPlumas espacioInfoItem">
+                    <span>
+                        Promedio Plumas:
+                    </span>
+                </div>
+                <div class="promedioPlumasItem">
+                    <span>
+                        <br>
+                        0
+                    </span>
+                </div>
+
+            </div>
+
+            <div class="col-2">
+                <div class="librosPublicados espacioInfoItem">
+                    <span>
+                        Libros publicados:
+                    </span>
+                </div>
+                <div class="librosPublicadosItem">
+                    <span>
+                        <br>
+                        0
+                    </span>
+                </div>
+            </div>
+        </div>
+
+        <div class="cardInfo-2 flexContendor">
+
+            <div class="col-3">
+                <div class="nacionalidadAutor espacioInfoItem">
+                    <span>
+                        Nacionalidad
+                    </span>
+                </div>
+                <div class="nacionalidadAutorItem">
+                    <span>
+                        Estadounidense
+                    </span>
                 </div>
             </div>
 
-            <div class="cardBtns flexContendor">
-                <div class="col-2">
-                    <button class="btnModificar">
-                        <a onclick="">
-                            <i class="fa-solid fa-pen-to-square"></i> Modificar
-                        </a>
-                    </button>
-                </div>
-                <div class="col-2">
-                    <button class="btnOcultar">
-                        <a onclick="">
-                            <i class="fa-solid fa-eye-slash"></i> Ocultar
-                        </a>
-                    </button>
-                </div>
-            </div>
-        </div>`
+
+        </div>
+    </div>`
     }
 }
 

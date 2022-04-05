@@ -1,0 +1,15 @@
+.col-3 {
+    display: flex;
+    align-content: center;
+    font-size: 1.5rem;
+    align-items: center;
+    justify-content: center;
+}
+
+.Plumas-espacioInfoItem {
+    font-size: 1rem;
+    align-self: center;
+    font-size: 2rem;
+    padding: 2rem 0;
+    align-self: center;
+}
