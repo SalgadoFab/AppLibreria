@@ -8,6 +8,11 @@
     align-items: center;
 }
 
+#labelCheck {
+    align-items: center;
+    padding-bottom: 0.2rem;
+}
+
 .tituloRegistrarse h1 {
     font-size: 3rem;
 }
