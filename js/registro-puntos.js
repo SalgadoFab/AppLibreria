@@ -1,6 +1,6 @@
 const btnRegistrar = document.getElementById('btnGuardar');
 
-const validarRegistroSocio = () => {
+const validarRegistroPunto= () => {
 
     let hayError = validarFormulario();
 
@@ -9,7 +9,7 @@ const validarRegistroSocio = () => {
     if (hayError == true) {
         Swal.fire({
             "icon": "warning",
-            "title": "El socio comercial no se pudo registrar",
+            "title": "El punto de retiro no se puede registrar",
             "text": "Compruebe que todos los campos estan correctamente llenados"
         });
 
@@ -17,10 +17,10 @@ const validarRegistroSocio = () => {
         Swal.fire({
             "icon": "success",
             "title": "Éxito",
-            "text": "Socio Comercial registrado con exito"
+            "text": "Punto de retiro registrado con exito"
         });
     }
 
 }
 
-btnRegistrar.addEventListener('click', validarRegistroSocio);
+btnRegistrar.addEventListener('click', validarRegistroPunto);

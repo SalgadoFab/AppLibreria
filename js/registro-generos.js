@@ -1,6 +1,6 @@
 const btnRegistrar = document.getElementById('btnGuardar');
 
-const validarRegistroSocio = () => {
+const validarRegistroGenero = () => {
 
     let hayError = validarFormulario();
 
@@ -23,4 +23,4 @@ const validarRegistroSocio = () => {
 
 }
 
-btnRegistrar.addEventListener('click', validarRegistroSocio);
+btnRegistrar.addEventListener('click', validarRegistroGenero);

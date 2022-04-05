@@ -107,3 +107,17 @@ input[type="checkbox"]:checked +  label:before{
     height: 0.4rem;
     top: 0.2rem;
 }
+
+
+ul.texto-ayuda {
+    display: block;
+    margin-top: 2rem;
+    font-size: 0.8rem;
+    line-height: 1.2rem;
+    color:red;
+    
+
+}
+ul.texto-ayuda li.validado {
+    color: blue;
+}

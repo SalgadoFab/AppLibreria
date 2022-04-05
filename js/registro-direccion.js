@@ -1,6 +1,6 @@
 const btnRegistrar = document.getElementById('btnGuardar');
 
-const validarRegistroSocio = () => {
+const validarRegistroDireccionEnvio = () => {
 
     let hayError = validarFormulario();
 
@@ -9,7 +9,7 @@ const validarRegistroSocio = () => {
     if (hayError == true) {
         Swal.fire({
             "icon": "warning",
-            "title": "El socio comercial no se pudo registrar",
+            "title": "La direccion no ha sido guardada",
             "text": "Compruebe que todos los campos estan correctamente llenados"
         });
 
@@ -17,10 +17,10 @@ const validarRegistroSocio = () => {
         Swal.fire({
             "icon": "success",
             "title": "Éxito",
-            "text": "Socio Comercial registrado con exito"
+            "text": "Direccion guardada correctamente"
         });
     }
 
 }
 
-btnRegistrar.addEventListener('click', validarRegistroSocio);
+btnRegistrar.addEventListener('click', validarRegistroDireccionEnvio);

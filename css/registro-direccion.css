@@ -3,12 +3,12 @@
     padding-bottom: 5rem;
 }
 
-.tituloRegistrarse {
+.titulo {
     display: flex;
     align-items: center;
 }
 
-.tituloRegistrarse h1 {
+.titulo h1 {
     font-size: 3rem;
 }
 
@@ -22,27 +22,12 @@
     font-size: 1.3rem;
 }
 
-.iniciarSesion {
-    display: flex;
-    flex-direction: column;
-    text-align: right;
-    font-size: 1.3rem;
-    padding-top: 1rem;
-}
-
-.iniciarSesion a {
-    padding-right: 1.5rem;
-    color: #000;
-    padding-top: 2rem;
-}
-
 .sctFormulario form {
     display: flex;
     width: 100%;
 }
 
-.labelAutoresFavoritos {
-    padding-bottom: 1rem;
+
+.registroDireccionMapa {
+    padding: 7rem !important;
 }
-
-

@@ -1,5 +1,5 @@
 // Items a mostrar por pagina
-let itemsPorPagina = 9;
+let itemsPorPagina = 5;
 
 // Fijamos la pagina 1 activa por defecto
 let paginaActiva = 1;
@@ -10,7 +10,7 @@ const obtenerNumeroPaginas = (listaArray) => {
 }
 
 // Obtenemos el numero de paginas para nuestra paginacion
-let totalPaginas = obtenerNumeroPaginas(lista_libros)
+let totalPaginas = obtenerNumeroPaginas(listaSocios)
 
 //Funcion para cambiar entre paginas por cada item de paginacion
 const cambiarPagina = (pagina) => {
@@ -25,90 +25,61 @@ const cambiarPagina = (pagina) => {
     contenedorItems.innerHTML = ""
 
     //Hacemos un for, para cada elemento dentro del rango de la página actual
-    for (let i = (pagina - 1) * itemsPorPagina; i < (pagina * itemsPorPagina) && i < lista_libros.length; i++) {
+    for (let i = (pagina - 1) * itemsPorPagina; i < (pagina * itemsPorPagina) && i < listaSocios.length; i++) {
 
         //Al contenedor de items le pasamos la estrucutra html para cada item del array
         //Cambiar variables
         contenedorItems.innerHTML += `
-    <div class="cardItem">
-    <div class="ctnImagenItem">
-        <div class="cardImagen">
-            <img src="/media/img/portadaLibros/cuentos_completos_EAP.jpg" alt="Portada Libro">
-            <a class="btnEliminarItem" onclick="">
-                <i class="fa-solid fa-trash-can"></i>
-            </a>
-        </div>
-    </div>
+        <div class="cardItem">
+            <div class="ctnImagenItem">
+                <div class="cardImagen">
+                    <img src="/media/img/portadaLibros/cuentos_completos_EAP.jpg" alt="Portada Libro">
+                    <a class="btnEliminarItem" onclick="">
+                        <i class="fa-solid fa-trash-can"></i>
+                    </a>
+                </div>
+            </div>
 
-    <div class="cardInfo-1">
-        <div class="col-1">
-            <div class="nombreLibro espacioInfoItem">
-                <span>
-                    Titulo: ${lista_libros[i].titulo}
-                </span>
-            </div>
-            <div class="nombreAutor">
-                <span>
-                    Autor:
-                </span>
-            </div>
-        </div>
-    </div>
+            <div class="cardInfo-1">
+                <div class="col-1">
+                    <div class="nombreLibro espacioInfoItem">
+                        <span>
+                            Nombre:
+                        </span>
+                    </div>
+                    <div class="nombreAutor">
+                        <div class="socio-ID">
+                            <span>
+                                ID:
+                            </span>
+                        </div>
 
-    <div class="cardBtns flexContendor">
-        <div class="col-2">
-            <button class="btnModificar">
-                <a onclick="">
-                    <i class="fa-solid fa-pen-to-square"></i> Modificar
-                </a>
-            </button>
-        </div>
-        <div class="col-2">
-            <button class="btnOcultar">
-                <a onclick="">
-                    <i class="fa-solid fa-eye-slash"></i> Ocultar
-                </a>
-            </button>
-        </div>
-    </div>
+                        <div class="socio-codigo">
+                            <span>
+                                Codigo:
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
-    <div class="cardInfo-2 flexContendor">
-
-        <div class="col-3">
-            <div class="dineroGeneradoTitulo espacioInfoItem">
-                <span>
-                    Dinero Generado
-                </span>
+            <div class="cardBtns flexContendor">
+                <div class="col-2">
+                    <button class="btnModificar">
+                        <a onclick="">
+                            <i class="fa-solid fa-pen-to-square"></i> Modificar
+                        </a>
+                    </button>
+                </div>
+                <div class="col-2">
+                    <button class="btnOcultar">
+                        <a onclick="">
+                            <i class="fa-solid fa-eye-slash"></i> Ocultar
+                        </a>
+                    </button>
+                </div>
             </div>
-            <div class="dineroGeneradoItem">
-                <span>
-                    0
-                </span>
-            </div>
-        </div>
-        <div class="col-3">
-            <div class="precioUnitarioTitulo espacioInfoItem">
-                <span>
-                    Precio Unitario
-                </span>
-            </div>  
-            <div class="precioUnitarioItem">
-                0
-            </div>
-        </div>
-        <div class="col-3">
-            <div class="tituloUnidades espacioInfoItem">
-                <span>
-                    Unidades Vendidas
-                </span>
-            </div>  
-            <div class="unidadesVendidas">
-                0
-            </div>
-        </div>
-
-    </div>
-</div>`
+        </div>`
     }
 }
 

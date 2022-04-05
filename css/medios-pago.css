@@ -1,0 +1,37 @@
+
+
+.sctFormulario form {
+    display: flex;
+    width: 100%;
+}
+
+.tituloMediosDePago {
+    font-size: 2rem;
+}
+.ctnMediosPagos {
+    padding: 4rem 0rem;
+    display: grid;
+    grid-gap: 2rem;
+    grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
+    column-gap: 8rem;
+}
+
+.itemMedioPago {
+    display: flex;
+    font-size: 1.5rem;
+}
+.numTarjeta {
+    margin: 0 1rem;
+}
+
+.txtTitular input {
+    width: calc(100% - 2rem) !important;
+}
+
+.numeroTarjeta input  {
+    width: calc(100% - rem);
+}
+
+.espaciado {
+    padding-bottom: 4rem;
+}
