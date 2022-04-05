@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer"
+    />
+
+    <link rel="stylesheet" href="/css/reset.css">
+    <link rel="stylesheet" href="/css/general.css">
+    <link rel="stylesheet" href="/css/registro-usuarios.css">
+    <link rel="stylesheet" href="/css/generos-literarios.css">
+
+
+    <title>Catálogo de géneros literarios</title>
+
+</head>
+
+<body>
+
+    <section class="sct cabeceraSeccion">
+        <form>
+
+            <div class="indicadorRegistro">
+                <h1>Catálogo Género</h1>
+            </div>
+        </form>
+
+    </section>
+
+    <div class="formControl flexContendor">
+
+        <div class="labelContenedor">
+
+            <label for="txt-genero"></label>
+            <select name="input" id="slt-genero">
+                <option value="">Ordenar por </option>
+                <option value="clasicos">Clásicos</option>
+                <option value="ciencia ficción">Ciencia Ficción</option>
+                <option value="fantasia">Fantasía</option>
+                <option value="infantiles">Infantiles</option>
+                <option value="latinoamericanos">Latinoamericanos</option>
+                <option value="terror">Terror</option>
+            </select>
+        </div>
+
+
+    </div>
+
+    <section class="sct sctFormulario flexContendor">
+        <form>
+            <div class="col-60">
+
+                <div class="formControl">
+                    <table id="tbl-generos">
+                        <thead>
+                            <tr>
+                                <th>Codigo de Género</th>
+                                <th>Nombre</th>
+                                <th>Libros en Stock</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td> 01 </td>
+                                <td> Clásicos </td>
+                                <td> 6 </td>
+                            </tr>
+
+                            <tr>
+                                <td> 02 </td>
+                                <td> Ciencia Ficción </td>
+                                <td> 3 </td>
+
+                            </tr>
+
+                            <tr>
+                                <td> 03 </td>
+                                <td> Fantasía </td>
+                                <td> 4 </td>
+
+                            </tr>
+
+                            <tr>
+                                <td> 04 </td>
+                                <td> Infantiles </td>
+                                <td> 5 </td>
+
+                            </tr>
+                            <tr>
+                                <td> 05 </td>
+                                <td> Latinoamericanos </td>
+                                <td> 7 </td>
+                            </tr>
+                            <tr>
+                                <td> 06 </td>
+                                <td> Terror </td>
+                                <td> 8 </td>
+                            </tr>
+
+
+                        </tbody>
+                    </table>
+                </div>
+
+            </div>
+            <div class="col-40">
+
+                <div class="btngrupo">
+                    <div class="btnEM">
+                        <button id="btnModificar" type="button"> Modificar </button>
+                        <button id="btnEliminar" type="button"> Eliminar </button>
+                    </div>
+
+                    <div class="btnEM">
+                        <button id="btnModificar" type="button"> Modificar </button>
+                        <button id="btnEliminar" type="button"> Eliminar </button>
+                    </div>
+
+                    <div class="btnEM">
+                        <button id="btnModificar" type="button"> Modificar </button>
+                        <button id="btnEliminar" type="button"> Eliminar </button>
+                    </div>
+
+                    <div class="btnEM">
+                        <button id="btnModificar" type="button"> Modificar </button>
+                        <button id="btnEliminar" type="button"> Eliminar </button>
+                    </div>
+
+                    <div class="btnEM">
+                        <button id="btnModificar" type="button"> Modificar </button>
+                        <button id="btnEliminar" type="button"> Eliminar </button>
+                    </div>
+                    <div class="btnEM">
+                        <button id="btnModificar" type="button"> Modificar </button>
+                        <button id="btnEliminar" type="button"> Eliminar </button>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </section>
+
+
+
+
+
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+
+
+
+</body>
+
+</html>
