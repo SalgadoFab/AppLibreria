@@ -55,6 +55,10 @@
     outline: none;
 }
 
+.formControl textarea {
+    padding: 1rem;
+}
+
 .formControl select {
     width: calc(100% - 2rem);
     font-size: 1.1rem;
@@ -120,3 +124,4 @@
 .espacioAbajo {
     padding-bottom: 6rem !important;
 }
+
