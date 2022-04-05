@@ -1,0 +1,18 @@
+.imgPuntosRetiro img {
+    object-fit: contain !important; 
+}
+
+.bordesRedondosAbajo {
+    border-radius: 0 0 1.3rem 1.3rem !important;
+}
+
+.cardInfoPuntos span {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+
+    font-size: 1rem !important;
+}
+

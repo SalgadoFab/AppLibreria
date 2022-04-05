@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
+    <link rel="stylesheet" href="/css/reset.css">
+    <link rel="stylesheet" href="/css/general.css">
+    
+    <link rel="stylesheet" href="/css/registro-direccion.css">
+
+
+    <title>Registro Direccion de Envio</title>
+
+    <body>
+        <section class="sct cabeceraSeccion">
+
+            <div class="col-2">
+                <div class="titulo">
+                    <div class="iconoCabecera">
+                        <i class="fas fa-user-circle"></i>
+                    </div>
+                    <h1>
+                        Direccion de Envio
+                    </h1>
+                </div>
+
+        </section>
+
+        <section class="sct sctFormulario flexContendor">
+            <form>
+                <div class="col-2">
+                    
+                    <div class="formControl flexContendor">
+
+                        <div class="col-2 labelContenedor">
+    
+                            <label for="txt-provincia"> Provincia </label>
+                            <input name="input" type="text" id="txt-provincia">
+                            <div class="iconoInput">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                        </div>
+                        <div class="col-2 labelContenedor">
+
+                            <label for="txt-canton"> Canton </label>
+                            <input name="input" type="text" id="txt-canton">
+                            <div class="iconoInput">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                        </div>
+    
+                    </div>
+                    <div class="formControl flexContendor">
+
+                        <div class="col-2 labelContenedor">
+    
+                            <label for="txt-distrito"> Distrito </label>
+                            <input name="input" type="text" id="txt-distrito">
+                            <div class="iconoInput">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                        </div>
+    
+                    </div>
+
+                    <!--Componente de textArea-->
+                    <div class="formControl">
+
+                        <div class="labelContenedor">
+    
+                            <label for="txt-direccion"> Direccion </label>
+                            <textarea class="height-12" name="input" id="txt-direccion" rows="14"></textarea>
+                            <div class="iconoInput">
+                                <i class="fa-solid fa-location-dot"></i>
+                            </div>
+                        </div>
+    
+                    </div>
+    
+                </div>
+
+                <div class="col-2">
+
+                    <div class="formControl">
+                        <div class="labelUbicacionMapa">
+                            <label for="ubicacionMapa">Dirección en mapa:</label>
+                        </div>
+
+                        <div class="provicionalUbicacionMapa registroDireccionMapa">
+                            <i class="fa-solid fa-map-location"></i>
+                        </div>
+                        <span>Nota - Las ubicaciones por mapa será funcionalidad para la proxima iteración</span>
+
+                    </div>
+
+                    <div class="formControl">
+                        <button id="btnGuardar" class="btnGuardar" style="margin-top: 4rem;" type="button"> Guardar Direccion </button>
+                    </div>
+
+                </div>
+            </form>
+        </section>
+
+        <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+        <script src="/js/validar-formulario.js"></script>
+
+        <script src="/js/registro-direccion.js"></script>
+    </body>
+
+</html>
