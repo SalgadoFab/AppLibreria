@@ -11,8 +11,8 @@
 
     <link rel="stylesheet" href="/css/reset.css">
     <link rel="stylesheet" href="/css/general.css">
-    <link rel="stylesheet" href="/css/subirFotoPerfil.css">
-    <link rel="stylesheet" href="/css/registroUsuarios.css">
+
+    <link rel="stylesheet" href="/css/inicioSesion.css">
 
 
     <title>Login Usuarios - Libreria</title>
@@ -24,7 +24,7 @@
 
     <section class="sct cabeceraSeccion">
 
-        <div class="col-4">
+        <div class="col-40">
             <div class="tituloRegistrarse">
                 <div class="iconoCabecera">
                     <i class="fas fa-user-circle"></i>
@@ -39,10 +39,10 @@
             <div class="indicadorRegistro">
                 <span>Ingrese los datos de inicio de sesión</span>
             </div>
-            <div class="col-4">
+            <div id="mensajeRegistro">
                 <div class="registrarse">
                     <span>¿No tienes cuenta?</span>
-                    <a href="index.html">Registrate</a>
+                    <a href="registroUsuarios.html">Registrate</a>
                 </div>
             </div>
 
@@ -54,57 +54,77 @@
     </section>
 
     <section class="sct sctFormulario flexContendor">
-        <form>
-            <div class="col-60">
+
+        <div class="contenedorInput">
 
 
-                <!--Contenedor de Imput Completo-->
-                <div class="formControl">
+            <!--Contenedor de Imput Completo-->
+            <div class="formControl">
 
-                    <div class="labelContenedor">
+                <div class="labelContenedor">
 
-                        <label for="txt-correo"> Correo Electronico </label>
-                        <input name="input" type="email" id="txt-correo">
-                        <div class="iconoInput">
-                            <i class="fas fa-at"></i>
-                        </div>
+                    <label for="txt-correo"> Correo Electronico </label>
+                    <input name="input" type="email" id="txt-correo">
+                    <div class="iconoInput">
+                        <i class="fas fa-at"></i>
                     </div>
+                </div>
+
+            </div>
+
+            <div class="formControl flexContendor">
+
+                <div class="col-2 labelContenedor">
+
+                    <label for="txt-password"> Contraseña </label>
+
+                    <input name="input" type="password" id="txt-password">
+
+                </div>
+                <div id="divCheck">
+                    <!--hice este div para que no se confunideran los labels del formulario-->
+
+                    <input id="check" class="check" type="checkbox">
+                    <div id="labelCheck" for="check">Mostrar Contraseña</div>
 
                 </div>
 
-                <div class="formControl flexContendor">
-
-                    <div class="col-2 labelContenedor">
-
-                        <label for="txt-password"> Contraseña </label>
-                        <input name="input" type="password" id="txt-password">
-                        <div class="iconoInput">
-                            <i class="far fa-eye"></i>
-                        </div>
-                    </div>
-
-
-                </div>
-                <div class="col-60">
 
 
 
 
+            </div>
 
-                    <div class="formControl">
-                        <button id="btnGuardar" class="btnGuardar" style="margin-top: 1rem;" type="button"> Iniciar Sesión </button>
-                    </div>
-
+            <div>
+                <div class="olvidoContraseña">
+                    <span>¿Olvidó su contraseña?</span>
+                    <a href="registroUsuarios.html">Recuperar contraseña</a>
                 </div>
             </div>
 
 
-        </form>
+            <div class="col-60">
+
+
+
+
+
+                <div class="formControl">
+                    <button id="btnIngresar" class="btnIngresar" style="margin-top: 1rem;" type="button"> Iniciar Sesión </button>
+                </div>
+
+            </div>
+        </div>
+
+
+
     </section>
 
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-    <script src="/js/subirFotoPerfil.js"></script>
-    <script src="/js/registroUsuarios.js"></script>
+    <script src="/js/inicioSesion.js"></script>
+
+    <script src="/js/usuarios-proyecto.js"></script>
+
 </body>
 
 </html>
