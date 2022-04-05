@@ -1,0 +1,33 @@
+.cabeceraSeccion {
+    display: flex;
+    padding-bottom: 5rem;
+}
+
+.titulo {
+    display: flex;
+    align-items: center;
+}
+
+.titulo h1 {
+    font-size: 3rem;
+}
+
+.iconoCabecera {
+    font-size: 4rem;
+    padding-right: 1rem;
+}
+
+.indicadorRegistro {
+    padding-top: 2rem;
+    font-size: 1.3rem;
+}
+
+.sctFormulario form {
+    display: flex;
+    width: 100%;
+}
+
+
+.registroDireccionMapa {
+    padding: 7rem !important;
+}
