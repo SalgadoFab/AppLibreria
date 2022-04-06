@@ -5,86 +5,113 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer"
+    />
+
+    <link rel="stylesheet" href="/css/reset.css">
+    <link rel="stylesheet" href="/css/general.css">
+    <link rel="stylesheet" href="/css/subir-foto.css">
+    <link rel="stylesheet" href="/css/registro-usuarios.css">
+    <link rel="stylesheet" href="/css/tipos-identificacion.css">
+    <link rel="stylesheet" href="/css/modificar-parametro-sistema.css">
+
     <title> Parametros de Sistema </title>
 </head>
 
 <body>
-    <section class="sct sctFormulario flexContendor">
-        <form>
-            <div class="col-60">
-                <div>
-                    <label> Cantidad minima de compras para obtener tarjetas LibroFan</label>
-                    <div>
-                        <div>
-                            <input type="number" name="" placeholder="Cantidad Actual">
-                            <div>
-                                <i class="fa-solid fa-credit-card"></i>
-                            </div>
-                        </div>
+    <section class="sct cabeceraSeccion">
 
-                        <div>
-                            <input type="text" name="" placeholder="Nueva Cantidad">
-                            <button type="submit">Actualizar Cantidad</button>
-                        </div>
-                    </div>
+        <div class="col-2">
+            <div class="tituloRegistrarse">
+                <div class="iconoCabecera">
+                    <i class="fa-solid fa-sitemap"></i>
                 </div>
+                <h1>
+                    Parametro de Sistemas
+                </h1>
+            </div>
 
-                <div>
-                    <label> Precio Adicional por Envios de Libros a dirreciones fisicas</label>
-                    <div>
-                        <div>
-                            <input type="number" name="" placeholder="Precio Actual">
-                            <div>
-                                <i class="fa-solid fa-cart-flatbed"></i>
-                            </div>
-                        </div>
-
-                        <div>
-                            <input type="text" name="" placeholder="Nueva Precio">
-                            <button type="submit">Actualizar Precio</button>
-                        </div>
-                    </div>
-                </div>
-
-                <div>
-                    <label> </label>
-                    <div>
-                        <div>
-                            <input type="number" name="" placeholder="Tarifa Actual">
-                            <div>
-                                <i class="fa-solid fa-credit-card"></i>
-                            </div>
-                        </div>
-
-                        <div>
-                            <input type="text" name="" placeholder="Nueva Cantidad">
-                            <button type="submit">Actualizar Cantidad</button>
-                        </div>
-                    </div>
-                </div>
-
-                <div>
-                    <label> </label>
-                    <div>
-                        <div>
-                            <input type="number" name="" placeholder="Descuento Actual">
-                            <div>
-                                <i class="fa-solid fa-credit-card"></i>
-                            </div>
-                        </div>
-
-                        <div>
-                            <input type="text" name="" placeholder="Nueva Cantidad">
-                            <button type="submit">Actualizar Cantidad</button>
-                        </div>
-                    </div>
-                </div>
+            <div class="indicadorRegistro">
 
             </div>
 
+    </section>
+
+    <section class="sct sctFormulario flexContendor">
+        <form>
+            <div class="col-60">
+                <div class="formControl flexContendor">
+                    <div class="bloques">
+                        <label> Cantidad minima de compras para obtener tarjetas LibroFan</label>
+                        <div class="flexContendor">
+                            <input id="input-css" type="number" name="input" placeholder="Cantidad Actual">
+                            <div class="icono">
+                                <i class="fa-solid fa-bars fa-2x fa-hand-holding-dollar"></i>
+                            </div>
+                        </div>
+
+                        <div class="flexContendor">
+                            <input id="input-css" type="text" name="input" placeholder="Nueva Cantidad">
+                            <button id="btnGuardar" class="btnGuardar" type="button"> Actualizar Cantidad </button>
+                        </div>
+                    </div>
+
+                    <div class="bloques">
+                        <label> Precio Adicional por Envios de Libros a dirreciones fisicas</label>
+                        <div class="flexContendor">
+                            <input id="input-css" type="number" name="input" placeholder="Precio Actual">
+                            <div class="icono">
+                                <i class="fa-solid fa-bars fa-2x fa-cart-flatbed"></i>
+                            </div>
+                        </div>
+
+                        <div class="flexContendor">
+                            <input id="input-css" type="text" name="input" placeholder="Nueva Precio">
+                            <button id="btnGuardar" class="btnGuardar" type="button"> Actualizar Precio </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="formControl flexContendor">
+                    <div class="bloques">
+                        <label> Tarifa de Impuesto aplicada a cada Libro </label>
+                        <div class="flexContendor">
+                            <input id="input-css" type="number" name="input" placeholder="Tarifa Actual">
+                            <div class="icono">
+                                <i class="fa-solid fa-bars fa-2x fa-coins"></i>
+                            </div>
+                        </div>
+
+                        <div class="flexContendor">
+                            <input id="input-css" type="text" name="input" placeholder="Nueva Tarifa">
+                            <button id="btnGuardar" class="btnGuardar" type="button"> Actualizar Impuesto </button>
+                        </div>
+                    </div>
+
+                    <div class="bloques">
+                        <label> Tarifa de descuentos para usuarios LibroFan</label>
+                        <div class="flexContendor">
+                            <input id="input-css" type="number" name="input" placeholder="Descuento Actual">
+                            <div class="icono">
+                                <i class="fa-solid fa-bars fa-2x fa-credit-card"></i>
+                            </div>
+                        </div>
+
+                        <div class="flexContendor">
+                            <input id="input-css" type="text" name="input" placeholder="Nueva Descuento">
+                            <button id="btnGuardar" class="btnGuardar" type="button"> Actualizar Descuento </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
             <div class="col-40">
-
+                <div class="imgs">
+                    <span class="drop-zone__prompt">
+                        <img src="/media/img/portadaLibros/cuentos_completos_EAP.jpg" alt="Portada Libro">
+                    </span>
+                </div>
             </div>
 
         </form>

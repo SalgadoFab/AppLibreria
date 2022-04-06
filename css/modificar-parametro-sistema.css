@@ -1,0 +1,36 @@
+.bloques {
+    background-color: rgb(255, 255, 255);
+    margin: 1rem;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.bloques label input {
+    margin: 1rem;
+}
+
+.col-60 {
+    width: 75%;
+}
+
+.col-40 {
+    width: 15%;
+}
+
+.formControl input {
+    margin: 1rem;
+}
+
+#btnGuardar {
+    margin: 1rem;
+}
+
+.imgs {
+    width: 100%;
+}
+
+.icono {
+    width: 10%;
+    text-align: center;
+    margin: 1rem;
+}
