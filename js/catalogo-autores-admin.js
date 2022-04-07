@@ -15,7 +15,7 @@ let totalPaginas = obtenerNumeroPaginas(listaAutores)
 //Funcion para cambiar entre paginas por cada item de paginacion
 const cambiarPagina = (pagina) => {
     //Obtenemos el contedor de los items
-    let contenedorItems = document.getElementById("catalogoAutoresAdminCTN")
+    let contenedorItems = document.getElementById("CatalogoAutoresAdminCTN")
 
     // Revisamos que la página esté dentro de los límites
     if (pagina < 1) pagina = 1
