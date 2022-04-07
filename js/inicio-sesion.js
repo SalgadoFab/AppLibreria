@@ -25,7 +25,7 @@ const validarInicioSesion = () => {
             'title': 'Bienvenido',
             'text': 'Ha iniciado sesion'
         }).then(() => {
-            window.location.href = '#';
+            window.location.href = '/html/catalogo-libros-vista-cliente.html';
         });
     } else {
         Swal.fire({
