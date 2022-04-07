@@ -1,6 +1,7 @@
 .cabeceraSeccion {
     display: flex;
     padding: 2rem 14em;
+    margin-top: 5rem;
 }
 
 .tituloRegistrarse {

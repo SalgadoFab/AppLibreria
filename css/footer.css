@@ -33,3 +33,16 @@
     border-radius: 50px;
     padding: 1rem 1.2rem;
 }
+
+.socialMedia ul{
+    display: flex;
+    justify-content: center;
+}
+.socialMedia li {
+    margin: 0 0.5rem;
+    font-size: 1.5rem;
+    box-shadow: -10px 5px 8px 0px rgb(0 0 0 / 10%);
+    border-radius: 50px;
+    padding: 1rem 1.2rem;
+}
+

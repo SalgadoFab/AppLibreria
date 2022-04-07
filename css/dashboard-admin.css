@@ -176,3 +176,16 @@
     margin-left: 0.5rem;
     margin-bottom: 0.8rem;
 }
+
+
+.llenarEspacioVacioDashboard {
+    padding: 20rem 0;
+}
+footer .ctnFlexFooter {
+    margin-left: 20rem !important;
+}
+
+
+.sct {
+    padding: 2rem 4em !important;
+}
