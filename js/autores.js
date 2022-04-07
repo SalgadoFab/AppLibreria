@@ -15,7 +15,7 @@ let listaAutores = [{
     'nacionalidad': 'Salvadoreña',
     'bibliografia': 'Nació en San Salvador, el 16 de febrero de 1966. Hija de Ricardo Castellanos y de Teresa Araujo de Castellanos. A la edad de trece años su familia se traslada a la ciudad de Santiago, Chile, donde cursa sus estudios de bachillerato. Estudió parvularia en la Universidad Católica de Chile, donde vivió durante su juventud. Regresa a El Salvador y estudia Ciencias de la Educación por la Universidad Evangélica de El Salvador, graduándose en 1991',
     'libros': ['La historia sin fin de Alissa', 'El monstruo en mi closet', 'El abrazo infinito', 'El semáforo de la ciudad de cristales'],
-    'imagenAutor': 'media/img/imgAutores/guadalupe_castellanos.jpg',
+    'imagenAutor': '/media/img/imgAutores/guadalupe_castellanos.jpg',
     'nobel': false,
     'annoNobel': ''
 }, {
@@ -81,8 +81,8 @@ let listaAutores = [{
 }, {
     'nombre': 'Kerri Maniscalco',
     'nacimiento': '1983',
-    'defuncion': 'Estadounidense',
-    'nacionalidad': '',
+    'defuncion': '',
+    'nacionalidad': 'Estadounidense',
     'bibliografia': 'Nacida en Newburgh, Nueva York, Kerri Maniscalco es una autora americana conocida por su saga A la caza de Jack el Destripador, una serie de thrillers góticos.   Maniscalco creció en Nueva York, ciudad donde estudió Bellas Artes antes de transferirse a Diseño de Comunicación en el Fashion Institute of Technology de Manhattan. Durante sus estudios, realizó cursos acerca de justicia criminal y ciencia, considerando formarse como psicóloga forense, opción que desechó por labrarse una carrera como escritora.    Su pasión por los libros es debida, en gran parte, al amor que le inculcó su abuela por la lectura, enseñándole la importancia de poder escapar de la realidad a través de ella.   Su primera obra, A la caza de Jack el Destripador, fue publicada en 2016, dando comienzo así a una serie bajo el mismo nombre.',
     'libros': ['El reino de los malditos', 'A la caza del diablo', 'A la caza de Houdini', 'A la caza del principe Drácula'],
     'imagenAutor': '/media/img/imgAutores/kerri_maniscalco.webp',
@@ -95,7 +95,7 @@ let listaAutores = [{
     'nacionalidad': 'Española',
     'bibliografia': 'Jara Santamaría, nació el 10 de enero de 1990, en Zaragoza, España. Pasó su infancia en Pamplona. Estudió Periodismo y Comunicación Audiovisual en la Universidad Carlos III de Madrid. Es periodista y trabaja en el ámbito de la comunicación. Colabora en la revista digital Culturamas y en el blog de literatura juvenil de la librería Kirikú y la Bruja, además de participar en actividades de animación a la lectura.    En 2007 obtuvo el II Premio Jordi Sierra i Fabra para Jóvenes Escritores con la novela Te comerás el mundo, en 2016 la novela Londres después de ti, ganó el Premio Literario ”la Caixa”',
     'libros': ['Los dioses del norte,La leyenda del bosque', 'Te comeras el mundo', 'Londres despues de tí'],
-    'imagenAutor': '',
+    'imagenAutor': '/media/img/imgAutores/jara_santamaria.jpg',
     'nobel': false,
     'annoNobel': ''
 }, {
@@ -172,7 +172,7 @@ let listaAutores = [{
     'nombre': 'William Shakespeare',
     'nacimiento': '',
     'defuncion': '',
-    'nacionalidad': '',
+    'nacionalidad': 'Británico',
     'bibliografia': 'Hijo de una conocida familia de Stratford-upon-Avon, William Shakespeare nació en abril de 1564. No se conoce la fecha exacta de su nacimiento, aunque se cree que fue alrededor del día 26 de ese mes gracias a que se conserva su acta bautismal.   Shakespeare fue el tercero de los ochos hijos del matrimonio formado por John Shakespeare, político local y comerciante, y de Mary Arden. A pesar de la situación privilegiada que tenían, poco después del nacimiento del escritor todo cambió. Su familia fue perseguida, se cree, por profesar la fe católica.    Poco se sabe de la infancia y de la adolescencia del famoso escritor inglés. Todo apunta a que cursó los estudios primarios en una escuela local, la Stratford Grammar School. Sin embargo, no hay ningún documento que acredite que Shakespeare se formara allí ni cuántos años estudió.   En noviembre de 1582, William Shakespeare, de 18 años, contrajo matrimonio con Anne Hathaway, de 26. Con ella, el dramaturgo tuvo tres hijos: Susanna y los mellizos Judith y Hamnet. Este último murió a los once años por causas que se desconocen.    Los bautizos de sus tres hijos fueron los últimos datos que se tuvieron de Shakespeare durante unos diez años. Esto es lo que se conoce como “los años perdidos”.  Alrededor de 1590, William Shakespeare se trasladó a Londres y dejó a su familia en Stratford. Hay quien afirma que el escritor británico huyó para escapar de una condena por caza furtiva de ciervos. Sin embargo, no se tiene constancia de que fuera cierto.    Los comienzos en la capital inglesa fueron humildes. Muchos creen que trabajó como maestro y como aprendiz de carnicero antes de convertirse en el reconocido escritor que fue.   Hacia 1592, comenzó su andadura como dramaturgo y actor, trabajando en la compañía de teatros Chamberlains Men, de la que fue copropietario más tarde.   Tras la muerte de la reina Isabel I de Inglaterra en 1603, la compañía consiguió una patente real del rey Jacobo I de Inglaterra y VI de Escocia. A partir de ese momento, pasó a llamarse Kings Men.',
     'libros': ['El sueño de una noche de verano', 'Romeo y Julieta', 'Hamlet', 'Mcbeth'],
     'imagenAutor': '/media/img/imgAutores/william_shakespeare.jpg',
@@ -276,26 +276,6 @@ let listaAutores = [{
     'bibliografia': 'Fue el mayor de los cinco hijos que tuvo el matrimonio formado por Pierre Verne, que procedía de una familia vinculada a la jurisprudencia (su abuelo fue consejero notario de Luis XV y presidente del Colegio de Abogados de Nantes), y de Sophie Allotte de la Fuÿe, perteneciente a una familia de militares.   En 1847 comenzó sus estudios de derecho en París y se recibió de abogado en 1849, razón por la cual su padre le permite permanecer en París. Mientras tanto seguiría escribiendo teatro. A pesar de los deseos de su padre que quiso que se dedicara a su carrera de abogacía y ante la amenaza de quitarle el financiamiento, Verne sigue sin estar interesado en seguir esa la labor. Y ya sin el financiamiento de su padre, gasta todos sus ahorros en libros y se pasa largas horas en las bibliotecas de París queriendo saberlo todo: estudiando geología, ingeniería y astronomía, conocimientos con los que más adelante documentaría sus fantásticas aventuras y predijera con asombrosa exactitud muchos de los logros científicos del siglo XX. Hablaría de cohetes espaciales, submarinos, helicópteros, aire acondicionado, misiles dirigidos e imágenes en movimiento, mucho antes de que aparecieran estos inventos. Recién en 1869 publicaría su primera novela "Cinco semanas en Globo", un éxito fulminante, gracias al cual firmó un espléndido contrato con el editor P. J. Hetzel, que le garantizaría la cantidad anual de 20.000 francos durante los siguientes veinte años, a cambio de lo cual, se obligaría a escribir dos novelas de un nuevo estilo cada año. Luego le siguieron otras novelas a la gran producción del autor: "Viaje al centro de la tierra"(1864), "De la tierra a la luna"(1865), y "20,000 Leguas de viaje submarino"(1870). La última novela antes de su muerte fue "La invasión del mar".   Célebre por sus relatos de aventuras fantásticas, narradas siempre con un tono de verosimilitud científica, en las que describe, con una visión casi profética, multitud de logros científicos, inventos y descubrimientos posteriores a su época. Fue considerado el precursor de un género literario nuevo, la ciencia ficción.   Falleció en 1905 en la ciudad de Amines.',
     'libros': ['De la tierra a la luna', 'El faro del fin del mundo', 'las indias negras', 'Una ciudad flotante', 'Cinco semanas en globo', 'Veite mil leguas de viaje submarino', 'Viaje al centro de la tierra'],
     'imagenAutor': '/media/img/imgAutores/julio_verne.jpg',
-    'nobel': false,
-    'annoNobel': ''
-}, {
-    'nombre': '',
-    'nacimiento': '',
-    'defuncion': '',
-    'nacionalidad': '',
-    'bibliografia': '',
-    'libros': ['', ''],
-    'imagenAutor': '',
-    'nobel': false,
-    'annoNobel': ''
-}, {
-    'nombre': '',
-    'nacimiento': '',
-    'defuncion': '',
-    'nacionalidad': '',
-    'bibliografia': '',
-    'libros': ['', ''],
-    'imagenAutor': '',
     'nobel': false,
     'annoNobel': ''
 }]
