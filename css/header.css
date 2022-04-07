@@ -1,0 +1,164 @@
+
+
+.small-caps {
+	text-transform: uppercase;
+	letter-spacing: 0.15rem;
+	font-size: 0.7rem;
+}
+
+.bolder {
+	font-weight: bolder;
+}
+
+.lighter {
+	font-weight: lighter;
+}
+
+.text-center {
+	text-align: center;
+}
+
+.site-logo {
+	font-size: 1rem;
+	font-weight: bolder;
+	text-transform: uppercase;
+	letter-spacing: 0.8rem;
+	margin: 0 1rem;
+	width: 50%;
+}
+
+/* --- Elements --- */
+
+
+.container {
+	max-width: 100%; /* max 'width' of contents of site */
+	margin: 0 auto; /* centered horizontally  */
+}
+
+.nav-bar {
+	position: fixed; /* lock to top */
+	top: 0;
+	width: 100%; /* full width */
+	background-color: white;
+    height: 5rem;
+    box-shadow: 0 0.46875rem 2.1875rem rgb(4 9 20 / 3%), 0 0.9375rem 1.40625rem rgb(4 9 20 / 3%), 0 0.25rem 0.53125rem rgb(4 9 20 / 5%), 0 0.125rem 0.1875rem rgb(4 9 20 / 3%);
+}
+
+.nav-bar .container {
+	display: flex;
+	align-items: center; /* vertically center */
+	height: 100%;
+}
+
+/* Hide checkbox that controls Mobile Nav Button*/
+#drop-down-cbox {
+	display: none;
+}
+
+/* Mobile Nav Button */
+#drop-down-cbox + label {
+	position: relative;
+	display: none;
+	width: 60px;
+	height: 60px;
+	overflow: hidden;
+	background-color: transparent;
+	transition: all 10ms ease-in-out;
+}
+
+/* Mobile Nav Button Bars */
+#drop-down-cbox + label span {
+	position: absolute;
+	display: block;
+	background-color: #666;
+	width: 34px;
+	height: 4px;
+	border-radius: 2px;
+	left: 50%;
+	transform: translate(-50%, -50%); /* centering trick */
+	transition: all 300ms ease-in-out;
+}
+
+/* Mobile Nav Button Bars Invididually */
+#drop-down-cbox + label span:nth-child(1) {
+	top: 35%; /* evenly spaced */
+}
+#drop-down-cbox + label span:nth-child(2) {
+	top: 50%; /* evenly spaced */
+}
+#drop-down-cbox + label span:nth-child(3) {
+	top: 65%; /* evenly spaced */
+}
+
+/* Mobile Nav Button Styling for Checked */
+#drop-down-cbox:checked + label {
+	background-color: #666;
+}
+
+#drop-down-cbox:checked + label span {
+	background-color: white;
+}
+
+/* Transform the bars into an 'X' */
+#drop-down-cbox:checked + label span:nth-child(1) {
+	top: 50%;
+	transform: translate(-50%, -50%) rotate(45deg); /* center, then rotate */
+}
+#drop-down-cbox:checked + label span:nth-child(2) {
+	left: -150%; /* move center bar out of the picture */
+}
+#drop-down-cbox:checked + label span:nth-child(3) {
+	top: 50%;
+	transform: translate(-50%, -50%) rotate(-45deg); /* center, then rotate */
+}
+
+/* Main Nav Desktop */
+.main-nav {
+	flex-grow: 1; /* fill remaining space */
+	display: flex;
+	justify-content: space-around; /* evenly space items */
+	align-items: center; /* center vertically */
+}
+
+.main-nav li {
+	display: block;
+	width: 100%;
+	height: 60px;
+	line-height: 60px; /* vertically center text, matches height */
+	text-align: center;
+}
+
+.main-nav li a,
+.main-nav li span {
+	display: block;
+	width: 100%;
+	height: 100%;
+}
+
+.main-nav li a:hover,
+.main-nav li span:hover {
+	border-bottom: 4px solid #666;
+}
+
+.main-nav li > ul {
+	max-height: 0px; /* max-height instead of height, height can't transition to auto */
+	transition: all 500ms ease-in-out;
+	overflow: hidden; /* make it so nav doesn't show beyond the 0px max-height */
+}
+
+.main-nav li:hover > ul {
+	max-height: 180px; /* height x how many links */
+	height: auto;
+}
+
+.main-nav li > ul li a,
+.main-nav li > ul li span {
+	background-color: white;
+}
+
+.main-nav li > ul li a:hover,
+.main-nav li > ul li span:hover {
+	background-color: #666;
+	color: white;
+	border-bottom: none;
+}
