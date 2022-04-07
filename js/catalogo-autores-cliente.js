@@ -33,7 +33,7 @@ const cambiarPagina = (pagina) => {
         <div class="cardItem">
         <div class="ctnImagenItem">
             <div class="cardImagen">
-                <img src="/media/img/imgAutores/isaac_asimov.jpg" alt="Portada Libro">
+                <img src="${listaAutores[i].imagenAutor}" alt="Portada Libro">
                 <a class="btnEliminarItem" onclick="">
                     <i class="fa-regular fa-heart"></i>
                 </a>
@@ -49,7 +49,7 @@ const cambiarPagina = (pagina) => {
                     <div class="nombreAutorItem">
                         <span>
                             <br>
-                            Isaac Asimov
+                            ${listaAutores[i].nombre}
                         </span>
                     </div>
 
@@ -94,12 +94,12 @@ const cambiarPagina = (pagina) => {
             <div class="col-3">
                 <div class="nacionalidadAutor espacioInfoItem">
                     <span>
-                        Nacionalidad
+                        Nacionalidad:
                     </span>
                 </div>
                 <div class="nacionalidadAutorItem">
                     <span>
-                        Estadounidense
+                        ${listaAutores[i].nacionalidad}
                     </span>
                 </div>
             </div>
