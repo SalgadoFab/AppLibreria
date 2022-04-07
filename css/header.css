@@ -168,7 +168,15 @@ section.cabeceraSeccion {
     margin-top: 6rem;
 }
 
-
+ul.main-nav  li ul li {
+	height: 3rem;
+    line-height: 1rem;
+}
+ul.main-nav  li ul li a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 
 /* Tablet and Mobile View */
 @media (max-width: 768px) {

@@ -37,15 +37,10 @@
                 <h1 class="site-logo">Bazar de las Sorpresas</h1>
         
                 <ul class="main-nav small-caps">
-                    <li><a href="#">Incio</a></li>
-                    <li><a href="#">Nosotros</a></li>
-                    <li><span>Tienda</span>
-                        <ul>
-                            <li><a href="#">Catalgo de Libros</a></li>
-                            <li><a href="">Catalogo de Autores</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="#">Contacto</a></li>
+                    <li><a href="/html/index.html">Incio</a></li>
+                    <li><a href="/html/index.html#recomendaciones">Recomendaciones</a></li>
+                    <li><a class="btnEnlaceTienda" href="">Tienda</a></li>
+                    <li><a href="/html/index.html#contacto">Contacto</a></li>
                 </ul>
                 
             </div>
@@ -353,7 +348,7 @@
 
     </section>
 
-    <section class="sct"> 
+    <section class="sct" id="recomendaciones"> 
 
         <div class="recomendaciones librosInicio">
             <h3>
@@ -641,7 +636,7 @@
             </h2>
             <div class="btnIrTienda">
                 <button>
-                    <a href="/html/inicio-sesion.html">Ir a Tienda</a> 
+                    <a class="btnEnlaceTienda" href="">Ir a Tienda</a> 
                 </button>
             </div>
         </div>
@@ -654,7 +649,7 @@
         class="sct sctSombra sctContacto"
         id="contacto"
     >
-        <div class="ctnContacto ctnFlex">
+        <div class="ctnContacto ctnFlex" id="contacto">
 
             <div class="col-2 dataContacto">
                 <div class="tituloContacto">
@@ -741,7 +736,7 @@
         </div>  
     </footer>
 
-
+    <script src="/js/validar-sesion.js"></script>
     <script src="/js/index.js"></script>
 
 </body>
