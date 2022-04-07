@@ -87,18 +87,37 @@
     padding-bottom: 1.5rem;
 }
 
-.paginaActiva a {
-    color: red !important;
+
+
+.paginacionGeneral {
+    text-align: center;
 }
 
+ul#ctnPaginacion li a {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: gray 0.15rem solid;
+}
+.paginaActiva a {
+    background: #585656;
+    color: #fff;
+}
 ul#ctnPaginacion,
 ul#ctnPaginacion li {
-    display: inline-block;
+    display: inline-flex;
     padding: 0;
 }
 
 ul#ctnPaginacion>li {
     margin: 0px 3px;
+    width: 2rem;
+    height: 1.8rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 #plumavacia {

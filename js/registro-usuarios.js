@@ -3,6 +3,7 @@ const txtPassword = document.getElementById('txt-password');
 const txtPasswordConfirmacion = document.getElementById('txt-password-confirmacion');
 const btnRegistrar = document.getElementById('btnGuardar');
 
+//Variable que contiene si el password tiene errores de requerimientos
 let errorRequerimientoPassword = false;
 
 //Funcion de Validacion de requerimientos de contraseña
