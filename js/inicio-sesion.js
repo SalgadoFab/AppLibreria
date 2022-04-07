@@ -25,7 +25,7 @@ const validarInicioSesion = () => {
             'title': 'Bienvenido',
             'text': 'Ha iniciado sesion'
         }).then(() => {
-            window.location.href = 'dashboard-usuario.html';
+            window.location.href = '#';
         });
     } else {
         Swal.fire({

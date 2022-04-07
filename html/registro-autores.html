@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer"
+    />
+
+    <link rel="stylesheet" href="/css/reset.css">
+    <link rel="stylesheet" href="/css/general.css">
+    <link rel="stylesheet" href="/css/subir-foto.css">
+    <link rel="stylesheet" href="/css/registro-autores.css">
+
+
+    <title>Registro de Autores - Libreria</title>
+
+</head>
+
+<body>
+
+    <section class="sct cabeceraSeccion">
+
+        <div class="col-2">
+            <div class="tituloRegistrarse">
+
+                <h1>
+                    Registro de Autores
+                </h1>
+            </div>
+
+            <div class="indicadorRegistro">
+                <span>Complete los campos requeridos</span>
+            </div>
+
+        </div>
+
+
+    </section>
+
+    <section class="sct sctFormulario flexContendor">
+        <form>
+            <div class="col-60">
+                <!--Contenedor de 2 Columnas-->
+                <div class="formControl flexContendor">
+
+
+                    <div class="labelNombreCompleto"></div>
+                    <label for="txt-NombreCompleto"> Nombre completo </label>
+                    <input name="input" type="text" id="txt-nombreCompleto">
+
+
+
+                </div>
+                <div class="formControl flexContendor">
+
+                    <div class="col-2 labelContenedor">
+
+                        <label for="txt-nacionalidad"> Nacionalidad </label>
+                        <input name="input" type="text" id="txt-nacionalidad">
+
+                    </div>
+                    <div class="col-2 labelContenedor">
+
+                        <label for="txt-añoPremioNobel"> Año del prermio Nobel </label>
+                        <input name="input" type="text" id="txt-añoPremioNobel">
+
+                    </div>
+
+                </div>
+
+                <div class="formControl">
+
+                    <div class="labelContenedor">
+
+                        <label for="txt-biografia"> Biografía </label>
+                        <textarea class="height-12" name="input" id="txt-biografia" rows="14"></textarea>
+
+                    </div>
+
+                </div>
+
+                <div class="formControl flexContendor">
+
+                    <div class="col-2 labelContenedor">
+                        <!--lista de obras acá-->
+
+
+                        <div class="labelContenedor">
+
+                            <label for="txt-listaObras"> Listado de obras </label>
+                            <textarea class="height-12" name="input" id="txt-listaObras" rows="14"></textarea>
+
+                        </div>
+
+
+
+                    </div>
+                    <div class="col-2 labelDiv">
+
+                        <label for="txt-fechaNacimiento"> Año de nacimiento </label>
+                        <input name="input" type="text" id="txt-añoNacimiento">
+
+
+
+                        <label for="txt-fechaDefuncion"> Año de defunción </label>
+                        <input name="input" type="text" id="txt-añoDefuncion">
+                        <div class="iconoInput">
+
+
+
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            </div>
+
+            <div class="col-40">
+
+                <div class="formControl ctn-subirFoto">
+                    <div class="labelSubiFoto">
+                        <label for="foto-perfil-autor">Arrastre la imagen del autor</label>
+                    </div>
+                    <div class="drop-zone">
+                        <span class="drop-zone__prompt"><i class="far fa-image"></i></span>
+                        <input name="input" type="file" id="foto-perfil-autor" class="drop-zone__input">
+                    </div>
+
+
+
+                    <div class="formControl">
+                        <button id="btnGuardar" class="btnGuardar" style="margin-top: 10rem;" type="button"> Guardar
+                        </button>
+                    </div>
+
+                </div>
+        </form>
+    </section>
+
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="/js/subir-foto.js"></script>
+    <script src="/js/validar-formulario.js"></script>
+    <script src="/js/registro-autores.js"></script>
+
+</body>
+
+</html>
