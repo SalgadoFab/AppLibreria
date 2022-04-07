@@ -33,7 +33,7 @@ const cambiarPagina = (pagina) => {
         <div class="cardItem">
             <div class="ctnImagenItem">
                 <div class="cardImagen">
-                    <img src="/media/img/portadaLibros/cuentos_completos_EAP.jpg" alt="Portada Libro">
+                    <img src="${listaSocios[i].imgSocio}" alt="Portada Libro">
                     <a class="btnEliminarItem" onclick="">
                         <i class="fa-solid fa-trash-can"></i>
                     </a>
