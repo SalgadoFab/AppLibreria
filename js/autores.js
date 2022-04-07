@@ -15,7 +15,7 @@ let listaAutores = [{
     'nacionalidad': 'Salvadoreña',
     'bibliografia': 'Nació en San Salvador, el 16 de febrero de 1966. Hija de Ricardo Castellanos y de Teresa Araujo de Castellanos. A la edad de trece años su familia se traslada a la ciudad de Santiago, Chile, donde cursa sus estudios de bachillerato. Estudió parvularia en la Universidad Católica de Chile, donde vivió durante su juventud. Regresa a El Salvador y estudia Ciencias de la Educación por la Universidad Evangélica de El Salvador, graduándose en 1991',
     'libros': ['La historia sin fin de Alissa', 'El monstruo en mi closet', 'El abrazo infinito', 'El semáforo de la ciudad de cristales'],
-    'imagenAutor': 'media/img/imgAutores/guadalupe_castellanos.jpg',
+    'imagenAutor': '/media/img/imgAutores/guadalupe_castellanos.jpg',
     'nobel': false,
     'annoNobel': ''
 }, {
