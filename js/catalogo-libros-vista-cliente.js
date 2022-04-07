@@ -33,7 +33,7 @@ const cambiarPagina = (pagina) => {
         <div class="cardItem">
             <div class="ctnImagenItem">
                 <div class="cardImagen">
-                    <img src="/media/img/portadaLibros/alicia_en_el_pais_de_las_maravillas.jpg" alt="Portada Libro">
+                    <img src="${lista_libros[i].imagenLibro}" alt="Portada Libro">
                     <a class="btnFavorito" onclick="">
                         <i class="fa-solid fa-heart"></i>
                     </a>
@@ -44,7 +44,7 @@ const cambiarPagina = (pagina) => {
                 <div class="col-1">
                     <div class="nombreLibro espacioInfoItem">
                         <span>
-                            Nombre de Libro: Alicia en el País de las Maravillas
+                            Nombre de Libro: ${lista_libros[i].titulo}
                         </span>
                     </div>
 
@@ -53,7 +53,7 @@ const cambiarPagina = (pagina) => {
                 <div class="col-1">
                     <div class="nombreLibro espacioInfoItem">
                         <span>
-                            Género: Fantasía
+                            Género: ${lista_libros[i].genero}
                         </span>
                     </div>
 
@@ -62,7 +62,7 @@ const cambiarPagina = (pagina) => {
                 <div class="col-1">
                     <div class="nombreLibro espacioInfoItem">
                         <span>
-                            Autor: Lewis Carroll
+                            Autor: ${lista_libros[i].autor}
                         </span>
                     </div>
 
@@ -70,7 +70,7 @@ const cambiarPagina = (pagina) => {
                 <div class="col-3">
                     <div class="nombreLibro espacioInfoItem">
                         <span>
-                            ₡25, 000
+                        ${lista_libros[i].precio}
                         </span>
                     </div>
 
@@ -102,7 +102,7 @@ const cambiarPagina = (pagina) => {
                             <i class="fa-solid fa-feather-pointed"></i>
                             <i class="fa-solid fa-feather-pointed"></i>
                             <i class="fa-solid fa-feather-pointed"></i>
-                            <i class="fa-solid fa-feather-pointed" id="plumavacia"></i>
+                            <i class="fa-solid fa-feather-pointed"></i>
                         </span>
                     </div>
 
