@@ -1,6 +1,6 @@
 const btnRegistrar = document.getElementById('btnGuardar');
 
-const validarRegistroPunto = () => {
+const validarRegistroAutor = () => {
 
     let hayError = validarFormulario();
 
@@ -9,7 +9,7 @@ const validarRegistroPunto = () => {
     if (hayError == true) {
         Swal.fire({
             "icon": "warning",
-            "title": "El punto de retiro no se puede registrar",
+            "title": "El autor no se puede registrar",
             "text": "Compruebe que todos los campos estan correctamente llenados"
         });
 
@@ -17,10 +17,10 @@ const validarRegistroPunto = () => {
         Swal.fire({
             "icon": "success",
             "title": "Éxito",
-            "text": "Punto de retiro registrado con exito"
+            "text": "Autor registrado con exito"
         });
     }
 
 }
 
-btnRegistrar.addEventListener('click', validarRegistroPunto);
+btnRegistrar.addEventListener('click', validarRegistroAutor);
