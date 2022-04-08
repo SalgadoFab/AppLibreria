@@ -3,13 +3,13 @@
 
 
 /* Capturar las variables*/
-var header = document.querySelectorAll(".menuItem"),
+let header = document.querySelectorAll(".menuItem"),
     item = document.querySelectorAll(".item"),
     hoverPanelTl = [],
     openedPanel = {};
     
 Array.prototype.forEach.call(header, function (el, i) {
-    var arrow = el.querySelector(".arrow"),
+    let arrow = el.querySelector(".arrow"),
         spacer = el.querySelector(".hoverMenuItem"),
         panel = el.parentNode,
         content = panel.querySelector(".itemMenuContenido");
@@ -56,7 +56,7 @@ Array.prototype.forEach.call(header, function (el, i) {
             /* Cerramos el ultimo panel abierto para no saturar el contenido visual */
             if (openedPanel.el != undefined) {
                 console.log(openedPanel);
-                var openArrow = openedPanel.el.querySelector(".arrow"),
+                let openArrow = openedPanel.el.querySelector(".arrow"),
                     openPanel = openedPanel.el.parentNode,
                     openContent = openPanel.querySelector(".itemMenuContenido");
                     

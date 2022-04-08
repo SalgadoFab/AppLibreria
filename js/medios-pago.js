@@ -1,7 +1,6 @@
 const btnRegistrar = document.getElementById('btnGuardar');
 
 
-
 //Creamos las variables para la validacion, los inputs y los requerimientos de cada campo
 let ccNumeroInput = document.querySelector('#txt-numero-tarjeta'),
     ccNumeroPatron = /^\d{0,16}$/g,
@@ -20,7 +19,7 @@ let ccNumeroInput = document.querySelector('#txt-numero-tarjeta'),
 		
 //Funcion de mascara para asignar el valor, limite y separador de cada input
 let mascara = (valor, limite, separador) => {
-    var output = [];
+    let output = [];
     for (let i = 0; i < valor.length; i++) {
         //Determinamos el espacio entre cada separador
         if ( i !== 0 && i % limite === 0) {
