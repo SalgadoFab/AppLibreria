@@ -1,0 +1,23 @@
+@media only screen and (max-width: 766px) {
+
+    .main-nav {
+        align-items: center;
+        font-size: 1.5rem;
+        top: 5rem;
+        height: calc(100vh - 3rem);
+    }
+
+    .itemAnuncio img {
+        height: 50vh;
+    }
+    
+    .sct {
+        padding: 2rem 3em;
+        margin: auto;
+    }
+    
+    .sctIrTienda, 
+    .sctContacto {
+        margin: 6rem 4rem;
+    }
+}

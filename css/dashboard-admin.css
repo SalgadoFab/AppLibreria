@@ -115,6 +115,10 @@
     font-weight: 500;
     border-bottom: 0.01rem solid rgba(0, 0, 0, 0.06);
 }
+.item a {
+    color: #000 !important;
+}
+
 .item:hover {
     background-color: rgba(0, 0, 0, 0.06);
 }
@@ -141,6 +145,7 @@
 /*Contenido del AdminDashboard*/
 .mainDashboardAdmin {
     margin: 4rem 0 1rem 20rem;
+    min-height: 80vh;
 }
 
 .mainDashboardAdmin:after {

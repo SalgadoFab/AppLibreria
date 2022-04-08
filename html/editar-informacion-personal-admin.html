@@ -8,17 +8,17 @@
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer"
     />
-
     <link rel="stylesheet" href="/css/reset.css">
     <link rel="stylesheet" href="/css/general.css">
+    
     <link rel="stylesheet" href="/css/subir-foto.css">
     <link rel="stylesheet" href="/css/registro-usuarios.css">
+    <link rel="stylesheet" href="/css/editar-informacion.css">
 
-    <link rel="stylesheet" href="/css/footer.css">
     <link rel="stylesheet" href="/css/dashboard-admin.css">
+    <link rel="stylesheet" href="/css/footer.css">
 
-    <title>Registro de Libros - Librería</title>
-
+    <title>Editar Informacion</title>
 </head>
 
 <body>
@@ -192,189 +192,241 @@
             <div class="col-2">
                 <div class="tituloRegistrarse">
                     <div class="iconoCabecera">
-                        <i class="fa-solid fa-address-book"></i>
+                        <i class="fas fa-user-circle"></i>
                     </div>
-                    <h1> Registrar Libros </h1>
+                    <h1>
+                        Actualizar Informacion Personal
+                    </h1>
                 </div>
             </div>
-
         </section>
-
+    
         <section class="sct sctFormulario flexContendor">
             <form>
                 <div class="col-60">
-                    <div class="formControl">
-
-                        <div class="labelContenedor">
-
-                            <label for="txt-nombre-libro"> Nombre de Libro </label>
-                            <input name="input" type="text" id="txt-nombre-libro">
-
-                            <div class="iconoInput">
-                                <i class="fa-solid fa-book"></i>
-                            </div>
-                        </div>
-
-                    </div>
-
-                    <div class="formControl">
-
-                        <div class="labelContenedor">
-                            <label for="txt-ISBN"> ISBN </label>
-                            <input name="input" type="text" id="txt-ISBN">
-                            <div class="iconoInput">
-                                <i class="fa-solid fa-barcode"></i>
-                            </div>
-                        </div>
-
-                    </div>
-
-                    <div class="formControl">
-
-                        <div class="labelContenedor">
-                            <label for="txt-Autores"> Autores </label>
-                            <input name="input" type="text" id="txt-Autores">
-                            <div class="iconoInput">
-                                <i class="fa-solid fa-pen-clip"></i>
-                            </div>
-                        </div>
-
-                    </div>
-
+                    <!--Contenedor de 2 Columnas-->
                     <div class="formControl flexContendor">
-
+    
                         <div class="col-2 labelContenedor">
-
-                            <label for="slt-idioma"> Idioma </label>
-                            <select name="input" id="slt-idioma">
-                                <option value=""> -- Seleccione una opción</option>
-                                <option value="Español"> Español </option>
-                                <option value="Ingles"> Inglés </option>
-                                <option value="Portugues"> Portugués </option>
+    
+                            <label for="txt-primer-nombre"> Primer nombre </label>
+                            <input name="input" type="text" id="txt-primer-nombre">
+                            <div class="iconoInput">
+                                <i class="fas fa-user"></i>
+                            </div>
+                        </div>
+                        <div class="col-2 labelContenedor">
+    
+                            <label for="txt-segundo-nombre"> Segundo nombre </label>
+                            <input name="input" type="text" id="txt-segundo-nombre">
+                            <div class="iconoInput">
+                                <i class="fas fa-user"></i>
+                            </div>
+                        </div>
+    
+                    </div>
+    
+    
+                    <div class="formControl flexContendor">
+    
+                        <div class="col-2 labelContenedor">
+    
+                            <label for="txt-primer-apellido"> Primer apellido </label>
+                            <input name="input" type="text" id="txt-primer-apellido">
+                            <div class="iconoInput">
+                                <i class="fas fa-user"></i>
+                            </div>
+                        </div>
+                        <div class="col-2 labelContenedor">
+    
+                            <label for="txt-segundo-apellido"> Segundo Apellido </label>
+                            <input name="input" type="text" id="txt-segundo-apellido">
+                            <div class="iconoInput">
+                                <i class="fas fa-user"></i>
+                            </div>
+                        </div>
+    
+                    </div>
+    
+    
+                    <div class="formControl flexContendor">
+    
+                        <div class="col-2 labelContenedor">
+    
+                            <label for="slt-tipo-indentificacion"> Tipo de Indentificación </label>
+                            <select name="input" id="slt-tipo-indentificacion">
+                                <option value="">Tipo</option>
+                                <option value="Cedula de Indentidad">Cédula de Indentidad</option>
+                                <option value="Pasaporte">Pasaporte</option>
                             </select>
                         </div>
-
                         <div class="col-2 labelContenedor">
-
-                            <label for="slt-formato"> Formato </label>
-                            <select name="input" id="slt-formato">
-                                <option value=""> -- Seleccione una opción</option>
-                                <option value="Fisico"> Físico</option>
-                                <option value="Digital"> Digital</option>
-                                <option value="Ebook"> Ebook</option>
-                            </select>
-                        </div>
-
-                    </div>
-
-                    <div class="formControl flexContendor">
-
-                        <div class="col-2 labelContenedor">
-
-                            <label for="txt-publicacion"> Fecha de Publicación </label>
-                            <input name="input" type="date" id="txt-publicacion">
-                        </div>
-                        <div class="col-2 labelContenedor">
-
-                            <label for="slt-Generos"> Géneros </label>
-                            <select name="input" id="slt-Generos">
-                                <option value=""> -- Seleccione una opción</option>
-                                <option value="Clasicos">Clásicos</option>
-                                <option value="Fantasia">Fantasía</option>
-                                <option value="Infantiles">Infantiles</option>
-                                <option value="Latinoamericanos">Latinoamericanos</option>
-                                <option value="Terror">Terror</option>
-                            </select>
-                        </div>
-
-                    </div>
-
-                    <div class="formControl flexContendor">
-
-                        <div class="col-2 labelContenedor">
-
-                            <label for="txt-Premios"> Premios Ganados </label>
-                            <input name="input" type="text" id="txt-Premios">
+    
+                            <label for="txt-indentificacion"> Indentificación </label>
+                            <input name="input" type="text" id="txt-indentificacion">
                             <div class="iconoInput">
-                                <i class="fa-solid fa-trophy"></i>
+                                <i class="fas fa-id-card-alt"></i>
                             </div>
                         </div>
-
-                        <div class="col-2 labelContenedor">
-
-                            <label for="txt-Precio"> Precio </label>
-                            <input name="input" type="text" id="txt-Precio">
-                            <div class="iconoInput">
-                                <i class="fa-solid fa-colon-sign"></i>
-                            </div>
-
-                        </div>
-
+    
                     </div>
-
+    
                     <div class="formControl flexContendor">
-
+    
                         <div class="col-2 labelContenedor">
-
-                            <label for="txt-stock"> En stock </label>
-                            <input name="input" type="number" id="txt-stock">
-
-                        </div>
-
-                        <div class="col-2 labelContenedor">
-
-                            <label for="txt-Descuento"> Descuento </label>
-                            <input name="input" type="text" id="txt-Descuento">
-                            <!-- en type="text" podira ser type="number" -->
+    
+                            <label for="txt-provincia"> Provincia </label>
+                            <input name="input" type="text" id="txt-provincia">
                             <div class="iconoInput">
-                                <i class="fa-solid fa-percent"></i>
+                                <i class="fas fa-map-marker-alt"></i>
                             </div>
                         </div>
-
+                        <div class="col-2 labelContenedor">
+    
+                            <label for="txt-distrito"> Distrito </label>
+                            <input name="input" type="text" id="txt-distrito">
+                            <div class="iconoInput">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                        </div>
+    
                     </div>
-
+    
+                    <div class="formControl flexContendor">
+    
+                        <div class="col-2 labelContenedor">
+    
+                            <label for="txt-canton"> Cantón </label>
+                            <input name="input" type="text" id="txt-canton">
+                            <div class="iconoInput">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                        </div>
+                        <div class="col-2 labelContenedor">
+    
+                            <label for="txt-direccion"> Dirección Exacta </label>
+                            <input name="input" type="text" id="txt-direccion">
+                            <div class="iconoInput">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                        </div>
+    
+                    </div>
+    
+    
+    
                     <!--Contenedor de Imput Completo-->
                     <div class="formControl">
-
+    
                         <div class="labelContenedor">
-
-                            <label for="txt-Reseña"> Reseña del Libro </label>
-
-                            <textarea class="height-12" name="input" id="txt-Reseña" rows="14"></textarea>
+    
+                            <label for="txt-correo"> Correo Electrónico </label>
+                            <input name="input" type="email" id="txt-correo">
                             <div class="iconoInput">
-                                <i class="fa-solid fa-align-left"></i>
+                                <i class="fas fa-at"></i>
+                            </div>
+                        </div>
+    
+                    </div>
+    
+                    <div class="formControl flexContendor">
+    
+                        <div class="col-2 labelContenedor">
+                            <label for="txt-password-actual">Contraseña Actual</label>
+                            <input type="password" id="txt-password-actual">
+                            <div class="iconoInput">
+                                <i class="far fa-eye"></i>
                             </div>
 
                         </div>
+                        <div class="col-2 labelContenedor">
+                            
+                            <div class="btnEnviarCodigoSeguridad">
+                                <button id="btnEnviarCodigo" class="btnEnviarCodigo" style="margin-top: 2rem;" type="button"> Recibir codigo de seguridad </button>
+                            </div>
 
+                        </div>
+    
                     </div>
 
-                    <div class="formControl">
-                        <button id="btnGuardar" style="width: calc(100% - 2rem);"  class="btnGuardar" type="button"> Guardar Libro </button>
+                    <div class="formControl flexContendor">
+    
+                        <div class="col-2 labelContenedor">
+
+                            <label for="txt-password"> Contraseña Nueva </label>
+                            <input name="input" class="password" type="password" id="txt-password">
+                            <div class="iconoInput">
+                                <i class="far fa-eye"></i>
+                            </div>
+                            <ul class="texto-ayuda">
+                                <li class="longitud">Debe tener al menos 8 caracteres de longitud.</li>
+                                <li class="minuscula">Debe contener una letra minúscula.</li>
+                                <li class="mayuscula">Debe contener una letra mayúscula.</li>
+                                <li class="caracter">Debe contener un número o carácter especial.</li>
+                            </ul>
+        
+
+                        </div>
+                        <div class="col-2 labelContenedor">
+                            <label for="txt-codigo"> Codigo de Seguridad </label>
+                            <input name="input" type="text" placeholder="Codigo" id="txt-codigo">
+
+                        </div>
+    
+                    </div>
+
+                    <div class="formControl flexContendor">
+    
+                        <div class="col-2 labelContenedor">
+                            <label for="txt-password-confirmacion"> Confirmación de Contraseña </label>
+                            <input name="input" type="password" id="txt-password-confirmacion">
+                            <div class="iconoInput">
+                                <i class="far fa-eye"></i>
+                            </div>
+                        </div>
+
+                        <div class="col-2 labelContenedor">
+                            
+                            <button id="btnActualizar" class="btnGuardar" style="margin-top: 2rem;" type="button"> Actualizar Datos </button>
+                            
+                        </div>
+    
                     </div>
 
                 </div>
-
+    
                 <div class="col-40">
-
+    
                     <div class="formControl ctn-subirFoto">
                         <div class="labelSubiFoto">
-                            <label for="foto-portada">Arrastre la imagen de Portada</label>
+                            <label for="foto-perfil-usuario">Arrastre la imagen de perfil</label>
                         </div>
                         <div class="drop-zone">
-                            <span class="drop-zone__prompt">
-                                <i class="far fa-image"></i>
-                            </span>
-                            <input name="input" type="file" id="foto-portada" class="drop-zone__input">
+                            <span class="drop-zone__prompt"><i class="far fa-image"></i></span>
+                            <input name="input" type="file" id="foto-perfil-usuario" class="drop-zone__input">
                         </div>
                     </div>
+    
+                    <div class="formControl">
+    
+                        <div class="labelContenedor">
+    
+                            <label for="txt-correo"> Género </label>
+                            <select name="input" id="slt-genero">
+                                <option value="">Género</option>
+                                <option value="Masculino">Masculino</option>
+                                <option value="Femenino">Femenino</option>
+                            </select>
+                        </div>
+    
+                    </div>
+    
                 </div>
-
             </form>
-
         </section>
 
     </main>
+
 
     <footer>
         <div class="ctn-footer ctnFlexFooter">
@@ -418,14 +470,13 @@
         </div>
     </footer>
 
-
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.2/TweenMax.min.js" integrity="sha512-D2J9vHhZDistrNPhgdeuB/MAW4bEDlqddpItoxqhTAeJIOnBEYIkF01AfDOCosWb6KOQSqVgPB5mfrSUTX1BBQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="/js/dashboard-admin.js"></script>
 
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="/js/subir-foto.js"></script>
-
     <script src="/js/validar-formulario.js"></script>
+    <script src="/js/editar-informacion-admin.js"></script>
 
 </body>
 

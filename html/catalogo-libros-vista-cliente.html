@@ -12,8 +12,6 @@
     <link rel="stylesheet" href="/css/general.css">
     <link rel="stylesheet" href="/css/card.css">
     <link rel="stylesheet" href="/css/card-libros-vista-cliente.css">
-
-
     <link rel="stylesheet" href="/css/header.css">
     <link rel="stylesheet" href="/css/footer.css">
 
@@ -54,9 +52,11 @@
     <section class="sct">
         <div id="catalogoLibrosClienteCTN" class="cardContenedor"></div>
 
-        <a href="javascript:paginaAnterior()" id="btnAnterior"> Anterior </a>
-        <ul id="ctnPaginacion"></ul>
-        <a href="javascript:paginaSiguiente()" id="btnSiguiente"> Siguiente </a>
+        <div class="paginacionGeneral">
+            <a class="btnFlecha" href="javascript:paginaAnterior()" id="btnAnterior"> <i class="fa-regular fa-circle-left"></i> </a>
+            <ul id="ctnPaginacion"></ul>
+            <a class="btnFlecha" href="javascript:paginaSiguiente()" id="btnSiguiente"> <i class="fa-regular fa-circle-right"></i> </a>
+        </div>
 
     </section>
 

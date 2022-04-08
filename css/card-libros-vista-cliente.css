@@ -7,9 +7,19 @@
 }
 
 .Plumas-espacioInfoItem {
-    font-size: 1rem;
+    font-size: 1.5rem;
     align-self: center;
-    font-size: 2rem;
-    padding: 2rem 0;
+    padding: 1.5rem 0;
     align-self: center;
+}
+
+.cardInfo-1 .espacioInfoItem {
+    margin: 0.5rem 0 1rem;
+}
+.cardInfo-1 {
+    padding: 1rem 1rem 0rem;
+}
+
+.cardImagen img {
+    height: 15rem;
 }

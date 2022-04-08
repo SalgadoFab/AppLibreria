@@ -70,7 +70,7 @@ const cambiarPagina = (pagina) => {
                 <div class="col-3">
                     <div class="nombreLibro espacioInfoItem">
                         <span>
-                        ${lista_libros[i].precio}
+                        ₡ ${lista_libros[i].precio}
                         </span>
                     </div>
 

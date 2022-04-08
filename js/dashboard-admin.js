@@ -99,3 +99,9 @@ Array.prototype.forEach.call(item, function (el, i) {
         console.log("El elemento " + el.innerText + " Fue clickeado.");
     });
 });
+
+
+let btnVolverTienda = document.querySelector('.btnVolver a')
+
+btnVolverTienda.setAttribute('href', '/html/catalogo-libros-vista-cliente.html')
+

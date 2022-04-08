@@ -1,0 +1,12 @@
+.cardImagen img {
+    height: 17rem;
+}
+.cardInfo-1 .espacioInfoItem {
+    margin: 0.5rem 0;
+}
+.cardBtns {
+    padding: 0.5rem 1rem;
+}
+.cardInfo-2 {
+    padding-bottom: 1rem;
+}
