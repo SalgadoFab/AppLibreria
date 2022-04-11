@@ -1,158 +1,321 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer"
+    />
     <link rel="stylesheet" href="/css/reset.css">
     <link rel="stylesheet" href="/css/general.css">
-    
+
+    <link rel="stylesheet" href="/css/dashboard-admin.css">
+    <link rel="stylesheet" href="/css/footer.css">
 
     <link rel="stylesheet" href="/css/medios-pago.css">
 
     <title>Medios de Pago</title>
 </head>
-<body>
-    
-    <section class="sct cabeceraSeccion">
 
-        <div class="col-2">
-            <div class="titulo">
-                <div class="iconoCabecera">
-                    <i class="fas fa-user-circle"></i>
-                </div>
+<body>
+
+    <header class="headerDashboardAdmin">
+        <div class="contenidoHeaderAdmin">
+            <div class="tituloHeader">
                 <h1>
-                    Medios de Pago
+                    El Bazar de las Sorpresas
                 </h1>
             </div>
-
-    </section>
-
-
-    <section class="sct">
-
-        <div class="tituloMediosDePago">
-            <h2>
-                Medios de pagos actuales
-            </h2>
+            <div class="indicadoresHeader">
+                <div class="btnVolver">
+                    <a href="/html/tienda">Volver a Tienda</a>
+                </div>
+                <div class="imgAdmin">
+                    <img src="" alt="Foto Cliente">
+                </div>
+                <div class="nombreAdministrador">
+                    Nombre Cliente
+                </div>
+            </div>
         </div>
-        
-        <div class="ctnMediosPagos">
+    </header>
 
-            <div class="itemMedioPago">
-                <div class="iconoTarjeta">
-                    <i class="fa-regular fa-credit-card"></i>
-                </div>
-                <div class="numTarjeta">
-                    Tarjeta XXX-XXX
-                </div>
-                <div class="btnEliminarTarjeta">
-                    <a onclick=""><i class="fa-solid fa-trash-can"></i></a>
-                </div>
-            </div>
-            <div class="itemMedioPago">
-                <div class="iconoTarjeta">
-                    <i class="fa-regular fa-credit-card"></i>
-                </div>
-                <div class="numTarjeta">
-                    Tarjeta XXX-XXX
-                </div>
-                <div class="btnEliminarTarjeta">
-                    <a onclick=""><i class="fa-solid fa-trash-can"></i></a>
-                </div>
-            </div>
-            <div class="itemMedioPago">
-                <div class="iconoTarjeta">
-                    <i class="fa-regular fa-credit-card"></i>
-                </div>
-                <div class="numTarjeta">
-                    Tarjeta XXX-XXX
-                </div>
-                <div class="btnEliminarTarjeta">
-                    <a onclick=""><i class="fa-solid fa-trash-can"></i></a>
-                </div>
-            </div>
-                        <div class="itemMedioPago">
-                <div class="iconoTarjeta">
-                    <i class="fa-regular fa-credit-card"></i>
-                </div>
-                <div class="numTarjeta">
-                    Tarjeta XXX-XXX
-                </div>
-                <div class="btnEliminarTarjeta">
-                    <a onclick=""><i class="fa-solid fa-trash-can"></i></a>
-                </div>
-            </div>
+    <nav class="navBarAdmin">
 
+        <div class="redirigirDashboard">
+            <a class="redirigirDashboard" href="/html/dashboard-usuario.html">
+                <i class="fa-solid fa-clipboard-list"></i> Dashboard
+            </a>
         </div>
 
-    </section>
+        <div class="navBarAdmin-menu">
 
-    <section class="sct sctFormulario ">
-        
-        <div class="tituloMediosDePago espaciado">
-            <h2>
-                Registrar Medio de Pago
-            </h2>
+            <div class="separadorMenu">
+                <span>
+                    Tienda
+                </span>
+            </div>
+
+            <div class="panel cerrado">
+                <div class="menuItem">
+                    <i class="fa-regular fa-credit-card"></i>Medios de Pago<i class="fa fa-angle-right arrow"></i>
+                    <span class="hoverMenuItem"></span>
+                </div>
+                <div class="itemMenuContenido">
+                    <div class="item"><i class="fa-solid fa-list-ul"></i>
+                        <a href="medios-pago.html"> <span>Catálogo Medios de Pago</span> </a>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="panel cerrado">
+                <div class="menuItem">
+                    <i class="fa-solid fa-map-pin"></i>Mi Dirección<i class="fa fa-angle-right arrow"></i>
+                    <span class="hoverMenuItem"></span>
+                </div>
+                <div class="itemMenuContenido">
+
+                    <div class="item"><i class="fa-solid fa-file-pen"></i>
+                        <a href="registro-direccion-envio.html"> <span>Editar Dirección </span> </a>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="panel cerrado">
+                <div class="menuItem">
+                    <i class="fa-solid fa-hat-wizard"></i>LibroFan<i class="fa fa-angle-right arrow"></i>
+                    <span class="hoverMenuItem"></span>
+                </div>
+                <div class="itemMenuContenido">
+
+                    <div class="item"><i class="fa fa-book"></i><span>No Disponible </span></div>
+
+                </div>
+            </div>
+
+            <div class="separadorMenu">
+                <span>
+                    Sistema
+                </span>
+            </div>
+
+            <div class="panel cerrado">
+                <div class="menuItem">
+                    <i class="fa-solid fa-laptop"></i>Información Personal<i class="fa fa-angle-right arrow"></i>
+                    <span class="hoverMenuItem"></span>
+                </div>
+                <div class="itemMenuContenido">
+
+                    <div class="item"><i class="fa-solid fa-file-pen"></i>
+                        <a href="/html/editar-informacion-personal-cliente.html"><span>Editar Información Personal</span></a></div>
+
+                </div>
+            </div>
+
         </div>
+    </nav>
 
-        <form>
-            <div class="col-60">
-                <!--Contenedor de 2 Columnas-->
-                <div class="formControl flexContendor">
-                    <div class="col-2 labelContenedor">
-                        <label for="txt-codigo"> Número de Tarjeta </label>
-                        <input name="input" type="text" id="txt-codigo">
-                        <div class="iconoInput">
-                            <i class="fa-solid fa-id-card-clip"></i>
-                        </div>
+    <main class="mainDashboardAdmin">
+
+        <section class="sct cabeceraSeccion">
+
+            <div class="col-2">
+                <div class="titulo">
+                    <div class="iconoCabecera">
+                        <i class="fas fa-user-circle"></i>
                     </div>
+                    <h1>
+                        Medios de Pago
+                    </h1>
                 </div>
 
-                <div class="formControl flexContendor">
+        </section>
+        <section class="sct">
 
-                    <div class="col-2 labelContenedor">
-                        <label for="txt-expiracion"> Fecha de Expiracion - MM/YY </label>
-                        <input name="input" type="tel" id="txt-expiracion" placeholder="12 / 99"/>
-                        <div class="iconoInput">
-                            <i class="fa-solid fa-id-card-clip"></i>
-                        </div>
-                    </div>
-                    <div class="col-2 labelContenedor ">
-                        <label for="txt-ccv"> CCV </label>
-                        <input name="input" type="text" id="txt-ccv">
-                        <div class="iconoInput">
-                            <i class="fa-solid fa-id-card-clip"></i>
-                        </div>
-                    </div>
+            <div class="tituloMediosDePago">
+                <h2>
+                    Medios de pagos actuales
+                </h2>
+            </div>
 
+            <div class="ctnMediosPagos">
+
+                <div class="itemMedioPago">
+                    <div class="iconoTarjeta">
+                        <i class="fa-regular fa-credit-card"></i>
+                    </div>
+                    <div class="numTarjeta">
+                        Tarjeta XXX-XXX
+                    </div>
+                    <div class="btnEliminarTarjeta">
+                        <a onclick=""><i class="fa-solid fa-trash-can"></i></a>
+                    </div>
                 </div>
-
+                <div class="itemMedioPago">
+                    <div class="iconoTarjeta">
+                        <i class="fa-regular fa-credit-card"></i>
+                    </div>
+                    <div class="numTarjeta">
+                        Tarjeta XXX-XXX
+                    </div>
+                    <div class="btnEliminarTarjeta">
+                        <a onclick=""><i class="fa-solid fa-trash-can"></i></a>
+                    </div>
+                </div>
+                <div class="itemMedioPago">
+                    <div class="iconoTarjeta">
+                        <i class="fa-regular fa-credit-card"></i>
+                    </div>
+                    <div class="numTarjeta">
+                        Tarjeta XXX-XXX
+                    </div>
+                    <div class="btnEliminarTarjeta">
+                        <a onclick=""><i class="fa-solid fa-trash-can"></i></a>
+                    </div>
+                </div>
+                <div class="itemMedioPago">
+                    <div class="iconoTarjeta">
+                        <i class="fa-regular fa-credit-card"></i>
+                    </div>
+                    <div class="numTarjeta">
+                        Tarjeta XXX-XXX
+                    </div>
+                    <div class="btnEliminarTarjeta">
+                        <a onclick=""><i class="fa-solid fa-trash-can"></i></a>
+                    </div>
+                </div>
 
             </div>
 
-            <div class="col-40">
+        </section>
 
-                <div class="formControl">
-                    <div class="col-1 labelContenedor txtTitular">
-                        <label for="txt-titular"> Titular de la Tarjeta </label>
-                        <input name="input" type="text" id="txt-titular">
-                    </div>
-                </div>
+        <section class="sct sctFormulario ">
 
-                <div class="formControl">
-                    <button id="btnGuardar" class="btnGuardar" style="margin-top: 1rem;" type="button"> Guardar Metodo de Pago </button>
-                </div>
-
+            <div class="tituloMediosDePago espaciado">
+                <h2>
+                    Registrar Medio de Pago
+                </h2>
             </div>
-        </form>
-    </section>
+
+            <form>
+                <div class="col-60">
+                    <!--Contenedor de 2 Columnas-->
+                    <div class="wrapper">
+	
+                        <div class="cc-types">
+                            <img class="cc-tipo-img cc-tipo-img--amex">
+                            <img class="cc-tipo-img cc-tipo-img--visa">
+                            <img class="cc-tipo-img cc-tipo-img--mastercard">
+                            <img class="cc-tipo-img cc-tipo-img--disc">
+                            <img class="cc-tipo-img cc-tipo-img--genric">
+                        </div>
+                        
+                        <div class="formControl flexContendor">
+                            <div class="col-2 labelContenedor">
+                                <label for="txt-codigo"> Número de Tarjeta </label>
+                                <input name="input" type="text" maxlength="19" id="txt-numero-tarjeta">
+                                <div class="iconoInput">
+                                    <i class="fa-solid fa-id-card-clip"></i>
+                                </div>
+                            </div>
+                        </div>
     
+                        <div class="formControl flexContendor">
+    
+                            <div class="col-2 labelContenedor">
+                                <label for="txt-expiracion"> Fecha de Expiración - MM/YY </label>
+                                <input name="input" type="text" maxlength="5" id="txt-expiracion">
+                                <div class="iconoInput">
+                                    <i class="fa-solid fa-id-card-clip"></i>
+                                </div>
+                            </div>
+                            <div class="col-2 labelContenedor ">
+                                <label for="txt-ccv"> CCV </label>
+                                <input name="input" type="text" maxlength="3" id="txt-cv">
+                                <div class="iconoInput">
+                                    <i class="fa-solid fa-id-card-clip"></i>
+                                </div>
+                            </div>
+    
+                        </div>
+
+
+                        
+                    </div>
+
+                </div>
+
+                <div class="col-40">
+
+                    <div class="formControl">
+                        <div class="col-1 labelContenedor txtTitular">
+                            <label for="txt-titular"> Titular de la Tarjeta </label>
+                            <input name="input" type="text" id="txt-titular">
+                        </div>
+                    </div>
+
+                    <div class="formControl">
+                        <button id="btnGuardar" class="btnGuardar" style="margin-top: 6.5rem;" type="button"> Guardar Método de Pago </button>
+                    </div>
+
+                </div>
+            </form>
+        </section>
+    </main>
+
+
+    <footer>
+        <div class="ctn-footer ctnFlexFooter">
+            <div class="redes col-footer-3 ">
+                <div class="socialMedia">
+                    <ul>
+                        <li>
+                            <a href="#">
+                                <i class="fa-brands fa-whatsapp"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="fa-brands fa-facebook-f"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="fa-brands fa-instagram"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footerText col-footer-3 ">
+                ©2022 Bazar de las Sorpresas. Derechos reservados.
+            </div>
+            <div class="checkout col-footer-3 ">
+                <ul>
+                    <li>
+                        <i class="fa-brands fa-cc-visa"></i>
+                    </li>
+                    <li>
+                        <i class="fa-brands fa-cc-mastercard"></i>
+                    </li>
+                    <li>
+                        <i class="fa-brands fa-cc-amex"></i>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.2/TweenMax.min.js" integrity="sha512-D2J9vHhZDistrNPhgdeuB/MAW4bEDlqddpItoxqhTAeJIOnBEYIkF01AfDOCosWb6KOQSqVgPB5mfrSUTX1BBQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="/js/validar-formulario.js"></script>
+    <script src="/js/dashboard-admin.js"></script>
     <script src="/js/medios-pago.js"></script>
 
 </body>
+
 </html>

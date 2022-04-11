@@ -1,9 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;500;700&family=Raleway:wght@600&display=swap');
 
+@media only screen and (min-width: 767px) {
+    html, body {
+        font-size: 1vw !important;
+    } 
+}
+
 html, body {
 	font-family: 'Comfortaa' !important;
 	font-weight: 600 !important;
-	font-size: 1vw !important;
+	font-size: 10px;
 	background: #f0f3f5;
 }
 
@@ -24,8 +30,6 @@ time, mark, audio, video {
 	margin: 0;
 	padding: 0;
 	border: 0;
-	font-size: 100%;
-	font: inherit;
 	vertical-align: baseline;
 }
 /* HTML5 display-role reset for older browsers */

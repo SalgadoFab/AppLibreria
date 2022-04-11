@@ -1,0 +1,198 @@
+/*Contenido*/
+.cardImagen {
+    position: initial !important;
+}
+
+.itemAnuncio img {
+    width: 100%;
+    height: 80vh;
+    object-fit: cover;
+    object-position: top;
+}
+
+.librosInicio h2 {
+	text-align: center;
+    font-size: 3rem;
+    padding: 4rem 0 2rem;
+}
+
+.ctnRecomendaciones,
+.ctnMasVendidos {
+    padding: 2rem 0rem;
+    display: grid;
+    grid-gap: 2rem;
+    grid-template-columns: repeat(auto-fill, minmax(12rem, 1fr));
+}
+.ctnRecomendaciones .cardInfo-1,
+.ctnMasVendidos .cardInfo-1 {
+    gap: 1rem;
+    align-items: flex-start;
+    padding: 1rem 1rem 0rem;
+}
+.ctnRecomendaciones .Plumas-espacioInfoItem,
+.ctnMasVendidos .Plumas-espacioInfoItem {
+    font-size: 1.2rem !important;
+	padding: 0rem 0 2rem !important;
+}
+
+
+
+.recomendaciones h3{
+    text-align: center;
+    font-size: 1.8rem;
+}
+
+.recomendaciones h2 {
+	padding: 1rem 0 2rem !important;
+}
+
+
+.sctSombra {
+	margin: 6rem auto;
+    padding: 4rem;
+    box-shadow: 0 0 2rem 0 rgb(0 0 0 / 25%);
+    border-radius: 20px;
+}
+
+
+.sctIrTienda {
+	max-width: 40rem;
+    margin: 6rem auto 12rem;
+}
+
+.sctIrTienda h2 {
+
+	padding-top: 2rem;
+
+    text-align:center;
+   
+    text-transform:uppercase;
+    font-size:1.5rem; letter-spacing:0.4rem;
+    
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    grid-template-rows: 16px 0;
+    grid-gap: 22px;
+}
+
+.sctIrTienda h2:after,.sctIrTienda h2:before {
+    content: " ";
+    display: block;
+    border-bottom: 1px solid #777;
+}
+
+.formControl button,
+.sctIrTienda button {
+    display: block;
+    text-align: center;
+    font-size: 1rem;
+    border-radius: 3px;
+    background: linear-gradient(110deg, rgba(0,102,117,1) 22%, rgba(70,199,173,1) 89%);
+    box-shadow: 0 4px 20px 0px rgb(0 0 0 / 14%), 0 7px 10px -5px #006675d1;
+    margin: 1rem 2rem 0.5rem;
+    border: none;
+    width: 12rem;
+
+	margin-top: 3rem;
+}
+
+.sctIrTienda a {
+    color: #fff;
+    width: 100%;
+    height: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btnIrTienda {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.ctnFlex {
+	display: flex;
+}
+
+.col-2 {
+	width: 50%;
+}
+
+#contacto {
+	max-width: 63rem;
+	border-radius: 10px;
+}
+
+
+.ctnContacto {
+    padding: 3rem 0;
+}
+
+.tituloContacto h2 {
+    font-size: 2.5rem;
+    font-weight: 600;
+    padding-bottom: 2rem;
+}
+.dataContacto {
+    padding-right: 2rem;
+}
+
+.descripcionContacto p{
+    font-size: 1.1rem;
+    padding-bottom: 3rem;
+}
+
+.infoContacto a {
+    display: block;
+    text-decoration: none;
+    color: #000;
+    padding-bottom: 0.2rem;
+}
+
+.formControl {
+    padding-bottom: 1rem;
+}
+
+.formControl label{
+    font-size: 1.2rem;
+    padding-bottom: 1rem;
+}
+
+.sctNuestroExito button,
+.formControl button,
+.formControl input {
+    width: calc(100% - 3rem);
+    height: 2.5rem;
+    border-radius: 5px;
+    padding: 0 1rem;
+    font-size: 1rem;
+    box-shadow: 0px 5px 8px 0px rgb(0 0 0 / 10%);
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+.formControl button {
+    margin-top: 2rem;
+	width: calc(100% - 1rem) !important;
+	padding: 0;
+	margin: 0;
+	color: #fff;
+} 
+
+.Plumas-espacioInfoItem {
+    display: none;
+}
+
+
+
+.espaciado-titulo {
+    min-height: 4rem;
+}
+.col-1.espaciadoAutor {
+    min-height: 3rem;
+}
+.precioLibro {
+    padding: 0rem 1rem 1rem 1rem;
+}

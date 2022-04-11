@@ -1,0 +1,74 @@
+.cabeceraSeccion {
+    display: flex;
+    padding: 2rem 14em;
+    margin-top: 5rem;
+}
+
+.tituloRegistrarse {
+    display: flex;
+    align-items: center;
+}
+
+#labelCheck {
+    align-items: center;
+    padding-bottom: 0.2rem;
+}
+
+.tituloRegistrarse h1 {
+    font-size: 3rem;
+}
+
+.iconoCabecera {
+    font-size: 4rem;
+    padding-right: 1rem;
+}
+
+.indicadorRegistro {
+    padding-top: 2rem;
+    font-size: 1.3rem;
+    padding-bottom: 1rem;
+}
+
+#imagenLibreria {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    width: 30rem;
+    height: 23.5rem;
+    border-radius: 1rem;
+}
+
+#divCheck {
+    display: flex;
+    align-items: flex-end;
+    justify-content: end;
+}
+
+#check.check {
+    display: flex;
+    width: 20px;
+    height: 20px;
+}
+
+.olvidoContraseña {
+    padding-bottom: 0.7rem;
+}
+
+.sctFormulario form {
+    display: flex;
+    width: 100%;
+}
+
+.formControl .btnIngresar {
+    width: 100%;
+    border-radius: 10px;
+    height: 3rem;
+    margin-top: 1rem;
+    border: none;
+    box-shadow: 0px 5px 8px 0px rgb(0 0 0 / 40%);
+    background: #90b22e;
+    color: #fff;
+    font-size: 1.1rem;
+    cursor: pointer;
+}

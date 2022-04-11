@@ -5,6 +5,7 @@ let itemsPorPagina = 9;
 let paginaActiva = 1;
 
 //Funcion para obtener el numero de paginas, recibe por parametro el array de elementos y lo divide por la cantidad que deseamos mostrar por pagina
+//Devuelve el numero
 const obtenerNumeroPaginas = (listaArray) => {
     return Math.ceil(listaArray.length / itemsPorPagina)
 }
@@ -15,7 +16,7 @@ let totalPaginas = obtenerNumeroPaginas(listaAutores)
 //Funcion para cambiar entre paginas por cada item de paginacion
 const cambiarPagina = (pagina) => {
     //Obtenemos el contedor de los items
-    let contenedorItems = document.getElementById("catalogoAutoresAdminCTN")
+    let contenedorItems = document.getElementById("CatalogoAutoresAdminCTN")
 
     // Revisamos que la página esté dentro de los límites
     if (pagina < 1) pagina = 1
@@ -33,7 +34,7 @@ const cambiarPagina = (pagina) => {
         <div class="cardItem">
         <div class="ctnImagenItem">
             <div class="cardImagen">
-                <img src="/media/img/imgAutores/cuadra_pablo_antonio.jpg" alt="Portada Libro">
+                <img src="${listaAutores[i].imagenAutor}">
                 <a class="btnEliminarItem" onclick="">
                     <i class="fa-solid fa-trash-can"></i>
                 </a>
@@ -44,7 +45,7 @@ const cambiarPagina = (pagina) => {
             <div class="col-1">
                 <div class="nombreLibro espacioInfoItem">
                     <span>
-                        Nombre de Autor
+                        Nombre de Autor: ${listaAutores[i].nombre}
                     </span>
                 </div>
 

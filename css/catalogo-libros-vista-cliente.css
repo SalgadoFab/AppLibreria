@@ -1,0 +1,19 @@
+.col-1 .nombreAutor {
+    text-align: center;
+}
+
+.col-2 .librosPublicadosItem {
+    text-align: center;
+}
+
+.col-2 .promedioPlumasItem {
+    text-align: center;
+}
+
+.col-3 .premiosAutor {
+    text-align: center;
+}
+
+.cardInfo-2 .flexContendor .col-3 {
+    justify-content: center;
+}

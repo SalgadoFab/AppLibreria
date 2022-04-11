@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="/css/reset.css">
+    <link rel="stylesheet" href="/css/general.css">
+    <link rel="stylesheet" href="/css/card.css">
+    
+    <link rel="stylesheet" href="/css//card-autores-vista-cliente.css">
+
+    <link rel="stylesheet" href="/css/header.css">
+    <link rel="stylesheet" href="/css/footer.css">
+
+
+    <title>Catálogo Vista Cliente</title>
+</head>
+
+<body>
+    <header>
+        <nav class="nav-bar">
+            <div class="container">
+                <input type="checkbox" id="drop-down-cbox" />
+                <label for="drop-down-cbox">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </label>
+
+                <h1 class="site-logo">Bazar de las Sorpresas</h1>
+
+                <ul class="main-nav small-caps">
+                    <li><a href="/html/index.html">Incio</a></li>
+                    <li><a href="/html/index.html#recomendaciones">Recomendaciones</a></li>
+                    <li><span>Tienda</span>
+                        <ul>
+                            <li><a href="/html/catalogo-libros-vista-cliente.html">Catálogo de Libros</a></li>
+                            <li><a href="/html/catalogo-autores-vista-cliente.html">Catálogo de Autores</a></li>
+                        </ul>
+                    </li>
+                    <li><a class="btnEnlaceDashboard" href="">Dashboard</a></li>
+                    <li><a href="/html/index.html#contacto">Contacto</a></li>
+                </ul>
+
+            </div>
+        </nav>
+    </header>
+
+
+    <section class="sct">
+        <div id="catalogoAutoresClienteCTN" class="cardContenedor"></div>
+
+        <div class="paginacionGeneral">
+            <a class="btnFlecha" href="javascript:paginaAnterior()" id="btnAnterior"> <i class="fa-regular fa-circle-left"></i> </a>
+            <ul id="ctnPaginacion"></ul>
+            <a class="btnFlecha" href="javascript:paginaSiguiente()" id="btnSiguiente"> <i class="fa-regular fa-circle-right"></i> </a>
+        </div>
+
+    </section>
+
+
+
+    <footer>
+        <div class="ctn-footer ctnFlexFooter">
+            <div class="redes col-footer-3 ">
+                <div class="socialMedia">
+                    <ul>
+                        <li>
+                            <a href="#">
+                                <i class="fa-brands fa-whatsapp"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="fa-brands fa-facebook-f"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="fa-brands fa-instagram"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footerText col-footer-3 ">
+                ©2022 Bazar de las Sorpresas. Derechos reservados.
+            </div>
+            <div class="checkout col-footer-3 ">
+                <ul>
+                    <li>
+                        <i class="fa-brands fa-cc-visa"></i>
+                    </li>
+                    <li>
+                        <i class="fa-brands fa-cc-mastercard"></i>
+                    </li>
+                    <li>
+                        <i class="fa-brands fa-cc-amex"></i>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+    <script src="/js/validar-sesion.js"></script>
+    <script src="/js/autores.js"></script>
+    <script src="/js/catalogo-autores-cliente.js"></script>
+
+</body>
+
+</html>

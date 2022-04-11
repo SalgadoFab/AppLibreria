@@ -1,0 +1,21 @@
+.btnEnviarCodigo {
+    margin-top: 2.2rem;
+    padding: 0.7rem;
+    font-size: 1rem;
+    color: #fff;
+    background: rgb(43,203,234);
+    background: linear-gradient(97deg, rgba(43,203,234,1) 51%, rgba(57,188,240,1) 100%);
+    border-radius: 0.3rem;
+    box-shadow: 0 4px 20px 0px rgb(0 0 0 / 14%), 0 7px 10px -5px #006675d1;
+    border: 0;
+    cursor: pointer;
+
+    -webkit-transition: all 0.3s 0s  ease;
+    -moz-transition: all 0.3s 0s  ease;
+    -o-transition: all 0.3s 0s ease;
+    transition: all 0.3s 0s  ease;
+}
+
+.btnEnviarCodigo:hover {
+    box-shadow: 0 25px 20px 0px rgb(0 0 0 / 20%), 0 7px 10px -5px #006675d1;
+}

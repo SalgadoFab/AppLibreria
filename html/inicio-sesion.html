@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
@@ -8,12 +8,13 @@
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer"
     />
-
     <link rel="stylesheet" href="/css/reset.css">
     <link rel="stylesheet" href="/css/general.css">
-    <link rel="stylesheet" href="/css/subir-foto.css">
-    <link rel="stylesheet" href="/css/registro-usuarios.css">
 
+    <link rel="stylesheet" href="/css/inicio-sesion.css">
+
+    <link rel="stylesheet" href="/css/header.css">
+    <link rel="stylesheet" href="/css/footer.css">
 
     <title>Login Usuarios - Libreria</title>
 
@@ -22,9 +23,32 @@
 <body>
     <!--Sigue en producción-->
 
+    <header>
+        <nav class="nav-bar">
+            <div class="container">
+                <input type="checkbox" id="drop-down-cbox" />
+                <label for="drop-down-cbox">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </label>
+
+                <h1 class="site-logo">Bazar de las Sorpresas</h1>
+
+                <ul class="main-nav small-caps">
+                    <li><a href="/html/index.html">Incio</a></li>
+                    <li><a href="/html/index.html#recomendaciones">Recomendaciones</a></li>
+                    <li><a class="btnEnlaceTienda" href="">Tienda</a></li>
+                    <li><a href="/html/index.html#contacto">Contacto</a></li>
+                </ul>
+
+            </div>
+        </nav>
+    </header>
+
     <section class="sct cabeceraSeccion">
 
-        <div class="col-4">
+        <div class="col-40">
             <div class="tituloRegistrarse">
                 <div class="iconoCabecera">
                     <i class="fas fa-user-circle"></i>
@@ -34,19 +58,15 @@
                 </h1>
             </div>
 
-
-
             <div class="indicadorRegistro">
                 <span>Ingrese los datos de inicio de sesión</span>
             </div>
-            <div class="col-4">
+            <div id="mensajeRegistro">
                 <div class="registrarse">
                     <span>¿No tienes cuenta?</span>
-                    <a href="index.html">Registrate</a>
+                    <a href="/html/registro-usuarios.html">Registrate</a>
                 </div>
             </div>
-
-
 
         </div>
 
@@ -54,57 +74,115 @@
     </section>
 
     <section class="sct sctFormulario flexContendor">
-        <form>
-            <div class="col-60">
+
+        <div class="contenedorInput">
 
 
-                <!--Contenedor de Imput Completo-->
-                <div class="formControl">
+            <!--Contenedor de Imput Completo-->
+            <div class="formControl">
 
-                    <div class="labelContenedor">
+                <div class="labelContenedor">
 
-                        <label for="txt-correo"> Correo Electronico </label>
-                        <input name="input" type="email" id="txt-correo">
-                        <div class="iconoInput">
-                            <i class="fas fa-at"></i>
-                        </div>
+                    <label for="txt-correo"> Correo Electrónico </label>
+                    <input name="input" type="email" id="txt-correo">
+                    <div class="iconoInput">
+                        <i class="fas fa-at"></i>
                     </div>
+                </div>
+
+            </div>
+
+            <div class="formControl flexContendor">
+
+                <div class="col-2 labelContenedor">
+
+                    <label for="txt-password"> Contraseña </label>
+
+                    <input name="input" type="password" id="txt-password">
+
+                </div>
+                <div id="divCheck">
+                    <!--hice este div para que no se confunideran los labels del formulario-->
+
+                    <input id="check" class="check" type="checkbox">
+                    <div id="labelCheck" for="check">Mostrar Contraseña</div>
 
                 </div>
 
-                <div class="formControl flexContendor">
+            </div>
 
-                    <div class="col-2 labelContenedor">
-
-                        <label for="txt-password"> Contraseña </label>
-                        <input name="input" type="password" id="txt-password">
-                        <div class="iconoInput">
-                            <i class="far fa-eye"></i>
-                        </div>
-                    </div>
-
-
-                </div>
-                <div class="col-60">
-
-
-
-
-
-                    <div class="formControl">
-                        <button id="btnGuardar" class="btnGuardar" style="margin-top: 1rem;" type="button"> Iniciar Sesión </button>
-                    </div>
-
+            <div>
+                <div class="olvidoContraseña">
+                    <span>¿Olvidó su contraseña?</span>
+                    <a href="#">Recuperar contraseña</a>
                 </div>
             </div>
 
 
-        </form>
+            <div class="col-60">
+
+                <div class="formControl">
+                    <button id="btnIngresar" class="btnIngresar" style="margin-top: 1rem;" type="button"> Iniciar Sesión </button>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="col-40">
+            <img id="imagenLibreria" src="https://images.adsttc.com/media/images/6080/c284/f91c/81a3/2b00/00d0/slideshow/20210407-Maria_Santiba%C3%B1ez_La_Increible-DSC_2506-_copy.jpg?1619051098" alt="">
+        </div>
+
     </section>
 
+
+    <footer>
+        <div class="ctn-footer ctnFlexFooter">
+            <div class="redes col-footer-3 ">
+                <div class="socialMedia">
+                    <ul>
+                        <li>
+                            <a href="#">
+                                <i class="fa-brands fa-whatsapp"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="fa-brands fa-facebook-f"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="fa-brands fa-instagram"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footerText col-footer-3 ">
+                ©2022 Bazar de las Sorpresas. Derechos reservados.
+            </div>
+            <div class="checkout col-footer-3 ">
+                <ul>
+                    <li>
+                        <i class="fa-brands fa-cc-visa"></i>
+                    </li>
+                    <li>
+                        <i class="fa-brands fa-cc-mastercard"></i>
+                    </li>
+                    <li>
+                        <i class="fa-brands fa-cc-amex"></i>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-    <script src="/js/subir-foto.js"></script>
-    <script src="/js/registro-usuarios.js"></script>
+    <script src="/js/usuarios.js"></script>
+    <script src="/js/validar-sesion.js"></script>
+    <script src="/js/inicio-sesion.js"></script>
+
 </body>
 
 </html>

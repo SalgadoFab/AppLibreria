@@ -13,85 +13,302 @@
     
     <link rel="stylesheet" href="/css/registro-socios.css">
 
+    <link rel="stylesheet" href="/css/footer.css">
+    <link rel="stylesheet" href="/css/dashboard-admin.css">
+
 
     <title>Registro Socios Comerciales</title>
 
     <body>
-        <section class="sct cabeceraSeccion">
 
-            <div class="col-2">
-                <div class="tituloRegistrarse">
-                    <div class="iconoCabecera">
-                        <i class="fas fa-user-circle"></i>
-                    </div>
+        <header class="headerDashboardAdmin">
+            <div class="contenidoHeaderAdmin">
+                <div class="tituloHeader">
                     <h1>
-                        Registro de Socios Comerciales
+                        El Bazar de las Sorpresas
                     </h1>
                 </div>
-
-                <div class="indicadorRegistro">
-
-                </div>
-
-        </section>
-
-        <section class="sct sctFormulario flexContendor">
-            <form>
-                <div class="col-60">
-                    <!--Contenedor de 2 Columnas-->
-                    <div class="formControl flexContendor">
-                        <div class="col-2 labelContenedor">
-
-                            <label for="txt-nombre-socio"> Nombre de Socio Comercial </label>
-                            <input name="input" type="text" id="txt-nombre-socio">
-                            <div class="iconoInput">
-                                <i class="fas fa-user"></i>
-                            </div>
-                        </div>
-                        <div class="col-2 labelContenedor">
-                            <label for="txt-codigo"> Código </label>
-                            <input name="input" type="text" id="txt-codigo">
-                            <div class="iconoInput">
-                                <i class="fa-solid fa-id-card-clip"></i>
-                            </div>
-                        </div>
+                <div class="indicadoresHeader">
+                    <div class="btnVolver">
+                        <a href="/html/tienda">Volver a Tienda</a>
                     </div>
-
-                    <div class="formControl">
-
-                        <div class="labelContenedor">
+                    <div class="imgAdmin">
+                        <img src="" alt="Foto Administrador">
+                    </div>
+                    <div class="nombreAdministrador">
+                        Nombre Administrador
+                    </div>
+                </div>
+            </div>
+        </header>
     
-                            <label for="txt-direccion"> Dirección de sede central: </label>
-                            <textarea class="height-10" name="input" id="txt-direccion" rows="14"></textarea>
-                            <div class="iconoInput">
-                                <i class="fa-solid fa-location-dot"></i>
-                            </div>
-                        </div>
+        <nav class="navBarAdmin">
+
+            <div class="redirigirDashboard">
+                <a class="redirigirDashboard" href="/html/dashboard-admin.html">
+                    <i class="fa-solid fa-clipboard-list"></i> Dashboard
+                </a>
+            </div>
+    
+            <div class="navBarAdmin-menu">
+    
+                <div class="separadorMenu">
+                    <span>
+                        Tienda
+                    </span>
+                </div>
+    
+                <div class="panel cerrado">
+                    <div class="menuItem">
+                        <i class="fa-regular fa-address-card"></i>Autores<i class="fa fa-angle-right arrow"></i>
+                        <span class="hoverMenuItem"></span>
+                    </div>
+                    <div class="itemMenuContenido">
+                        <div class="item"><i class="fa-solid fa-file-pen"></i>
+                            <a href="/html/registro-autores.html"><span>Registrar Autores</span></a></div>
+                        <div class="item"><i class="fa-solid fa-list-ul"></i>
+                            <a href="/html/catalogo-autores-admin.html"><span>Catálogo de Autores</span></a></div>
+                    </div>
+                </div>
+    
+    
+                <div class="panel cerrado">
+                    <div class="menuItem">
+                        <i class="fa-solid fa-masks-theater"></i>Géneros Literarios<i class="fa fa-angle-right arrow"></i>
+                        <span class="hoverMenuItem"></span>
+                    </div>
+                    <div class="itemMenuContenido">
+    
+                        <div class="item"><i class="fa-solid fa-file-pen"></i><a href="/html/registro-generos.html"><span>Registrar Géneros Literarios</span></a> </div>
+                        <div class="item"><i class="fa-solid fa-list-ul"></i>
+                            <a href="/html/catalogo-generos-literarios.html"><span>Catálogo de Géneros </span></a></div>
+                    </div>
+                </div>
+    
+                <div class="panel cerrado">
+                    <div class="menuItem">
+                        <i class="fa-solid fa-book-open"></i>Libros<i class="fa fa-angle-right arrow"></i>
+                        <span class="hoverMenuItem"></span>
+                    </div>
+                    <div class="itemMenuContenido">
+    
+                        <div class="item"><i class="fa-solid fa-file-pen"></i><a href="/html/registroLibros.html"><span>Registrar Libros</span></a></div>
+                        <div class="item"><i class="fa-solid fa-list-ul"></i>
+                            <a href="/html/catalogo-libros-admin.html"><span>Catálogo de Libros</span></a></div>
     
                     </div>
-
-
                 </div>
+    
+                <div class="panel cerrado">
+                    <div class="menuItem">
+                        <i class="fa-solid fa-briefcase"></i>Socios Comerciales<i class="fa fa-angle-right arrow"></i>
+                        <span class="hoverMenuItem"></span>
+                    </div>
+                    <div class="itemMenuContenido">
+    
+                        <div class="item"><i class="fa-solid fa-file-pen"></i><a href="/html/registro-socios.html"><span>Registrar Socios Comerciales</span></a></div>
+                        <div class="item"><i class="fa-solid fa-list-ul"></i><a href="/html/catalogo-socios-comeciales.html"><span>Catálogo de Socios Comerciales</span></a></div>
+    
+                    </div>
+                </div>
+    
+                <div class="panel cerrado">
+                    <div class="menuItem">
+                        <i class="fa-solid fa-map-pin"></i>Puntos de Retiro<i class="fa fa-angle-right arrow"></i>
+                        <span class="hoverMenuItem"></span>
+                    </div>
+                    <div class="itemMenuContenido">
+    
+                        <div class="item"><i class="fa-solid fa-file-pen"></i><a href="/html/registro-puntos.html"><span>Registrar Puntos de Retiro</span></a></div>
+                        <div class="item"><i class="fa-solid fa-list-ul"></i><a href="/html/catalogo-puntos-retiro.html"><span>Catálogo Puntos de Retiro</span></a></div>
+    
+                    </div>
+                </div>
+    
+                <div class="panel cerrado">
+                    <div class="menuItem">
+                        <i class="fa-solid fa-user-tie"></i>Clientes<i class="fa fa-angle-right arrow"></i>
+                        <span class="hoverMenuItem"></span>
+                    </div>
+                    <div class="itemMenuContenido">
+    
+                        <div class="item"><i class="fa-solid fa-list-ul"></i>
+                            <a href="/html/catalogo-lista-usuario.html"><span>Catálogo de Usuarios </span></a></div>
+    
+                    </div>
+                </div>
+    
+                <div class="separadorMenu">
+                    <span>
+                        Sistema
+                    </span>
+                </div>
+    
+                <div class="panel cerrado">
+                    <div class="menuItem">
+                        <i class="fa fa-area-chart"></i>Reportes<i class="fa fa-angle-right arrow"></i>
+                        <span class="hoverMenuItem"></span>
+                    </div>
+                    <div class="itemMenuContenido">
+    
+                        <div class="item"><i class="fa-solid fa-list-ul"></i><span>En Construcción  <i class="fa-solid fa-person-digging"></i></span></div>
+    
+                    </div>
+                </div>
+    
+                <div class="panel cerrado">
+                    <div class="menuItem">
+                        <i class="fa-solid fa-gears"></i>Parámetros<i class="fa fa-angle-right arrow"></i>
+                        <span class="hoverMenuItem"></span>
+                    </div>
+                    <div class="itemMenuContenido">
+    
+                        <div class="item"><i class="fa-solid fa-gears"></i><a href="/html/modificar-parametro-sistema.html"><span>Modificar parámetros de Sistema</span></a></div>
+    
+                    </div>
+                </div>
+    
+                <div class="panel cerrado">
+                    <div class="menuItem">
+                        <i class="fa-solid fa-circle-info"></i>Información Personal<i class="fa fa-angle-right arrow"></i>
+                        <span class="hoverMenuItem"></span>
+                    </div>
+                    <div class="itemMenuContenido">
+    
+                        <div class="item"><i class="fa-solid fa-list-ul"></i><a href="/html/editar-informacion-personal-admin.html"><span>Editar Información Personal</span></a></div>
+    
+                    </div>
+                </div>
+    
+            </div>
+        </nav>
+    
+        <main class="mainDashboardAdmin">
+    
+            <section class="sct cabeceraSeccion">
 
-                <div class="col-40">
-
-                    <div class="formControl ctn-subirFoto">
-                        <div class="labelSubiFoto">
-                            <label for="foto-perfil-usuario">Arrastre el logo del Socio Comercial</label>
+                <div class="col-2">
+                    <div class="tituloRegistrarse">
+                        <div class="iconoCabecera">
+                            <i class="fas fa-user-circle"></i>
                         </div>
-                        <div class="drop-zone">
-                            <span class="drop-zone__prompt"><i class="far fa-image"></i></span>
-                            <input name="input" type="file" id="foto-perfil-usuario" class="drop-zone__input">
-                        </div>
+                        <h1>
+                            Registro de Socios Comerciales
+                        </h1>
                     </div>
 
-                    <div class="formControl">
-                        <button id="btnGuardar" class="btnGuardar" style="margin-top: 1rem;" type="button"> Guardar Registro </button>
+                    <div class="indicadorRegistro">
+
                     </div>
 
+            </section>
+            <section class="sct sctFormulario flexContendor">
+                <form>
+                    <div class="col-60">
+                        <!--Contenedor de 2 Columnas-->
+                        <div class="formControl flexContendor">
+                            <div class="col-2 labelContenedor">
+
+                                <label for="txt-nombre-socio"> Nombre de Socio Comercial </label>
+                                <input name="input" type="text" id="txt-nombre-socio">
+                                <div class="iconoInput">
+                                    <i class="fas fa-user"></i>
+                                </div>
+                            </div>
+                            <div class="col-2 labelContenedor">
+                                <label for="txt-codigo"> Código </label>
+                                <input name="input" type="text" id="txt-codigo">
+                                <div class="iconoInput">
+                                    <i class="fa-solid fa-id-card-clip"></i>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="formControl">
+
+                            <div class="labelContenedor">
+        
+                                <label for="txt-direccion"> Dirección de sede central: </label>
+                                <textarea class="height-10" name="input" id="txt-direccion" rows="14"></textarea>
+                                <div class="iconoInput">
+                                    <i class="fa-solid fa-location-dot"></i>
+                                </div>
+                            </div>
+        
+                        </div>
+
+
+                    </div>
+
+                    <div class="col-40">
+
+                        <div class="formControl ctn-subirFoto">
+                            <div class="labelSubiFoto">
+                                <label for="foto-perfil-usuario">Arrastre el logo del Socio Comercial</label>
+                            </div>
+                            <div class="drop-zone">
+                                <span class="drop-zone__prompt"><i class="far fa-image"></i></span>
+                                <input name="input" type="file" id="foto-perfil-usuario" class="drop-zone__input">
+                            </div>
+                        </div>
+
+                        <div class="formControl">
+                            <button id="btnGuardar" class="btnGuardar" style="margin-top: 1rem;" type="button"> Guardar Registro </button>
+                        </div>
+
+                    </div>
+                </form>
+            </section>
+    
+        </main>
+
+
+
+
+        <footer>
+            <div class="ctn-footer ctnFlexFooter">
+                <div class="redes col-footer-3 ">
+                    <div class="socialMedia">
+                        <ul>
+                            <li>
+                                <a href="#">
+                                    <i class="fa-brands fa-whatsapp"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <i class="fa-brands fa-facebook-f"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <i class="fa-brands fa-instagram"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
-            </form>
-        </section>
+                <div class="footerText col-footer-3 ">
+                    ©2022 Bazar de las Sorpresas. Derechos reservados. 
+                </div>
+                <div class="checkout col-footer-3 ">
+                    <ul>
+                        <li>
+                            <i class="fa-brands fa-cc-visa"></i>
+                        </li>
+                        <li>
+                            <i class="fa-brands fa-cc-mastercard"></i>
+                        </li>
+                        <li>
+                            <i class="fa-brands fa-cc-amex"></i>
+                        </li>
+                    </ul>
+                </div>
+            </div>  
+        </footer>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.2/TweenMax.min.js" integrity="sha512-D2J9vHhZDistrNPhgdeuB/MAW4bEDlqddpItoxqhTAeJIOnBEYIkF01AfDOCosWb6KOQSqVgPB5mfrSUTX1BBQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script src="/js/dashboard-admin.js"></script>
 
         <script src="/js/subir-foto.js"></script>
         <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>

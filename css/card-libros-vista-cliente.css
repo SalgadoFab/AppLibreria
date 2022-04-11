@@ -1,0 +1,25 @@
+.col-3 {
+    display: flex;
+    align-content: center;
+    font-size: 1.5rem;
+    align-items: center;
+    justify-content: center;
+}
+
+.Plumas-espacioInfoItem {
+    font-size: 1.5rem;
+    align-self: center;
+    padding: 1.5rem 0;
+    align-self: center;
+}
+
+.cardInfo-1 .espacioInfoItem {
+    margin: 0.5rem 0 1rem;
+}
+.cardInfo-1 {
+    padding: 1rem 1rem 0rem;
+}
+
+.cardImagen img {
+    height: 15rem;
+}
