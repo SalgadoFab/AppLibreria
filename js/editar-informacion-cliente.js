@@ -13,7 +13,7 @@ let errorRequerimientoPassword = false;
     let password = document.querySelector('.password');
     console.log(password)
 
-    //Obtemos
+    //Obtenemos los campos de ayuda
     let requerimientoPassword = {
         longitudCaracteres: document.querySelector('.texto-ayuda .longitud'),
         minuscula: document.querySelector('.texto-ayuda .minuscula'),
