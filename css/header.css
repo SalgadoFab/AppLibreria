@@ -134,11 +134,12 @@
 	display: block;
 	width: 100%;
 	height: 100%;
+	color: #000;
 }
 
 .main-nav li a:hover,
 .main-nav li span:hover {
-	border-bottom: 4px solid #666;
+	border-bottom: 4px solid rgb(255, 251, 30);
 }
 
 .main-nav li > ul {

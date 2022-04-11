@@ -5,6 +5,7 @@ let itemsPorPagina = 9;
 let paginaActiva = 1;
 
 //Funcion para obtener el numero de paginas, recibe por parametro el array de elementos y lo divide por la cantidad que deseamos mostrar por pagina
+//Devuelve el numero
 const obtenerNumeroPaginas = (listaArray) => {
     return Math.ceil(listaArray.length / itemsPorPagina)
 }

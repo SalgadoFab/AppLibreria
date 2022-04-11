@@ -23,8 +23,8 @@ const validarFormulario = () => {
         } else {
             //Si no esta vacio quitamos la clase de error
             inputsTxt[i].classList.remove('inputError')
-        }
-        
+        }        
+
     }
 
     //Devolvemos nuestra variable de error para lanzar el popup de formulario si es necesario

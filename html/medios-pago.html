@@ -64,7 +64,9 @@
                     <span class="hoverMenuItem"></span>
                 </div>
                 <div class="itemMenuContenido">
-                    <div class="item"><i class="fa-solid fa-list-ul"></i><span>Catálogo Medios de Pago</span></div>
+                    <div class="item"><i class="fa-solid fa-list-ul"></i>
+                        <a href="medios-pago.html"> <span>Catálogo Medios de Pago</span> </a>
+                    </div>
                 </div>
             </div>
 
@@ -76,7 +78,9 @@
                 </div>
                 <div class="itemMenuContenido">
 
-                    <div class="item"><i class="fa-solid fa-file-pen"></i><span>Editar Dirección </span></div>
+                    <div class="item"><i class="fa-solid fa-file-pen"></i>
+                        <a href="registro-direccion-envio.html"> <span>Editar Dirección </span> </a>
+                    </div>
 
                 </div>
             </div>
@@ -106,7 +110,8 @@
                 </div>
                 <div class="itemMenuContenido">
 
-                    <div class="item"><i class="fa-solid fa-file-pen"></i><span>Editar</span></div>
+                    <div class="item"><i class="fa-solid fa-file-pen"></i>
+                        <a href="/html/editar-informacion-personal-cliente.html"><span>Editar Información Personal</span></a></div>
 
                 </div>
             </div>
@@ -115,7 +120,6 @@
     </nav>
 
     <main class="mainDashboardAdmin">
-
 
         <section class="sct cabeceraSeccion">
 
@@ -130,8 +134,6 @@
                 </div>
 
         </section>
-
-
         <section class="sct">
 
             <div class="tituloMediosDePago">
@@ -202,35 +204,48 @@
             <form>
                 <div class="col-60">
                     <!--Contenedor de 2 Columnas-->
-                    <div class="formControl flexContendor">
-                        <div class="col-2 labelContenedor">
-                            <label for="txt-codigo"> Número de Tarjeta </label>
-                            <input name="input" type="text" id="txt-codigo">
-                            <div class="iconoInput">
-                                <i class="fa-solid fa-id-card-clip"></i>
+                    <div class="wrapper">
+	
+                        <div class="cc-types">
+                            <img class="cc-tipo-img cc-tipo-img--amex">
+                            <img class="cc-tipo-img cc-tipo-img--visa">
+                            <img class="cc-tipo-img cc-tipo-img--mastercard">
+                            <img class="cc-tipo-img cc-tipo-img--disc">
+                            <img class="cc-tipo-img cc-tipo-img--genric">
+                        </div>
+                        
+                        <div class="formControl flexContendor">
+                            <div class="col-2 labelContenedor">
+                                <label for="txt-codigo"> Número de Tarjeta </label>
+                                <input name="input" type="text" maxlength="19" id="txt-numero-tarjeta">
+                                <div class="iconoInput">
+                                    <i class="fa-solid fa-id-card-clip"></i>
+                                </div>
                             </div>
                         </div>
+    
+                        <div class="formControl flexContendor">
+    
+                            <div class="col-2 labelContenedor">
+                                <label for="txt-expiracion"> Fecha de Expiración - MM/YY </label>
+                                <input name="input" type="text" maxlength="5" id="txt-expiracion">
+                                <div class="iconoInput">
+                                    <i class="fa-solid fa-id-card-clip"></i>
+                                </div>
+                            </div>
+                            <div class="col-2 labelContenedor ">
+                                <label for="txt-ccv"> CCV </label>
+                                <input name="input" type="text" maxlength="3" id="txt-cv">
+                                <div class="iconoInput">
+                                    <i class="fa-solid fa-id-card-clip"></i>
+                                </div>
+                            </div>
+    
+                        </div>
+
+
+                        
                     </div>
-
-                    <div class="formControl flexContendor">
-
-                        <div class="col-2 labelContenedor">
-                            <label for="txt-expiracion"> Fecha de Expiración - MM/YY </label>
-                            <input name="input" type="tel" id="txt-expiracion" placeholder="12 / 99" />
-                            <div class="iconoInput">
-                                <i class="fa-solid fa-id-card-clip"></i>
-                            </div>
-                        </div>
-                        <div class="col-2 labelContenedor ">
-                            <label for="txt-ccv"> CCV </label>
-                            <input name="input" type="text" id="txt-ccv">
-                            <div class="iconoInput">
-                                <i class="fa-solid fa-id-card-clip"></i>
-                            </div>
-                        </div>
-
-                    </div>
-
 
                 </div>
 
@@ -244,7 +259,7 @@
                     </div>
 
                     <div class="formControl">
-                        <button id="btnGuardar" class="btnGuardar" style="margin-top: 1rem;" type="button"> Guardar Método de Pago </button>
+                        <button id="btnGuardar" class="btnGuardar" style="margin-top: 6.5rem;" type="button"> Guardar Método de Pago </button>
                     </div>
 
                 </div>

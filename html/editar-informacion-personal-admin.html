@@ -8,20 +8,17 @@
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer"
     />
-
     <link rel="stylesheet" href="/css/reset.css">
     <link rel="stylesheet" href="/css/general.css">
+    
     <link rel="stylesheet" href="/css/subir-foto.css">
-    <link rel="stylesheet" href="/css/registro-autores.css">
-
-
-    <link rel="stylesheet" href="/css/footer.css">
+    <link rel="stylesheet" href="/css/registro-usuarios.css">
+    <link rel="stylesheet" href="/css/editar-informacion.css">
 
     <link rel="stylesheet" href="/css/dashboard-admin.css">
+    <link rel="stylesheet" href="/css/footer.css">
 
-
-    <title>Registro de Autores - Libreria</title>
-
+    <title>Editar Informacion</title>
 </head>
 
 <body>
@@ -194,124 +191,241 @@
 
             <div class="col-2">
                 <div class="tituloRegistrarse">
-
+                    <div class="iconoCabecera">
+                        <i class="fas fa-user-circle"></i>
+                    </div>
                     <h1>
-                        Registro de Autores
+                        Actualizar Informacion Personal
                     </h1>
                 </div>
-
-                <div class="indicadorRegistro">
-                    <span>Complete los campos requeridos</span>
-                </div>
-
             </div>
-
-
         </section>
-
+    
         <section class="sct sctFormulario flexContendor">
             <form>
                 <div class="col-60">
                     <!--Contenedor de 2 Columnas-->
                     <div class="formControl flexContendor">
-
-
-                        <div class="labelNombreCompleto"></div>
-                        <label for="txt-NombreCompleto"> Nombre completo </label>
-                        <input name="input" type="text" id="txt-nombreCompleto">
-
-
-
-                    </div>
-                    <div class="formControl flexContendor">
-
+    
                         <div class="col-2 labelContenedor">
-
-                            <label for="txt-nacionalidad"> Nacionalidad </label>
-                            <input name="input" type="text" id="txt-nacionalidad">
-
-                        </div>
-                        <div class="col-2 labelContenedor">
-
-                            <label for="txt-añoPremioNobel"> Año del prermio Nobel </label>
-                            <input name="input" type="text" id="txt-añoPremioNobel">
-
-                        </div>
-
-                    </div>
-
-                    <div class="formControl">
-
-                        <div class="labelContenedor">
-
-                            <label for="txt-biografia"> Biografía </label>
-                            <textarea class="height-12" name="input" id="txt-biografia" rows="14"></textarea>
-
-                        </div>
-
-                    </div>
-
-                    <div class="formControl flexContendor">
-
-                        <div class="col-2 labelContenedor">
-                            <!--lista de obras acá-->
-
-
-                            <div class="labelContenedor">
-
-                                <label for="txt-listaObras"> Listado de obras </label>
-                                <textarea class="height-12" name="input" id="txt-listaObras" rows="14"></textarea>
-
-                            </div>
-
-
-
-                        </div>
-                        <div class="col-2 labelDiv">
-
-                            <label for="txt-fechaNacimiento"> Año de nacimiento </label>
-                            <input name="input" type="text" id="txt-añoNacimiento">
-
-
-
-                            <label for="txt-fechaDefuncion"> Año de defunción </label>
-                            <input name="input" type="text" id="txt-añoDefuncion">
+    
+                            <label for="txt-primer-nombre"> Primer nombre </label>
+                            <input name="input" type="text" id="txt-primer-nombre">
                             <div class="iconoInput">
+                                <i class="fas fa-user"></i>
+                            </div>
+                        </div>
+                        <div class="col-2 labelContenedor">
+    
+                            <label for="txt-segundo-nombre"> Segundo nombre </label>
+                            <input name="input" type="text" id="txt-segundo-nombre">
+                            <div class="iconoInput">
+                                <i class="fas fa-user"></i>
+                            </div>
+                        </div>
+    
+                    </div>
+    
+    
+                    <div class="formControl flexContendor">
+    
+                        <div class="col-2 labelContenedor">
+    
+                            <label for="txt-primer-apellido"> Primer apellido </label>
+                            <input name="input" type="text" id="txt-primer-apellido">
+                            <div class="iconoInput">
+                                <i class="fas fa-user"></i>
+                            </div>
+                        </div>
+                        <div class="col-2 labelContenedor">
+    
+                            <label for="txt-segundo-apellido"> Segundo Apellido </label>
+                            <input name="input" type="text" id="txt-segundo-apellido">
+                            <div class="iconoInput">
+                                <i class="fas fa-user"></i>
+                            </div>
+                        </div>
+    
+                    </div>
+    
+    
+                    <div class="formControl flexContendor">
+    
+                        <div class="col-2 labelContenedor">
+    
+                            <label for="slt-tipo-indentificacion"> Tipo de Indentificación </label>
+                            <select name="input" id="slt-tipo-indentificacion">
+                                <option value="">Tipo</option>
+                                <option value="Cedula de Indentidad">Cédula de Indentidad</option>
+                                <option value="Pasaporte">Pasaporte</option>
+                            </select>
+                        </div>
+                        <div class="col-2 labelContenedor">
+    
+                            <label for="txt-indentificacion"> Indentificación </label>
+                            <input name="input" type="text" id="txt-indentificacion">
+                            <div class="iconoInput">
+                                <i class="fas fa-id-card-alt"></i>
+                            </div>
+                        </div>
+    
+                    </div>
+    
+                    <div class="formControl flexContendor">
+    
+                        <div class="col-2 labelContenedor">
+    
+                            <label for="txt-provincia"> Provincia </label>
+                            <input name="input" type="text" id="txt-provincia">
+                            <div class="iconoInput">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                        </div>
+                        <div class="col-2 labelContenedor">
+    
+                            <label for="txt-distrito"> Distrito </label>
+                            <input name="input" type="text" id="txt-distrito">
+                            <div class="iconoInput">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                        </div>
+    
+                    </div>
+    
+                    <div class="formControl flexContendor">
+    
+                        <div class="col-2 labelContenedor">
+    
+                            <label for="txt-canton"> Cantón </label>
+                            <input name="input" type="text" id="txt-canton">
+                            <div class="iconoInput">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                        </div>
+                        <div class="col-2 labelContenedor">
+    
+                            <label for="txt-direccion"> Dirección Exacta </label>
+                            <input name="input" type="text" id="txt-direccion">
+                            <div class="iconoInput">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                        </div>
+    
+                    </div>
+    
+    
+    
+                    <!--Contenedor de Imput Completo-->
+                    <div class="formControl">
+    
+                        <div class="labelContenedor">
+    
+                            <label for="txt-correo"> Correo Electrónico </label>
+                            <input name="input" type="email" id="txt-correo">
+                            <div class="iconoInput">
+                                <i class="fas fa-at"></i>
+                            </div>
+                        </div>
+    
+                    </div>
+    
+                    <div class="formControl flexContendor">
+    
+                        <div class="col-2 labelContenedor">
+                            <label for="txt-password-actual">Contraseña Actual</label>
+                            <input type="password" id="txt-password-actual">
+                            <div class="iconoInput">
+                                <i class="far fa-eye"></i>
+                            </div>
 
+                        </div>
+                        <div class="col-2 labelContenedor">
+                            
+                            <div class="btnEnviarCodigoSeguridad">
+                                <button id="btnEnviarCodigo" class="btnEnviarCodigo" style="margin-top: 2rem;" type="button"> Recibir codigo de seguridad </button>
+                            </div>
 
+                        </div>
+    
+                    </div>
 
+                    <div class="formControl flexContendor">
+    
+                        <div class="col-2 labelContenedor">
 
+                            <label for="txt-password"> Contraseña Nueva </label>
+                            <input name="input" class="password" type="password" id="txt-password">
+                            <div class="iconoInput">
+                                <i class="far fa-eye"></i>
+                            </div>
+                            <ul class="texto-ayuda">
+                                <li class="longitud">Debe tener al menos 8 caracteres de longitud.</li>
+                                <li class="minuscula">Debe contener una letra minúscula.</li>
+                                <li class="mayuscula">Debe contener una letra mayúscula.</li>
+                                <li class="caracter">Debe contener un número o carácter especial.</li>
+                            </ul>
+        
+
+                        </div>
+                        <div class="col-2 labelContenedor">
+                            <label for="txt-codigo"> Codigo de Seguridad </label>
+                            <input name="input" type="text" placeholder="Codigo" id="txt-codigo">
+
+                        </div>
+    
+                    </div>
+
+                    <div class="formControl flexContendor">
+    
+                        <div class="col-2 labelContenedor">
+                            <label for="txt-password-confirmacion"> Confirmación de Contraseña </label>
+                            <input name="input" type="password" id="txt-password-confirmacion">
+                            <div class="iconoInput">
+                                <i class="far fa-eye"></i>
                             </div>
                         </div>
 
+                        <div class="col-2 labelContenedor">
+                            
+                            <button id="btnActualizar" class="btnGuardar" style="margin-top: 2rem;" type="button"> Actualizar Datos </button>
+                            
+                        </div>
+    
                     </div>
-                </div>
-                </div>
 
+                </div>
+    
                 <div class="col-40">
-
+    
                     <div class="formControl ctn-subirFoto">
                         <div class="labelSubiFoto">
-                            <label for="foto-perfil-autor">Arrastre la imagen del autor</label>
+                            <label for="foto-perfil-usuario">Arrastre la imagen de perfil</label>
                         </div>
                         <div class="drop-zone">
                             <span class="drop-zone__prompt"><i class="far fa-image"></i></span>
-                            <input name="input" type="file" id="foto-perfil-autor" class="drop-zone__input">
+                            <input name="input" type="file" id="foto-perfil-usuario" class="drop-zone__input">
                         </div>
-
-
-
-                        <div class="formControl">
-                            <button id="btnGuardar" class="btnGuardar" style="margin-top: 10rem;" type="button"> Guardar
-                            </button>
-                        </div>
-
                     </div>
+    
+                    <div class="formControl">
+    
+                        <div class="labelContenedor">
+    
+                            <label for="txt-correo"> Género </label>
+                            <select name="input" id="slt-genero">
+                                <option value="">Género</option>
+                                <option value="Masculino">Masculino</option>
+                                <option value="Femenino">Femenino</option>
+                            </select>
+                        </div>
+    
+                    </div>
+    
+                </div>
             </form>
         </section>
 
     </main>
-
 
 
     <footer>
@@ -362,7 +476,7 @@
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="/js/subir-foto.js"></script>
     <script src="/js/validar-formulario.js"></script>
-    <script src="/js/registro-autores.js"></script>
+    <script src="/js/editar-informacion-admin.js"></script>
 
 </body>
 

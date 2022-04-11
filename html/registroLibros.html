@@ -15,6 +15,7 @@
     <link rel="stylesheet" href="/css/registro-usuarios.css">
 
     <link rel="stylesheet" href="/css/footer.css">
+    <link rel="stylesheet" href="/css/dashboard-admin.css">
 
     <title>Registro de Libros - Librería</title>
 
@@ -22,192 +23,358 @@
 
 <body>
 
-    <section class="sct cabeceraSeccion">
-
-        <div class="col-2">
-            <div class="tituloRegistrarse">
-                <div class="iconoCabecera">
-                    <i class="fa-solid fa-address-book"></i>
+    <header class="headerDashboardAdmin">
+        <div class="contenidoHeaderAdmin">
+            <div class="tituloHeader">
+                <h1>
+                    El Bazar de las Sorpresas
+                </h1>
+            </div>
+            <div class="indicadoresHeader">
+                <div class="btnVolver">
+                    <a href="/html/tienda">Volver a Tienda</a>
                 </div>
-                <h1> Registrar Libros </h1>
+                <div class="imgAdmin">
+                    <img src="" alt="Foto Administrador">
+                </div>
+                <div class="nombreAdministrador">
+                    Nombre Administrador
+                </div>
             </div>
         </div>
+    </header>
 
-    </section>
+    <nav class="navBarAdmin">
 
-    <section class="sct sctFormulario flexContendor">
-        <form>
-            <div class="col-60">
-                <div class="formControl">
+        <div class="redirigirDashboard">
+            <a class="redirigirDashboard" href="/html/dashboard-admin.html">
+                <i class="fa-solid fa-clipboard-list"></i> Dashboard
+            </a>
+        </div>
 
-                    <div class="labelContenedor">
+        <div class="navBarAdmin-menu">
 
-                        <label for="txt-nombre-libro"> Nombre de Libro </label>
-                        <input name="input" type="text" id="txt-nombre-libro">
-
-                        <div class="iconoInput">
-                            <i class="fa-solid fa-book"></i>
-                        </div>
-                    </div>
-
-                </div>
-
-                <div class="formControl">
-
-                    <div class="labelContenedor">
-                        <label for="txt-ISBN"> ISBN </label>
-                        <input name="input" type="text" id="txt-ISBN">
-                        <div class="iconoInput">
-                            <i class="fa-solid fa-barcode"></i>
-                        </div>
-                    </div>
-
-                </div>
-
-                <div class="formControl">
-
-                    <div class="labelContenedor">
-                        <label for="txt-Autores"> Autores </label>
-                        <input name="input" type="text" id="txt-Autores">
-                        <div class="iconoInput">
-                            <i class="fa-solid fa-pen-clip"></i>
-                        </div>
-                    </div>
-
-                </div>
-
-                <div class="formControl flexContendor">
-
-                    <div class="col-2 labelContenedor">
-
-                        <label for="slt-idioma"> Idioma </label>
-                        <select name="input" id="slt-idioma">
-                            <option value=""> -- Seleccione una opción</option>
-                            <option value="Español"> Español </option>
-                            <option value="Ingles"> Inglés </option>
-                            <option value="Portugues"> Portugués </option>
-                        </select>
-                    </div>
-
-                    <div class="col-2 labelContenedor">
-
-                        <label for="slt-formato"> Formato </label>
-                        <select name="input" id="slt-formato">
-                            <option value=""> -- Seleccione una opción</option>
-                            <option value="Fisico"> Físico</option>
-                            <option value="Digital"> Digital</option>
-                            <option value="Ebook"> Ebook</option>
-                        </select>
-                    </div>
-
-                </div>
-
-                <div class="formControl flexContendor">
-
-                    <div class="col-2 labelContenedor">
-
-                        <label for="txt-publicacion"> Fecha de Publicación </label>
-                        <input name="input" type="date" id="txt-publicacion">
-                    </div>
-                    <div class="col-2 labelContenedor">
-
-                        <label for="slt-Generos"> Géneros </label>
-                        <select name="input" id="slt-Generos">
-                            <option value=""> -- Seleccione una opción</option>
-                            <option value="Clasicos">Clásicos</option>
-                            <option value="Fantasia">Fantasía</option>
-                            <option value="Infantiles">Infantiles</option>
-                            <option value="Latinoamericanos">Latinoamericanos</option>
-                            <option value="Terror">Terror</option>
-                        </select>
-                    </div>
-
-                </div>
-
-                <div class="formControl flexContendor">
-
-                    <div class="col-2 labelContenedor">
-
-                        <label for="txt-Premios"> Premios Ganados </label>
-                        <input name="input" type="text" id="txt-Premios">
-                        <div class="iconoInput">
-                            <i class="fa-solid fa-trophy"></i>
-                        </div>
-                    </div>
-
-                    <div class="col-2 labelContenedor">
-
-                        <label for="txt-Precio"> Precio </label>
-                        <input name="input" type="text" id="txt-Precio">
-                        <div class="iconoInput">
-                            <i class="fa-solid fa-colon-sign"></i>
-                        </div>
-
-                    </div>
-
-                </div>
-
-                <div class="formControl flexContendor">
-
-                    <div class="col-2 labelContenedor">
-
-                        <label for="txt-stock"> En stock </label>
-                        <input name="input" type="number" id="txt-stock">
-
-                    </div>
-
-                    <div class="col-2 labelContenedor">
-
-                        <label for="txt-Descuento"> Descuento </label>
-                        <input name="input" type="text" id="txt-Descuento">
-                        <!-- en type="text" podira ser type="number" -->
-                        <div class="iconoInput">
-                            <i class="fa-solid fa-percent"></i>
-                        </div>
-                    </div>
-
-                </div>
-
-                <!--Contenedor de Imput Completo-->
-                <div class="formControl">
-
-                    <div class="labelContenedor">
-
-                        <label for="txt-Reseña"> Reseña del Libro </label>
-                        <input name="input" type="email" id="txt-Reseña">
-                        <div class="iconoInput">
-                            <i class="fa-solid fa-align-left"></i>
-                        </div>
-
-                    </div>
-
-                </div>
-
+            <div class="separadorMenu">
+                <span>
+                    Tienda
+                </span>
             </div>
 
-            <div class="col-40">
-
-                <div class="formControl ctn-subirFoto">
-                    <div class="labelSubiFoto">
-                        <label for="foto-portada">Arrastre la imagen de Portada</label>
-                    </div>
-                    <div class="drop-zone">
-                        <span class="drop-zone__prompt">
-                            <i class="far fa-image"></i>
-                        </span>
-                        <input name="input" type="file" id="foto-portada" class="drop-zone__input">
-                    </div>
+            <div class="panel cerrado">
+                <div class="menuItem">
+                    <i class="fa-regular fa-address-card"></i>Autores<i class="fa fa-angle-right arrow"></i>
+                    <span class="hoverMenuItem"></span>
                 </div>
-
-                <div class="formControl">
-                    <button id="btnGuardar" class="btnGuardar" type="button"> Guardar Libro </button>
+                <div class="itemMenuContenido">
+                    <div class="item"><i class="fa-solid fa-file-pen"></i>
+                        <a href="/html/registro-autores.html"><span>Registrar Autores</span></a></div>
+                    <div class="item"><i class="fa-solid fa-list-ul"></i>
+                        <a href="/html/catalogo-autores-admin.html"><span>Catálogo de Autores</span></a></div>
                 </div>
-
             </div>
 
-        </form>
 
-    </section>
+            <div class="panel cerrado">
+                <div class="menuItem">
+                    <i class="fa-solid fa-masks-theater"></i>Géneros Literarios<i class="fa fa-angle-right arrow"></i>
+                    <span class="hoverMenuItem"></span>
+                </div>
+                <div class="itemMenuContenido">
+
+                    <div class="item"><i class="fa-solid fa-file-pen"></i><a href="/html/registro-generos.html"><span>Registrar Géneros Literarios</span></a> </div>
+                    <div class="item"><i class="fa-solid fa-list-ul"></i>
+                        <a href="/html/catalogo-generos-literarios.html"><span>Catálogo de Géneros </span></a></div>
+                </div>
+            </div>
+
+            <div class="panel cerrado">
+                <div class="menuItem">
+                    <i class="fa-solid fa-book-open"></i>Libros<i class="fa fa-angle-right arrow"></i>
+                    <span class="hoverMenuItem"></span>
+                </div>
+                <div class="itemMenuContenido">
+
+                    <div class="item"><i class="fa-solid fa-file-pen"></i><a href="/html/registroLibros.html"><span>Registrar Libros</span></a></div>
+                    <div class="item"><i class="fa-solid fa-list-ul"></i>
+                        <a href="/html/catalogo-libros-admin.html"><span>Catálogo de Libros</span></a></div>
+
+                </div>
+            </div>
+
+            <div class="panel cerrado">
+                <div class="menuItem">
+                    <i class="fa-solid fa-briefcase"></i>Socios Comerciales<i class="fa fa-angle-right arrow"></i>
+                    <span class="hoverMenuItem"></span>
+                </div>
+                <div class="itemMenuContenido">
+
+                    <div class="item"><i class="fa-solid fa-file-pen"></i><a href="/html/registro-socios.html"><span>Registrar Socios Comerciales</span></a></div>
+                    <div class="item"><i class="fa-solid fa-list-ul"></i><a href="/html/catalogo-socios-comeciales.html"><span>Catálogo de Socios Comerciales</span></a></div>
+
+                </div>
+            </div>
+
+            <div class="panel cerrado">
+                <div class="menuItem">
+                    <i class="fa-solid fa-map-pin"></i>Puntos de Retiro<i class="fa fa-angle-right arrow"></i>
+                    <span class="hoverMenuItem"></span>
+                </div>
+                <div class="itemMenuContenido">
+
+                    <div class="item"><i class="fa-solid fa-file-pen"></i><a href="/html/registro-puntos.html"><span>Registrar Puntos de Retiro</span></a></div>
+                    <div class="item"><i class="fa-solid fa-list-ul"></i><a href="/html/catalogo-puntos-retiro.html"><span>Catálogo Puntos de Retiro</span></a></div>
+
+                </div>
+            </div>
+
+            <div class="panel cerrado">
+                <div class="menuItem">
+                    <i class="fa-solid fa-user-tie"></i>Clientes<i class="fa fa-angle-right arrow"></i>
+                    <span class="hoverMenuItem"></span>
+                </div>
+                <div class="itemMenuContenido">
+
+                    <div class="item"><i class="fa-solid fa-list-ul"></i>
+                        <a href="/html/catalogo-lista-usuario.html"><span>Catálogo de Usuarios </span></a></div>
+
+                </div>
+            </div>
+
+            <div class="separadorMenu">
+                <span>
+                    Sistema
+                </span>
+            </div>
+
+            <div class="panel cerrado">
+                <div class="menuItem">
+                    <i class="fa fa-area-chart"></i>Reportes<i class="fa fa-angle-right arrow"></i>
+                    <span class="hoverMenuItem"></span>
+                </div>
+                <div class="itemMenuContenido">
+
+                    <div class="item"><i class="fa-solid fa-list-ul"></i><span>En Construcción  <i class="fa-solid fa-person-digging"></i></span></div>
+
+                </div>
+            </div>
+
+            <div class="panel cerrado">
+                <div class="menuItem">
+                    <i class="fa-solid fa-gears"></i>Parámetros<i class="fa fa-angle-right arrow"></i>
+                    <span class="hoverMenuItem"></span>
+                </div>
+                <div class="itemMenuContenido">
+
+                    <div class="item"><i class="fa-solid fa-gears"></i><a href="/html/modificar-parametro-sistema.html"><span>Modificar parámetros de Sistema</span></a></div>
+
+                </div>
+            </div>
+
+            <div class="panel cerrado">
+                <div class="menuItem">
+                    <i class="fa-solid fa-circle-info"></i>Información Personal<i class="fa fa-angle-right arrow"></i>
+                    <span class="hoverMenuItem"></span>
+                </div>
+                <div class="itemMenuContenido">
+
+                    <div class="item"><i class="fa-solid fa-list-ul"></i><a href="/html/editar-informacion-personal-admin.html"><span>Editar Información Personal</span></a></div>
+
+                </div>
+            </div>
+
+        </div>
+    </nav>
+
+    <main class="mainDashboardAdmin">
+
+        <section class="sct cabeceraSeccion">
+
+            <div class="col-2">
+                <div class="tituloRegistrarse">
+                    <div class="iconoCabecera">
+                        <i class="fa-solid fa-address-book"></i>
+                    </div>
+                    <h1> Registrar Libros </h1>
+                </div>
+            </div>
+
+        </section>
+
+        <section class="sct sctFormulario flexContendor">
+            <form>
+                <div class="col-60">
+                    <div class="formControl">
+
+                        <div class="labelContenedor">
+
+                            <label for="txt-nombre-libro"> Nombre de Libro </label>
+                            <input name="input" type="text" id="txt-nombre-libro">
+
+                            <div class="iconoInput">
+                                <i class="fa-solid fa-book"></i>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="formControl">
+
+                        <div class="labelContenedor">
+                            <label for="txt-ISBN"> ISBN </label>
+                            <input name="input" type="text" id="txt-ISBN">
+                            <div class="iconoInput">
+                                <i class="fa-solid fa-barcode"></i>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="formControl">
+
+                        <div class="labelContenedor">
+                            <label for="txt-Autores"> Autores </label>
+                            <input name="input" type="text" id="txt-Autores">
+                            <div class="iconoInput">
+                                <i class="fa-solid fa-pen-clip"></i>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="formControl flexContendor">
+
+                        <div class="col-2 labelContenedor">
+
+                            <label for="slt-idioma"> Idioma </label>
+                            <select name="input" id="slt-idioma">
+                                <option value=""> -- Seleccione una opción</option>
+                                <option value="Español"> Español </option>
+                                <option value="Ingles"> Inglés </option>
+                                <option value="Portugues"> Portugués </option>
+                            </select>
+                        </div>
+
+                        <div class="col-2 labelContenedor">
+
+                            <label for="slt-formato"> Formato </label>
+                            <select name="input" id="slt-formato">
+                                <option value=""> -- Seleccione una opción</option>
+                                <option value="Fisico"> Físico</option>
+                                <option value="Digital"> Digital</option>
+                                <option value="Ebook"> Ebook</option>
+                            </select>
+                        </div>
+
+                    </div>
+
+                    <div class="formControl flexContendor">
+
+                        <div class="col-2 labelContenedor">
+
+                            <label for="txt-publicacion"> Fecha de Publicación </label>
+                            <input name="input" type="date" id="txt-publicacion">
+                        </div>
+                        <div class="col-2 labelContenedor">
+
+                            <label for="slt-Generos"> Géneros </label>
+                            <select name="input" id="slt-Generos">
+                                <option value=""> -- Seleccione una opción</option>
+                                <option value="Clasicos">Clásicos</option>
+                                <option value="Fantasia">Fantasía</option>
+                                <option value="Infantiles">Infantiles</option>
+                                <option value="Latinoamericanos">Latinoamericanos</option>
+                                <option value="Terror">Terror</option>
+                            </select>
+                        </div>
+
+                    </div>
+
+                    <div class="formControl flexContendor">
+
+                        <div class="col-2 labelContenedor">
+
+                            <label for="txt-Premios"> Premios Ganados </label>
+                            <input name="input" type="text" id="txt-Premios">
+                            <div class="iconoInput">
+                                <i class="fa-solid fa-trophy"></i>
+                            </div>
+                        </div>
+
+                        <div class="col-2 labelContenedor">
+
+                            <label for="txt-Precio"> Precio </label>
+                            <input name="input" type="text" id="txt-Precio">
+                            <div class="iconoInput">
+                                <i class="fa-solid fa-colon-sign"></i>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <div class="formControl flexContendor">
+
+                        <div class="col-2 labelContenedor">
+
+                            <label for="txt-stock"> En stock </label>
+                            <input name="input" type="number" id="txt-stock">
+
+                        </div>
+
+                        <div class="col-2 labelContenedor">
+
+                            <label for="txt-Descuento"> Descuento </label>
+                            <input name="input" type="text" id="txt-Descuento">
+                            <!-- en type="text" podira ser type="number" -->
+                            <div class="iconoInput">
+                                <i class="fa-solid fa-percent"></i>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <!--Contenedor de Imput Completo-->
+                    <div class="formControl">
+
+                        <div class="labelContenedor">
+
+                            <label for="txt-Reseña"> Reseña del Libro </label>
+
+                            <textarea class="height-12" name="input" id="txt-Reseña" rows="14"></textarea>
+                            <div class="iconoInput">
+                                <i class="fa-solid fa-align-left"></i>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <div class="formControl">
+                        <button id="btnGuardar" style="width: calc(100% - 2rem);"  class="btnGuardar" type="button"> Guardar Libro </button>
+                    </div>
+
+                </div>
+
+                <div class="col-40">
+
+                    <div class="formControl ctn-subirFoto">
+                        <div class="labelSubiFoto">
+                            <label for="foto-portada">Arrastre la imagen de Portada</label>
+                        </div>
+                        <div class="drop-zone">
+                            <span class="drop-zone__prompt">
+                                <i class="far fa-image"></i>
+                            </span>
+                            <input name="input" type="file" id="foto-portada" class="drop-zone__input">
+                        </div>
+                    </div>
+                </div>
+
+            </form>
+
+        </section>
+
+    </main>
 
     <footer>
         <div class="ctn-footer ctnFlexFooter">
@@ -251,10 +418,15 @@
         </div>
     </footer>
 
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.2/TweenMax.min.js" integrity="sha512-D2J9vHhZDistrNPhgdeuB/MAW4bEDlqddpItoxqhTAeJIOnBEYIkF01AfDOCosWb6KOQSqVgPB5mfrSUTX1BBQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="/js/dashboard-admin.js"></script>
+
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="/js/subir-foto.js"></script>
 
     <script src="/js/validar-formulario.js"></script>
+    <script src="/js/registro-libros.js"></script>
 
 </body>
 
