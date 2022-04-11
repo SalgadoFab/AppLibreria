@@ -1,13 +1,12 @@
 .Lista-usuario {
-    width: 200%;
+    width: 100%;
 }
 
 .col-60 {
-    width: 400%;
+    width: 100%;
 }
 
 .col-40 {
-    width: 130%;
     padding-left: 0.5rem;
     margin-top: 2rem;
 }

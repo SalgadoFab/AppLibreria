@@ -187,3 +187,12 @@
 
 
 
+.espaciado-titulo {
+    min-height: 4rem;
+}
+.col-1.espaciadoAutor {
+    min-height: 3rem;
+}
+.precioLibro {
+    padding: 0rem 1rem 1rem 1rem;
+}
