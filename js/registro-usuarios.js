@@ -1,3 +1,54 @@
+const listaProvincias = document.getElementById('slt-provincias');
+const listaCantones = document.getElementById('slt-cantones');
+const listaDistritos = document.getElementById('slt-distritos');
+
+let provinciaSeleccionada,
+    cantonSeleccionado;
+
+const mostrarProvincias = () => {
+    distribucion.provincias.forEach(provincia => {
+        listaProvincias.options.add(new Option(provincia.title));
+    });
+};
+    
+const mostrarCantones = (nombreProvincia) => {
+    listaCantones.innerHTML = '';
+    listaCantones.options.add(new Option('-- Seleccione un cantón --'));
+    distribucion.provincias.forEach(provincia => {
+        if (provinciaSeleccionada == provincia.title) {
+            provincia.cantones.forEach(canton => {
+                listaCantones.options.add(new Option(canton.title));
+            });
+        }
+    });
+};
+
+const mostrarDistritos = (nombreCanton) => {
+    listaDistritos.innerHTML = '';
+    listaDistritos.options.add(new Option('-- Seleccione un distrito --'));
+    distribucion.provincias.forEach(provincia => {
+        if (provinciaSeleccionada == provincia.title) {
+            provincia.cantones.forEach(canton => {
+                if (cantonSeleccionado == canton.title) {
+                    canton.distritos.forEach(distrito => {
+                        listaDistritos.options.add(new Option(distrito.title));
+                    });
+                }
+            });
+        }
+    });
+};
+
+mostrarProvincias();
+listaProvincias.addEventListener('change', () => {
+    provinciaSeleccionada = listaProvincias.value;
+    mostrarCantones(provinciaSeleccionada);
+})
+listaCantones.addEventListener('change', () => {
+    cantonSeleccionado = listaCantones.value;
+    mostrarDistritos(cantonSeleccionado);
+})
+
 //Obtener campos de Contraseña 
 const txtPassword = document.getElementById('txt-password');
 const txtPasswordConfirmacion = document.getElementById('txt-password-confirmacion');
@@ -134,6 +185,33 @@ let errorRequerimientoPassword = false;
     }
     
 })();
+
+
+
+// this of eye method
+const mostrarPassword = (input, selector) => {
+    if(input.classList.contains('activo')) {
+        input.setAttribute('type', 'text');
+        selector.className = 'fa fa-eye';
+        input.classList.remove('activo')
+    } else {
+        input.setAttribute('type', 'password');
+        selector.className = 'fa fa-eye-slash';
+        input.classList.add('activo')
+    }
+}
+
+mostrarPass = document.getElementById('mostrarPassword');
+mostrarPassConfirmacion = document.getElementById('mostrarPasswordConfirmacion');
+
+mostrarPass.onclick = function () {
+    mostrarPassword (txtPassword, mostrarPass)
+}
+mostrarPassConfirmacion.onclick = function () {
+    mostrarPassword (txtPasswordConfirmacion, mostrarPassConfirmacion)
+}
+
+
 
 //Funcion de Validacion de campos normales
 const validarRegistroUsuario = () => {
