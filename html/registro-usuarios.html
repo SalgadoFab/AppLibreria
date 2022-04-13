@@ -151,19 +151,17 @@
 
                     <div class="col-2 labelContenedor">
 
-                        <label for="txt-provincia"> Provincia </label>
-                        <input name="input" type="text" id="txt-provincia">
-                        <div class="iconoInput">
-                            <i class="fas fa-map-marker-alt"></i>
-                        </div>
+                        <label for="slt-provincias"> Provincia </label>
+                        <select name="input" id="slt-provincias">
+                            <option value="">-- Seleccione una provincia --</option>
+                        </select>
                     </div>
                     <div class="col-2 labelContenedor">
 
-                        <label for="txt-distrito"> Distrito </label>
-                        <input name="input" type="text" id="txt-distrito">
-                        <div class="iconoInput">
-                            <i class="fas fa-map-marker-alt"></i>
-                        </div>
+                        <label for="slt-cantones"> Cantón </label>
+                        <select id="slt-cantones">
+                            <option value="">-- Seleccione un cantón --</option>
+                        </select>
                     </div>
 
                 </div>
@@ -172,11 +170,10 @@
 
                     <div class="col-2 labelContenedor">
 
-                        <label for="txt-canton"> Cantón </label>
-                        <input name="input" type="text" id="txt-canton">
-                        <div class="iconoInput">
-                            <i class="fas fa-map-marker-alt"></i>
-                        </div>
+                        <label for="slt-distritos"> Distrito </label>
+                        <select id="slt-distritos">
+                            <option value="">-- Seleccione un distrito --</option>
+                        </select>
                     </div>
                     <div class="col-2 labelContenedor">
 
@@ -221,9 +218,9 @@
                     <div class="col-2 labelContenedor">
 
                         <label for="txt-password"> Contraseña </label>
-                        <input name="input" class="password" type="password" id="txt-password">
+                        <input  name="input" class="password activo" type="password" id="txt-password">
                         <div class="iconoInput">
-                            <i class="far fa-eye"></i>
+                            <i id="mostrarPassword" class="fa fa-eye-slash"></i>
                         </div>
                         <ul class="texto-ayuda">
                             <li class="longitud">Debe tener al menos 8 caracteres de longitud.</li>
@@ -235,9 +232,9 @@
                     <div class="col-2 labelContenedor">
 
                         <label for="txt-password-confirmacion"> Confirmación de Contraseña </label>
-                        <input name="input" type="password" id="txt-password-confirmacion">
+                        <input name="input" type="password" class="activo" id="txt-password-confirmacion">
                         <div class="iconoInput">
-                            <i class="far fa-eye"></i>
+                            <i id="mostrarPasswordConfirmacion" class="fa fa-eye-slash"></i>
                         </div>
                     </div>
 
@@ -257,9 +254,7 @@
                 </div>
 
                 <div class="formControl">
-
                     <div class="labelContenedor">
-
                         <label for="txt-correo"> Género </label>
                         <select name="input" id="slt-genero">
                             <option value="">Género</option>
@@ -328,7 +323,6 @@
                 <div class="formControl">
                     <button id="btnGuardar" class="btnGuardar" style="margin-top: 10rem;" type="button"> Guardar Registro </button>
                 </div>
-
             </div>
         </form>
     </section>
@@ -377,6 +371,7 @@
 
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="/js/subir-foto.js"></script>
+    <script src="/js/ubicacion.js"></script>
     <script src="/js/validar-formulario.js"></script>
     <script src="/js/registro-usuarios.js"></script>
 

@@ -143,3 +143,9 @@
     font-size: 4rem;
     padding-right: 1rem;
 }
+
+
+.fa-eye,
+.fa-eye-slash {
+    cursor: pointer;
+}
