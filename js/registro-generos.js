@@ -1,3 +1,6 @@
+'use strict';
+const inputTipoGenero = document.querySelector('#txt-tipoGenero')
+const inputCodigoGenero = document.querySelector('#txt-codigoGenero')
 const btnRegistrar = document.getElementById('btnGuardar');
 
 const validarRegistroGenero = () => {
@@ -9,18 +12,20 @@ const validarRegistroGenero = () => {
     if (hayError == true) {
         Swal.fire({
             "icon": "warning",
-            "title": "El socio comercial no se pudo registrar",
+            "title": "El género literario no pudo ser registrado",
             "text": "Compruebe que todos los campos estan correctamente llenados"
         });
 
     } else { //Si la variable de error termina en false esto lanza un popup al usuario para indicar registro exitoso
-        Swal.fire({
-            "icon": "success",
-            "title": "Éxito",
-            "text": "Socio Comercial registrado con exito"
-        });
-    }
+        let genero = {
+            nombreGenero: inputTipoGenero.value,
+            codigoGenero: inputCodigoGenero.value,
 
-}
+        };
+
+        registrarDatos('/registrar-genero', genero);
+    };
+
+};
 
 btnRegistrar.addEventListener('click', validarRegistroGenero);
