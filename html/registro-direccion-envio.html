@@ -48,15 +48,15 @@
                     <i class="fa-solid fa-clipboard-list"></i> Dashboard
                 </a>
             </div>
-    
+
             <div class="navBarAdmin-menu">
-    
+
                 <div class="separadorMenu">
                     <span>
                         Tienda
                     </span>
                 </div>
-    
+
                 <div class="panel cerrado">
                     <div class="menuItem">
                         <i class="fa-regular fa-credit-card"></i>Medios de Pago<i class="fa fa-angle-right arrow"></i>
@@ -68,53 +68,53 @@
                         </div>
                     </div>
                 </div>
-    
-    
+
+
                 <div class="panel cerrado">
                     <div class="menuItem">
                         <i class="fa-solid fa-map-pin"></i>Mi Dirección<i class="fa fa-angle-right arrow"></i>
                         <span class="hoverMenuItem"></span>
                     </div>
                     <div class="itemMenuContenido">
-    
+
                         <div class="item"><i class="fa-solid fa-file-pen"></i>
                             <a href="registro-direccion-envio.html"> <span>Editar Dirección </span> </a>
                         </div>
-    
+
                     </div>
                 </div>
-    
+
                 <div class="panel cerrado">
                     <div class="menuItem">
                         <i class="fa-solid fa-hat-wizard"></i>LibroFan<i class="fa fa-angle-right arrow"></i>
                         <span class="hoverMenuItem"></span>
                     </div>
                     <div class="itemMenuContenido">
-    
+
                         <div class="item"><i class="fa fa-book"></i><span>No Disponible </span></div>
-    
+
                     </div>
                 </div>
-    
+
                 <div class="separadorMenu">
                     <span>
                         Sistema
                     </span>
                 </div>
-    
+
                 <div class="panel cerrado">
                     <div class="menuItem">
                         <i class="fa-solid fa-laptop"></i>Información Personal<i class="fa fa-angle-right arrow"></i>
                         <span class="hoverMenuItem"></span>
                     </div>
                     <div class="itemMenuContenido">
-    
+
                         <div class="item"><i class="fa-solid fa-file-pen"></i>
                             <a href="/html/editar-informacion-personal-cliente.html"><span>Editar Información Personal</span></a></div>
-    
+
                     </div>
                 </div>
-    
+
             </div>
         </nav>
 
@@ -141,32 +141,26 @@
                         <div class="formControl flexContendor">
 
                             <div class="col-2 labelContenedor">
-
-                                <label for="txt-provincia"> Provincia </label>
-                                <input name="input" type="text" id="txt-provincia">
-                                <div class="iconoInput">
-                                    <i class="fas fa-map-marker-alt"></i>
-                                </div>
+                                <label for="slt-provincias"> Provincia </label>
+                                <select name="input" id="slt-provincias">
+                                    <option value="">-- Seleccione una provincia --</option>
+                                </select>
                             </div>
                             <div class="col-2 labelContenedor">
-
-                                <label for="txt-canton"> Cantón </label>
-                                <input name="input" type="text" id="txt-canton">
-                                <div class="iconoInput">
-                                    <i class="fas fa-map-marker-alt"></i>
-                                </div>
+                                <label for="slt-cantones"> Cantón </label>
+                                <select id="slt-cantones">
+                                    <option value="">-- Seleccione un cantón --</option>
+                                </select>
                             </div>
 
                         </div>
                         <div class="formControl flexContendor">
 
                             <div class="col-2 labelContenedor">
-
-                                <label for="txt-distrito"> Distrito </label>
-                                <input name="input" type="text" id="txt-distrito">
-                                <div class="iconoInput">
-                                    <i class="fas fa-map-marker-alt"></i>
-                                </div>
+                                <label for="slt-distritos"> Distrito </label>
+                                <select id="slt-distritos">
+                                    <option value="">-- Seleccione un distrito --</option>
+                                </select>
                             </div>
 
                         </div>
