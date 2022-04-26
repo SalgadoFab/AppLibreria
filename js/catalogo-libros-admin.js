@@ -1,10 +1,11 @@
 let lista_libros;
 let totalPaginas; 
-const filtro = document.getElementById('txt-buscar');
+const buscar = document.getElementById('txt-buscar');
 const inicializar = async() => {
     lista_libros = await obtenerDatos('obtener-libros');
-    console.log(lista_libros);
     totalPaginas = obtenerNumeroPaginas(lista_libros)
+
+    console.log(lista_libros);
     cambiarPagina(1) 
     obtenerPaginacion() 
     obtenerPaginaActiva()
@@ -36,7 +37,7 @@ const cambiarPagina = (pagina) => {
     //Hacemos un for, para cada elemento dentro del rango de la página actual
     for (let i = (pagina - 1) * itemsPorPagina; i < (pagina * itemsPorPagina) && i < lista_libros.length; i++) {
 
-        if (lista_libros[i].nombreLibro.toLowerCase().includes(filtro.value.toLowerCase()) ) {
+        if (lista_libros[i].nombreLibro.toLowerCase().includes(buscar.value.toLowerCase()) ) {
             //Al contenedor de items le pasamos la estrucutra html para cada item del array
             //Cambiar variables
             contenedorItems.innerHTML += `
@@ -191,6 +192,6 @@ const obtenerPaginaActiva = () => {
 
 inicializar();
 
-filtro.addEventListener('keyup', () => {
+buscar.addEventListener('keyup', () => {
     cambiarPagina(paginaActiva);
 });
