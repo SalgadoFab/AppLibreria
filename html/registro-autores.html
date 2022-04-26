@@ -233,8 +233,8 @@
                         </div>
                         <div class="col-2 labelContenedor">
 
-                            <label for="txt-añoPremioNobel"> Año del prermio Nobel </label>
-                            <input name="input" type="text" id="txt-añoPremioNobel">
+                            <label for="txt-añoPremioNobel"> Año del premio Nobel </label>
+                            <input name="input" type="date" id="txt-anoPremioNobel">
 
                         </div>
 
@@ -270,12 +270,12 @@
                         <div class="col-2 labelDiv">
 
                             <label for="txt-fechaNacimiento"> Año de nacimiento </label>
-                            <input name="input" type="text" id="txt-añoNacimiento">
+                            <input name="input" type="date" id="txt-anoNacimiento">
 
 
 
                             <label for="txt-fechaDefuncion"> Año de defunción </label>
-                            <input name="input" type="text" id="txt-añoDefuncion">
+                            <input name="input" type="date" id="txt-anoDefuncion">
                             <div class="iconoInput">
 
 
@@ -296,7 +296,7 @@
                         </div>
                         <div class="drop-zone">
                             <span class="drop-zone__prompt"><i class="far fa-image"></i></span>
-                            <input name="input" type="file" id="foto-perfil-autor" class="drop-zone__input">
+                            <input type="file" id="foto-perfil-autor" class="drop-zone__input">
                         </div>
 
 
@@ -355,6 +355,13 @@
             </div>
         </div>
     </footer>
+
+    <!-- 1. Axios-->
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+    <!-- 2. Servicio general-->
+    <script src="/js/servicio-general.js"></script>
+
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.2/TweenMax.min.js" integrity="sha512-D2J9vHhZDistrNPhgdeuB/MAW4bEDlqddpItoxqhTAeJIOnBEYIkF01AfDOCosWb6KOQSqVgPB5mfrSUTX1BBQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="/js/dashboard-admin.js"></script>
