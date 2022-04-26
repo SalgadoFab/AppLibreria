@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="/css/reset.css">
     <link rel="stylesheet" href="/css/general.css">
     <link rel="stylesheet" href="/css/card.css">
-    
+
     <link rel="stylesheet" href="/css//card-autores-vista-cliente.css">
 
     <link rel="stylesheet" href="/css/header.css">
@@ -53,6 +53,8 @@
 
 
     <section class="sct">
+        <label for="txt-buscar">Buscar</label>
+        <input type="text" id="txt-buscar">
         <div id="catalogoAutoresClienteCTN" class="cardContenedor"></div>
 
         <div class="paginacionGeneral">
@@ -106,6 +108,9 @@
             </div>
         </div>
     </footer>
+
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="/js/servicio-general.js"></script>
 
     <script src="/js/validar-sesion.js"></script>
     <script src="/js/autores.js"></script>
