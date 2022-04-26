@@ -1,4 +1,9 @@
-const btnRegistrar = document.getElementById('btnGuardar');
+const inputProvincia = document.querySelector('#txt-provincia')
+const inputCanton = document.querySelector('#txt-canton')
+const inputDistrito = document.querySelector('#txt-distrito')
+const inputDireccion = document.querySelector('#txt-direccion')
+
+const btnRegistrar = document.getElementById('btnGuardarDireccion');
 
 const validarRegistroDireccionEnvio = () => {
 
@@ -14,11 +19,14 @@ const validarRegistroDireccionEnvio = () => {
         });
 
     } else { //Si la variable de error termina en false esto lanza un popup al usuario para indicar registro exitoso
-        Swal.fire({
-            "icon": "success",
-            "title": "Éxito",
-            "text": "Direccion guardada correctamente"
-        });
+
+        let direccionEnvio = {
+            provincia: inputProvincia.value,
+            canton: inputCanton.value,
+            distrito: inputDistrito.value,
+            direccion: inputDireccion.value,
+        };
+        registrarDatos('/registrar-direccion-envio', direccionEnvio);
     }
 
 }
