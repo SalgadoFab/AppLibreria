@@ -2,8 +2,8 @@ const listaProvincias = document.getElementById('slt-provincias');
 const listaCantones = document.getElementById('slt-cantones');
 const listaDistritos = document.getElementById('slt-distritos');
 
-let provinciaSeleccionada,
-    cantonSeleccionado;
+let provinciaSeleccionada;
+cantonSeleccionado;
 
 const mostrarProvincias = () => {
     distribucion.provincias.forEach(provincia => {
