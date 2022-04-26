@@ -9,7 +9,6 @@ const validarRegistroSocio = () => {
 
     let hayError = validarFormulario();
 
-
     //Mensaje del resultado de la validacion
     if (hayError == true) {
         Swal.fire({
@@ -22,9 +21,9 @@ const validarRegistroSocio = () => {
         let socio = {
             nombre: inputNombreSocio.value,
             codigo: inputCodigoSocio.value,
-            direccion: inputDireccionSocio.value,
+            direccion: inputDireccionSocio.value
         };
-        registrarDatos('/registrar-socio', socio)
+        registrarDatos('registrar-socio', socio);
     }
 
 }
