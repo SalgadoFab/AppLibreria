@@ -1,3 +1,22 @@
+'use strict';
+
+const inputnombreLibro = document.querySelector('#txt-nombre-libro')
+const inputisbn = document.querySelector('#txt-ISBN')
+const inputautores = document.querySelector('#txt-Autores')
+const inputidioma = document.querySelector('#slt-idioma')
+const inputformato = document.querySelector('#slt-formato')
+const inputfechapliblicacion = document.querySelector('#txt-publicacion')
+const inputgeneros = document.querySelector('#slt-Generos')
+const inputpremiosLibro = document.querySelector('#txt-Premios')
+const inputprecio = document.querySelector('#txt-Precio')
+const inputstock = document.querySelector('#txt-stock')
+const inputdescuento = document.querySelector('#txt-Descuento')
+const inputresenna = document.querySelector('#txt-Resenna')
+
+
+
+
+
 const btnRegistrar = document.getElementById('btnGuardar');
 
 const validarRegistroLibros = () => {
@@ -14,13 +33,24 @@ const validarRegistroLibros = () => {
         });
 
     } else { //Si la variable de error termina en false esto lanza un popup al usuario para indicar registro exitoso
-        Swal.fire({
-            "icon": "success",
-            "title": "Éxito",
-            "text": "Libro Registrado con Exito"
-        });
-    }
+        let libros = {
+            nombreLibro: inputnombreLibro.value,
+            isbn: inputisbn.value,
+            nombreAutor: inputautores.value,
+            idiomaLibro: inputidioma.value,
+            fechaPublicacion: inputfechapliblicacion.value,
+            generoLibro: inputgeneros.value,
+            premios: inputpremiosLibro.value,
+            precio: inputprecio.value,
+            libroStock: inputstock.value,
+            descuento: inputdescuento.value,
+            resennaLibro: inputresenna.value,
 
+        };
+        registrarDatos('/registrar-libro', libros);
+    };
 }
+
+
 
 btnRegistrar.addEventListener('click', validarRegistroLibros);
