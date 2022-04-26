@@ -1,3 +1,14 @@
+let totalPaginas;
+const buscar = document.getElementById('txt-buscar');
+const inicializar = async() => {
+    listaAutores = await obtenerDatos('obtener-autores');
+    console.log(listaAutores);
+    totalPaginas = obtenerNumeroPaginas(listaAutores)
+    cambiarPagina(1)
+    obtenerPaginacion()
+    obtenerPaginaActiva()
+};
+
 // Items a mostrar por pagina
 let itemsPorPagina = 9;
 
@@ -9,8 +20,6 @@ const obtenerNumeroPaginas = (listaArray) => {
     return Math.ceil(listaArray.length / itemsPorPagina)
 }
 
-// Obtenemos el numero de paginas para nuestra paginacion
-let totalPaginas = obtenerNumeroPaginas(listaAutores)
 
 //Funcion para cambiar entre paginas por cada item de paginacion
 const cambiarPagina = (pagina) => {
@@ -27,86 +36,88 @@ const cambiarPagina = (pagina) => {
     //Hacemos un for, para cada elemento dentro del rango de la página actual
     for (let i = (pagina - 1) * itemsPorPagina; i < (pagina * itemsPorPagina) && i < listaAutores.length; i++) {
 
-        //Al contenedor de items le pasamos la estrucutra html para cada item del array
-        //Cambiar variables
-        contenedorItems.innerHTML += `
-        <div class="cardItem">
-        <div class="ctnImagenItem">
-            <div class="cardImagen">
-                <img src="${listaAutores[i].imagenAutor}" alt="Portada Libro">
-                <a class="btnEliminarItem" onclick="">
-                    <i class="fa-regular fa-heart"></i>
-                </a>
+        if (listaAutores[i].nombreAutor.toLowerCase().includes(buscar.value.toLowerCase())) {
+            //Al contenedor de items le pasamos la estrucutra html para cada item del array
+            //Cambiar variables
+            contenedorItems.innerHTML += `
+            <div class="cardItem">
+            <div class="ctnImagenItem">
+                <div class="cardImagen">
+                    <img src="${listaAutores[i].imagenAutor}" alt="Portada Libro">
+                    <a class="btnEliminarItem" onclick="">
+                        <i class="fa-regular fa-heart"></i>
+                    </a>
+                </div>
             </div>
-        </div>
 
-        <div class="cardInfo-1">
-            <div class="col-1">
-                <div class="nombreAutor espacioInfoItem">
-                    <span>
-                        Nombre del Autor:
-                    </span>
-                    <div class="nombreAutorItem">
+            <div class="cardInfo-1">
+                <div class="col-1">
+                    <div class="nombreAutor espacioInfoItem">
+                        <span>
+                            Nombre del Autor:
+                        </span>
+                        <div class="nombreAutorItem">
+                            <span>
+                                <br>
+                                ${listaAutores[i].nombreAutor}
+                            </span>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="cardBtns flexContendor">
+                <div class="col-2">
+                    <div class="promPlumas espacioInfoItem">
+                        <span>
+                            Promedio Plumas:
+                        </span>
+                    </div>
+                    <div class="promedioPlumasItem">
                         <span>
                             <br>
-                            ${listaAutores[i].nombre}
+                            0
                         </span>
                     </div>
 
                 </div>
 
-            </div>
-        </div>
-
-        <div class="cardBtns flexContendor">
-            <div class="col-2">
-                <div class="promPlumas espacioInfoItem">
-                    <span>
-                        Promedio Plumas:
-                    </span>
-                </div>
-                <div class="promedioPlumasItem">
-                    <span>
-                        <br>
-                        0
-                    </span>
-                </div>
-
-            </div>
-
-            <div class="col-2">
-                <div class="librosPublicados espacioInfoItem">
-                    <span>
-                        Libros publicados:
-                    </span>
-                </div>
-                <div class="librosPublicadosItem">
-                    <span>
-                        <br>
-                        0
-                    </span>
-                </div>
-            </div>
-        </div>
-
-        <div class="cardInfo-2 flexContendor">
-
-            <div class="col-3">
-                <div class="nacionalidadAutor espacioInfoItem">
-                    <span>
-                        Nacionalidad:
-                    </span>
-                </div>
-                <div class="nacionalidadAutorItem">
-                    <span>
-                        ${listaAutores[i].nacionalidad}
-                    </span>
+                <div class="col-2">
+                    <div class="librosPublicados espacioInfoItem">
+                        <span>
+                            Libros publicados:
+                        </span>
+                    </div>
+                    <div class="librosPublicadosItem">
+                        <span>
+                            <br>
+                            0
+                        </span>
+                    </div>
                 </div>
             </div>
 
+            <div class="cardInfo-2 flexContendor">
 
-        </div>
-    </div>`
+                <div class="col-3">
+                    <div class="nacionalidadAutor espacioInfoItem">
+                        <span>
+                            Nacionalidad:
+                        </span>
+                    </div>
+                    <div class="nacionalidadAutorItem">
+                        <span>
+                            ${listaAutores[i].nacionalidad}
+                        </span>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>`
+        }
     }
 }
 
@@ -176,9 +187,8 @@ const obtenerPaginaActiva = () => {
 
 }
 
-//Ejecutamos la funciones principales al momento de que la pagina carga por primera vez
-window.onload = function() {
-    cambiarPagina(1) //Establecer página predeterminada
-    obtenerPaginacion() //Generar paginacion
-    obtenerPaginaActiva()
-};
+inicializar();
+
+buscar.addEventListener('keyup', () => {
+    cambiarPagina(paginaActiva);
+});
