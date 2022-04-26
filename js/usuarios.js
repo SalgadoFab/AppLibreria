@@ -1,5 +1,4 @@
 let listaUsuarios = [{
-
     'tipoUsuario': 1,
     'primerNombre': 'Luis',
     'segundoNombre': 'Fernando',
