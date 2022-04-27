@@ -74,4 +74,5 @@ const validarRegistroDireccionEnvio = () => {
 
 }
 
+
 btnRegistrar.addEventListener('click', validarRegistroDireccionEnvio);
