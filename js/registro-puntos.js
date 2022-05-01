@@ -1,5 +1,22 @@
-const btnRegistrar = document.getElementById('btnGuardar');
+let lista_Socios = [];
 
+const sltSocios = document.getElementById('slt-socio');
+
+const inicializarSocios = async() => {
+    lista_Socios = await obtenerDatos('obtener-socios');
+    for (let i = 0; i < lista_Socios.length ; i++){
+        let opt = document.createElement('option');
+        opt.value = lista_Socios[i].nombre;
+        opt.innerHTML = lista_Socios[i].nombre;
+        sltSocios.appendChild(opt);
+    }
+};
+
+inicializarSocios();
+
+const txtDireccion = document.getElementById('txt-direccion');
+
+const btnRegistrar = document.getElementById('btnGuardar');
 const validarRegistroPunto= () => {
 
     let hayError = validarFormulario();
@@ -13,12 +30,14 @@ const validarRegistroPunto= () => {
             "text": "Compruebe que todos los campos estan correctamente llenados"
         });
 
-    } else { //Si la variable de error termina en false esto lanza un popup al usuario para indicar registro exitoso
-        Swal.fire({
-            "icon": "success",
-            "title": "Éxito",
-            "text": "Punto de retiro registrado con exito"
-        });
+    } else { 
+
+        let punto = {
+            sltSocio: inputnombreCompleto.value,
+            nacimiento: inputAnoNacimiento.value,
+        };
+
+        registrarDatos('/registrar-autor', autor);
     }
 
 }

@@ -1,8 +1,11 @@
 let totalPaginas;
 const buscar = document.getElementById('txt-buscar');
+
 const inicializar = async() => {
+    
     listaAutores = await obtenerDatos('obtener-autores');
     console.log(listaAutores);
+
     totalPaginas = obtenerNumeroPaginas(listaAutores)
     cambiarPagina(1)
     obtenerPaginacion()

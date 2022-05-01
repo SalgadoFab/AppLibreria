@@ -1,3 +1,13 @@
+const btnActualizarPassword  = document.getElementById('btnActualizarPassword');
+let listaUsuarios
+
+const inicializarUsuarios = async() => {
+    listaUsuarios = await obtenerDatos('obtener-usuarios');
+    btnActualizarPassword.classList.add('btnDesactivado')
+    console.log(listaUsuarios);
+};
+inicializarUsuarios();
+
 const txtCorreo = document.getElementById('txt-correo');
 const txtCodigo = document.getElementById('txt-codigo');
 const txtPassword = document.getElementById('txt-nuevo-password');
@@ -135,8 +145,6 @@ let errorRequerimientoPassword = false;
     
 })();
 
-
-
 // this of eye method
 const mostrarPassword = (input, selector) => {
     if(input.classList.contains('activo')) {
@@ -150,6 +158,7 @@ const mostrarPassword = (input, selector) => {
     }
 }
 
+
 mostrarPass = document.getElementById('mostrarPassword');
 mostrarPassConfirmacion = document.getElementById('mostrarPasswordConfirmacion');
 
@@ -161,8 +170,22 @@ mostrarPassConfirmacion.onclick = function () {
 }
 
 
+
+let codigo;
+const codePass = () => {
+    codigo = '';
+    let caracteres = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+    for ( let i = 0; i < 6; i++ ) {
+      codigo += caracteres.charAt(Math.floor(Math.random() * caracteres.length));
+    }
+}
+
 const btnObtenerCodigo = document.getElementById('btnObtenerCodigo');
 const obtenerCodigo = () => {
+    
+    codePass();
+    console.log(codigo);
+
     //Variable para capturar si el usuario ya esta registrado
     let usuarioRegistrado = false;
     let correoVacio = false;
@@ -201,13 +224,14 @@ const obtenerCodigo = () => {
                 "title": "Codigo Enviado",
                 "text": "Revisa tu bandeja de entrada"
             });
+            btnActualizarPassword.classList.remove('btnDesactivado')
         }
     }
 } 
 btnObtenerCodigo.addEventListener('click', obtenerCodigo);
 
 
-const btnActualizarPassword  = document.getElementById('btnActualizarPassword');
+
 const actualizarPassword = () => {
     let errorCamposVacios = validarFormulario();
 
@@ -226,7 +250,7 @@ const actualizarPassword = () => {
 
     let errorCodigoSeguridad = false;
 
-    if (txtCodigo.value != 1234) {
+    if (txtCodigo.value != codigo) {
         errorCodigoSeguridad = true
         txtCodigo.classList.add("inputError");
     } else {

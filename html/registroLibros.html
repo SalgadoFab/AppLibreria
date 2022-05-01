@@ -229,18 +229,6 @@
 
                     </div>
 
-                    <div class="formControl">
-
-                        <div class="labelContenedor">
-                            <label for="txt-Autores"> Autores </label>
-                            <input name="input" type="text" id="txt-Autores">
-                            <div class="iconoInput">
-                                <i class="fa-solid fa-pen-clip"></i>
-                            </div>
-                        </div>
-
-                    </div>
-
                     <div class="formControl flexContendor">
 
                         <div class="col-2 labelContenedor">
@@ -256,13 +244,16 @@
 
                         <div class="col-2 labelContenedor">
 
-                            <label for="slt-formato"> Formato </label>
-                            <select name="input" id="slt-formato">
-                                <option value=""> -- Seleccione una opción</option>
-                                <option value="Fisico"> Físico</option>
-                                <option value="Digital"> Digital</option>
-                                <option value="Ebook"> Ebook</option>
-                            </select>
+                            <label for="slt-autor"> Autores </label>
+                            
+                            
+                            <div class="container">
+                                
+                                <select id="slt-autores" multiple data-multi-select-plugin>
+                                </select>
+
+                            </div>
+
                         </div>
 
                     </div>
@@ -276,14 +267,8 @@
                         </div>
                         <div class="col-2 labelContenedor">
 
-                            <label for="slt-Generos"> Géneros </label>
-                            <select name="input" id="slt-Generos">
-                                <option value=""> -- Seleccione una opción</option>
-                                <option value="Clasicos">Clásicos</option>
-                                <option value="Fantasia">Fantasía</option>
-                                <option value="Infantiles">Infantiles</option>
-                                <option value="Latinoamericanos">Latinoamericanos</option>
-                                <option value="Terror">Terror</option>
+                            <label for="slt-Generos"> Géneros Literarios</label>
+                            <select multiple data-multi-select-plugin name="input" id="slt-Generos">
                             </select>
                         </div>
 
@@ -422,7 +407,7 @@
 
     <!-- 2. Servicio general-->
     <script src="/js/servicio-general.js"></script>
-
+    <script src="/js/multi-select.js"></script>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.2/TweenMax.min.js" integrity="sha512-D2J9vHhZDistrNPhgdeuB/MAW4bEDlqddpItoxqhTAeJIOnBEYIkF01AfDOCosWb6KOQSqVgPB5mfrSUTX1BBQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="/js/dashboard-admin.js"></script>
