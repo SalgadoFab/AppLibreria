@@ -187,18 +187,6 @@
                 </div>
 
 
-                <div class="formControl">
-                    <div class="labelUbicacionMapa">
-                        <label for="ubicacionMapa">Dirección en mapa:</label>
-                    </div>
-
-                    <div class="provicionalUbicacionMapa">
-                        <i class="fa-solid fa-map-location"></i>
-                    </div>
-                    <span>Nota - Las ubicaciones por mapa será funcionalidad para la próxima iteración</span>
-
-                </div>
-
                 <!--Contenedor de Imput Completo-->
                 <div class="formControl">
 
@@ -255,73 +243,41 @@
 
                 <div class="formControl">
                     <div class="labelContenedor">
-                        <label for="txt-correo"> Género </label>
+                        <label for="slt-genero"> Género </label>
                         <select name="input" id="slt-genero">
                             <option value="">Género</option>
-                            <option value="Masculino">Masculino</option>
-                            <option value="Femenino">Femenino</option>
+                            <option value="1">Masculino</option>
+                            <option value="2">Femenino</option>
+                            <option value="3">Indefinido</option>
                         </select>
                     </div>
 
                 </div>
 
-                <div class="formControl formControlChexbox espacioAbajo">
+                <div class="formControl">
+                    <div class="labelContenedor">
 
-                    <div class="listaChexbox">
-                        <div class="labelAutoresFavoritos">
-                            <label> Autores Favoritos</label>
-                        </div>
-                        <div class="ctn-chexboxs autoresFavoritos">
-                            <div class="checkbox-container">
-                                <input type="checkbox" id="autor1" />
-                                <label class="checkbox" for="autor1">Autor 1</label>
-                            </div>
-                            <div class="checkbox-container">
-                                <input type="checkbox" id="autor2" />
-                                <label class="checkbox" for="autor2">Autor 2</label>
-                            </div>
-                            <div class="checkbox-container">
-                                <input type="checkbox" id="autor3" />
-                                <label class="checkbox" for="autor3">Autor 3</label>
-                            </div>
-                            <div class="checkbox-container">
-                                <input type="checkbox" id="autor4" />
-                                <label class="checkbox" for="autor4">Autor 4</label>
-                            </div>
-                        </div>
+                        <label for="slt-autores-favs"> Autores Literarios Favoritos </label>
+                        <select multiple data-multi-select-plugin id="slt-autores-favs">
+                        </select>
+
                     </div>
 
-
-                </div>
-
-                <div class="formControl formControlChexbox espacioAbajo">
-                    <div class="listaChexbox">
-                        <div class="labelAutoresFavoritos">
-                            <label> Géneros Favoritos</label>
-                        </div>
-                        <div class="ctn-chexboxs autoresFavoritos">
-                            <div class="checkbox-container">
-                                <input type="checkbox" id="genero1" />
-                                <label class="checkbox" for="genero1">Género 1</label>
-                            </div>
-                            <div class="checkbox-container">
-                                <input type="checkbox" id="genero2" />
-                                <label class="checkbox" for="genero2">Género 2</label>
-                            </div>
-                            <div class="checkbox-container">
-                                <input type="checkbox" id="genero3" />
-                                <label class="checkbox" for="genero3">Género 3</label>
-                            </div>
-                            <div class="checkbox-container">
-                                <input type="checkbox" id="genero4" />
-                                <label class="checkbox" for="genero4">Género 4</label>
-                            </div>
-                        </div>
-                    </div>
                 </div>
 
                 <div class="formControl">
-                    <button id="btnGuardar" class="btnGuardar" style="margin-top: 10rem;" type="button"> Guardar Registro </button>
+                    <div class="labelContenedor">
+
+                        <label for="slt-generos-favs"> Géneros Literarios Favoritos </label>
+                        <select multiple data-multi-select-plugin id="slt-generos-favs">
+                        </select>
+
+                    </div>
+
+                </div>
+
+                <div class="formControl">
+                    <button id="btnGuardar" class="btnGuardar" style="margin-top: 1.5rem;" type="button"> Guardar Registro </button>
                 </div>
             </div>
         </form>
@@ -368,6 +324,12 @@
             </div>
         </div>
     </footer>
+
+    <!-- 1. Axios-->
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <!-- 2. Servicio general-->
+    <script src="/js/servicio-general.js"></script>
+    <script src="/js/multi-select.js"></script>
 
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="/js/subir-foto.js"></script>

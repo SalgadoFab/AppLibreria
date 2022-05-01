@@ -1,3 +1,17 @@
+let lista_libros;
+let totalPaginas; 
+const buscar = document.getElementById('txt-buscar');
+const inicializar = async() => {
+    lista_libros = await obtenerDatos('obtener-libros');
+    totalPaginas = obtenerNumeroPaginas(lista_libros)
+
+    console.log(lista_libros);
+    cambiarPagina(1) 
+    obtenerPaginacion() 
+    obtenerPaginaActiva()
+};
+
+
 // Items a mostrar por pagina
 let itemsPorPagina = 9;
 
@@ -9,8 +23,6 @@ const obtenerNumeroPaginas = (listaArray) => {
     return Math.ceil(listaArray.length / itemsPorPagina)
 }
 
-// Obtenemos el numero de paginas para nuestra paginacion
-let totalPaginas = obtenerNumeroPaginas(lista_libros)
 
 //Funcion para cambiar entre paginas por cada item de paginacion
 const cambiarPagina = (pagina) => {
@@ -180,9 +192,4 @@ const obtenerPaginaActiva = () => {
 
 }
 
-//Ejecutamos la funciones principales al momento de que la pagina carga por primera vez
-window.onload = function() {
-    cambiarPagina(1) //Establecer página predeterminada
-    obtenerPaginacion() //Generar paginacion
-    obtenerPaginaActiva()
-};
+inicializar();

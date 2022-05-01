@@ -16,7 +16,7 @@ const validarUsuarioConectado = () => {
         }
     }
 
-    if (usuario.tipoUsuario == 1) {
+    if (usuario.rol == 1) {
         btnEnlaceDashboard[0].setAttribute("href", "/html/dashboard-admin.html")
     } else {
         btnEnlaceDashboard[0].setAttribute("href", "/html/dashboard-usuario.html")

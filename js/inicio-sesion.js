@@ -1,3 +1,10 @@
+const inicializarUsuarios = async() => {
+    listaUsuarios = await obtenerDatos('obtener-usuarios');
+    console.log(listaUsuarios);
+};
+inicializarUsuarios();
+
+
 let inputCorreo = document.getElementById("txt-correo");
 let inputPassword = document.getElementById("txt-password");
 let label = document.getElementById("labelCheck");
@@ -12,7 +19,7 @@ const validarInicioSesion = () => {
     //Recorremos todos los usuarios y validamos los datos ingresados con el json de usuarios
     listaUsuarios.forEach(userArray => {
 
-        if ((userArray.correo == inputCorreo.value) && (userArray.contrasena == inputPassword.value)) {
+        if ((userArray.correo == inputCorreo.value) && (userArray.password == inputPassword.value)) {
             localStorage.setItem('usuarioConectado', JSON.stringify(userArray));
             datosValidados = true;
         }

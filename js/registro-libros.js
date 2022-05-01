@@ -1,4 +1,31 @@
-'use strict';
+let lista_Autores = [];
+let lista_Generos = [];
+
+let sltAutores = document.getElementById('slt-autores');
+let sltGeneros = document.getElementById('slt-Generos');
+
+const inicializarAutores = async() => {
+    lista_Autores = await obtenerDatos('obtener-autores');
+    for (let i = 0; i < lista_Autores.length ; i++){
+        let opt = document.createElement('option');
+        opt.value = lista_Autores[i].nombreAutor;
+        opt.innerHTML = lista_Autores[i].nombreAutor;
+        sltAutores.appendChild(opt);
+    }
+};
+
+const inicializarGeneros = async() => {
+    lista_Generos = await obtenerDatos('obtener-generos');
+    for (let i = 0; i < lista_Generos.length ; i++){
+        let opt = document.createElement('option');
+        opt.value = lista_Generos[i].nombreGenero;
+        opt.innerHTML = lista_Generos[i].nombreGenero;
+        sltGeneros.appendChild(opt);
+    }
+};
+
+inicializarAutores();
+inicializarGeneros();
 
 const inputnombreLibro = document.querySelector('#txt-nombre-libro')
 const inputisbn = document.querySelector('#txt-ISBN')
@@ -14,9 +41,6 @@ const inputdescuento = document.querySelector('#txt-Descuento')
 const inputresenna = document.querySelector('#txt-Resenna')
 
 
-
-
-
 const btnRegistrar = document.getElementById('btnGuardar');
 
 const validarRegistroLibros = () => {
@@ -26,6 +50,7 @@ const validarRegistroLibros = () => {
 
     //Mensaje del resultado de la validacion
     if (hayError == true) {
+        console.log(options_selected)
         Swal.fire({
             "icon": "warning",
             "title": "Error",
