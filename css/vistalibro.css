@@ -1,0 +1,163 @@
+.cabeceraSeccion {
+    display: flex;
+    padding-bottom: 5rem;
+}
+
+.tituloRegistrarse {
+    display: flex;
+    align-items: center;
+}
+
+.tituloRegistrarse h1 {
+    font-size: 3rem;
+}
+
+.iconoCabecera {
+    font-size: 4rem;
+    padding-right: 1rem;
+}
+
+.indicadorRegistro {
+    padding-top: 2rem;
+    font-size: 1.3rem;
+}
+
+.iniciarSesion {
+    display: flex;
+    flex-direction: column;
+    text-align: right;
+    font-size: 1.3rem;
+    padding-top: 1rem;
+}
+
+.iniciarSesion a {
+    padding-right: 1.5rem;
+    color: #000;
+    padding-top: 2rem;
+}
+
+.sctFormulario form {
+    display: flex;
+    width: 100%;
+}
+
+.labelAutoresFavoritos {
+    padding-bottom: 1rem;
+}
+
+.labelDiv {
+    position: relative;
+}
+
+
+/*CSS Para los chexboxs*/
+
+.formControlChexbox {
+    padding-bottom: 1rem;
+}
+
+.formControl3 {
+    display: flex;
+    font-size: 1.2rem;
+    padding-bottom: 1rem;
+}
+
+.listaChexbox {
+    padding: 1rem 1rem 0;
+    box-shadow: 0px 5px 8px 0px rgb(0 0 0 / 40%);
+    border-radius: 20px;
+}
+
+.ctn-chexboxs {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.labelDiv {
+    width: 50%;
+    align-items: center;
+    padding-bottom: 2rem;
+}
+
+.labelDiv label {
+    padding-bottom: 2rem;
+    display: flex;
+    padding-top: 2.4rem;
+    align-items: center;
+}
+
+.checkbox-container {
+    width: 50%;
+}
+
+input[type="checkbox"] {
+    display: none;
+}
+
+input[type="checkbox"]:hover+label:before {
+    opacity: .5;
+}
+
+.checkbox {
+    display: inline-block;
+    position: relative;
+    padding-left: 2rem;
+    line-height: 2rem;
+    cursor: pointer;
+    font-size: 0.9rem !important;
+    padding-bottom: 0.5rem !important;
+}
+
+.checkbox:before {
+    z-index: 15;
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    width: 0.9rem;
+    border-width: 4px;
+    border-style: solid;
+    border-color: #444;
+    height: 0.9rem;
+    border-radius: 3px;
+}
+
+input[type="checkbox"]:checked+label {
+    color: #000;
+}
+
+input[type="checkbox"]:checked+label:before {
+    border-color: transparent;
+    border-left-color: #2ecc71;
+    border-bottom-color: #2ecc71;
+    transform: rotate(-50deg);
+    width: 1rem;
+    height: 0.4rem;
+    top: 0.2rem;
+}
+
+ul.texto-ayuda {
+    display: block;
+    margin-top: 2rem;
+    font-size: 0.8rem;
+    line-height: 1.2rem;
+    color: red;
+}
+
+ul.texto-ayuda li.validado {
+    color: blue;
+}
+
+.formControl .btnComprar {
+    width: 200%;
+    border-radius: 10px;
+    height: 3rem;
+    border: none;
+    box-shadow: 0px 5px 8px 0px rgb(0 0 0 / 40%);
+    background: #90b22e;
+    color: #fff;
+    font-size: 1.1rem;
+    cursor: pointer;
+}

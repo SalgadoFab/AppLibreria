@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer"
+    />
+
+    <link rel="stylesheet" href="/css/reset.css">
+    <link rel="stylesheet" href="/css/general.css">
+    <link rel="stylesheet" href="/css/subir-foto.css">
+    <link rel="stylesheet" href="/css/vistalibro.css">
+
+
+    <link rel="stylesheet" href="/css/footer.css">
+
+    <link rel="stylesheet" href="/css/dashboard-admin.css">
+
+
+    <title>Registro de Autores - Libreria</title>
+
+</head>
+
+<body>
+
+
+    <section class="sct sctFormulario flexContendor">
+        <form>
+            <div class="col-60">
+
+
+                <!--Contenedor de 2 Columnas-->
+                <div class="formControl flexContendor">
+
+                    <div class="formControl ctn-subirFoto">
+                        <div class="labelSubiFoto">
+                            <label for="foto-perfil-autor">Foto Autor</label>
+                        </div>
+                        <div class="drop-zone">
+                            <span class="drop-zone__prompt"><i class="far fa-image"></i></span>
+                            <input type="file" id="foto-perfil-autor" class="drop-zone__input">
+                        </div>
+
+                        <div class="labelNombreCompleto"></div>
+                        <label for="txt-NombreCompleto" style="margin-top: 2.5rem;"> Reseña </label>
+
+
+
+                    </div>
+                    <div class="formControl flexContendor">
+
+
+
+                        <div class="col-2 labelContenedor">
+
+                        </div>
+                        <div class="col-2 labelContenedor">
+
+
+                            <div class="labelNombreCompleto"></div>
+                            <label for="txt-NombreCompleto" style="margin-top: 2.5rem;"> Título de Libro </label>
+
+                            <label for="txt-nacionalidad"> Autor </label>
+
+                            <label for="txt-añoPremioNobel"> Editorial </label>
+
+                            <label for="txt-añoPremioNobel"> Fecha de Publicación </label>
+
+                            <label for="txt-añoPremioNobel"> Género </label>
+
+                            <div class="col-3labelContenedor">
+
+                                <div class="formControl">
+                                    <button id="btn" class="btnComprar" style="margin-top: 5rem;" type="button"> Comprar ahora</button>
+
+                                    <button id="btn" class="btnComprar" style="margin-top: 5rem;" type="button"> Agregar</button>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+
+                    </div>
+
+
+
+
+
+
+
+
+
+
+                </div>
+            </div>
+
+            </div>
+            </div>
+            </div>
+
+            <div class="col-40">
+
+
+
+
+
+            </div>
+        </form>
+    </section>
+
+    </main>
+
+
+
+    <footer>
+        <div class="ctn-footer ctnFlexFooter">
+            <div class="redes col-footer-3 ">
+                <div class="socialMedia">
+                    <ul>
+                        <li>
+                            <a href="#">
+                                <i class="fa-brands fa-whatsapp"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="fa-brands fa-facebook-f"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="fa-brands fa-instagram"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footerText col-footer-3 ">
+                ©2022 Bazar de las Sorpresas. Derechos reservados.
+            </div>
+            <div class="checkout col-footer-3 ">
+                <ul>
+                    <li>
+                        <i class="fa-brands fa-cc-visa"></i>
+                    </li>
+                    <li>
+                        <i class="fa-brands fa-cc-mastercard"></i>
+                    </li>
+                    <li>
+                        <i class="fa-brands fa-cc-amex"></i>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+    <!-- 1. Axios-->
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+    <!-- 2. Servicio general-->
+    <script src="/js/servicio-general.js"></script>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.2/TweenMax.min.js" integrity="sha512-D2J9vHhZDistrNPhgdeuB/MAW4bEDlqddpItoxqhTAeJIOnBEYIkF01AfDOCosWb6KOQSqVgPB5mfrSUTX1BBQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="/js/dashboard-admin.js"></script>
+
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="/js/subir-foto.js"></script>
+    <script src="/js/validar-formulario.js"></script>
+    <script src="/js/registro-autores.js"></script>
+
+</body>
+
+</html>
