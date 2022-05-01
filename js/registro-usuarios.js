@@ -1,3 +1,33 @@
+let lista_Autores = [];
+let lista_Generos = [];
+
+let sltAutoresFavs = document.getElementById('slt-autores-favs');
+let sltGenerosFavs = document.getElementById('slt-generos-favs');
+
+const inicializarAutores = async() => {
+    lista_Autores = await obtenerDatos('obtener-autores');
+    for (let i = 0; i < lista_Autores.length ; i++){
+        let opt = document.createElement('option');
+        opt.value = lista_Autores[i].nombreAutor;
+        opt.innerHTML = lista_Autores[i].nombreAutor;
+        sltAutoresFavs.appendChild(opt);
+    }
+};
+
+const inicializarGeneros = async() => {
+    lista_Generos = await obtenerDatos('obtener-generos');
+    for (let i = 0; i < lista_Generos.length ; i++){
+        let opt = document.createElement('option');
+        opt.value = lista_Generos[i].nombreGenero;
+        opt.innerHTML = lista_Generos[i].nombreGenero;
+        sltGenerosFavs.appendChild(opt);
+    }
+};
+
+inicializarAutores();
+inicializarGeneros();
+
+
 const listaProvincias = document.getElementById('slt-provincias');
 const listaCantones = document.getElementById('slt-cantones');
 const listaDistritos = document.getElementById('slt-distritos');
@@ -233,9 +263,22 @@ const validarRegistroUsuario = () => {
         txtPassword.classList.add("inputError");
     }
     
-    console.log(errorCamposVacios)
+    
 
-    //Mensaje del resultado de la validacion
+    const txtPrimerNombre = document.getElementById('txt-primer-nombre');
+    const txtSegundoNombre = document.getElementById('txt-segundo-nombre');
+    const txtPrimerApellido =  document.getElementById('txt-primer-apellido');
+    const txtSegundoApellido =  document.getElementById('txt-segundo-apellido');
+    const sltTipoIdentificacion = document.getElementById('slt-tipo-indentificacion');
+    const txtIdentificacion = document.getElementById('txt-indentificacion');
+    const sltGenero = document.getElementById('slt-genero');
+    //listaProvincias
+    //listaCantones
+    //listaDistritos
+    const txtDireccion = document.getElementById('txt-direccion');
+    const txtCorreo = document.getElementById('txt-correo');
+    //txtPassword
+
     if ( (errorCamposVacios == true) || (errorRequerimientoPassword == true) ) {
         Swal.fire({
             "icon": "warning",
@@ -243,12 +286,26 @@ const validarRegistroUsuario = () => {
             "text": "Compruebe que todos los campos estan correctamente llenados"
         });
 
-    } else { //Si la letiable de error termina en false esto lanza un popup al usuario para indicar registro exitoso
-        Swal.fire({
-            "icon": "success",
-            "title": "Bienvenido",
-            "text": "Usuario Registrado con exito"
-        });
+    } else { 
+        let usuario = {
+
+            primerNombre: txtPrimerNombre.value,
+            segundoNombre: txtSegundoNombre.value,
+            primerApellido: txtPrimerApellido.value,
+            segundoApellido: txtSegundoApellido.value,
+            tipoIdentificacion: sltTipoIdentificacion.value,
+            identificacion: txtIdentificacion.value,
+            provincia: listaProvincias.value,
+            canton: listaCantones.value,
+            distrito: listaDistritos.value,
+            direccion: txtDireccion.value,
+            genero: sltGenero.value,
+            correo: txtCorreo.value,
+            password: txtPassword.value
+
+        }
+
+        registrarDatos('/registrar-usuario', usuario);
     }
 
 } 

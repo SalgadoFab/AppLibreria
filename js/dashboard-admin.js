@@ -102,6 +102,9 @@ Array.prototype.forEach.call(item, function (el, i) {
 
 
 let btnVolverTienda = document.querySelector('.btnVolver a')
-
 btnVolverTienda.setAttribute('href', '/html/catalogo-libros-vista-cliente.html')
 
+let contenedorNombreUsuario = document.querySelector('.indicadoresHeader .nombreAdministrador');
+let usuario = JSON.parse(localStorage.getItem('usuarioConectado'));
+
+contenedorNombreUsuario.innerHTML = usuario.primerNombre + ' ' + usuario.primerApellido;

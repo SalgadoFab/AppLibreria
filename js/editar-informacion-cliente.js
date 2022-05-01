@@ -160,7 +160,7 @@ const validarEditarInformacionUsuario = () => {
 
     let errorCodigoSeguridad = false;
 
-    if (txtCodigo.value != 1234) {
+    if (txtCodigo.value != codigo) {
         errorCodigoSeguridad = true
         txtCodigo.classList.add("inputError");
     } else {
@@ -189,10 +189,20 @@ const validarEditarInformacionUsuario = () => {
 //Referenciamos a nuestro boton registrar con el evento click para ejecutar nuestra funcion de validacion
 btnActualizar.addEventListener('click', validarEditarInformacionUsuario);
 
+let codigo;
+const codePass = () => {
+    codigo = '';
+    let caracteres = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+    for ( let i = 0; i < 6; i++ ) {
+      codigo += caracteres.charAt(Math.floor(Math.random() * caracteres.length));
+    }
+}
 
 const btnEnviarCodigo = document.getElementById('btnEnviarCodigo');
-
 btnEnviarCodigo.onclick = function() {
+
+    codePass();
+    console.log(codigo);
 
     let codigoEnviado = true;
 
