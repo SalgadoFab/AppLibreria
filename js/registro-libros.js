@@ -6,7 +6,7 @@ let sltGeneros = document.getElementById('slt-Generos');
 
 const inicializarAutores = async() => {
     lista_Autores = await obtenerDatos('obtener-autores');
-    for (let i = 0; i < lista_Autores.length ; i++){
+    for (let i = 0; i < lista_Autores.length; i++) {
         let opt = document.createElement('option');
         opt.value = lista_Autores[i].nombreAutor;
         opt.innerHTML = lista_Autores[i].nombreAutor;
@@ -16,7 +16,7 @@ const inicializarAutores = async() => {
 
 const inicializarGeneros = async() => {
     lista_Generos = await obtenerDatos('obtener-generos');
-    for (let i = 0; i < lista_Generos.length ; i++){
+    for (let i = 0; i < lista_Generos.length; i++) {
         let opt = document.createElement('option');
         opt.value = lista_Generos[i].nombreGenero;
         opt.innerHTML = lista_Generos[i].nombreGenero;
@@ -54,7 +54,7 @@ const validarRegistroLibros = () => {
         Swal.fire({
             "icon": "warning",
             "title": "Error",
-            "text": "Compruebe que todos los campos estan correctamente llenados"
+            "text": "Compruebe que todos los campos estan correctamente llenos"
         });
 
     } else { //Si la variable de error termina en false esto lanza un popup al usuario para indicar registro exitoso

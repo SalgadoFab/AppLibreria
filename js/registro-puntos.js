@@ -4,7 +4,7 @@ const sltSocios = document.getElementById('slt-socio');
 
 const inicializarSocios = async() => {
     lista_Socios = await obtenerDatos('obtener-socios');
-    for (let i = 0; i < lista_Socios.length ; i++){
+    for (let i = 0; i < lista_Socios.length; i++) {
         let opt = document.createElement('option');
         opt.value = lista_Socios[i].nombre;
         opt.innerHTML = lista_Socios[i].nombre;
@@ -17,7 +17,7 @@ inicializarSocios();
 const txtDireccion = document.getElementById('txt-direccion');
 
 const btnRegistrar = document.getElementById('btnGuardar');
-const validarRegistroPunto= () => {
+const validarRegistroPunto = () => {
 
     let hayError = validarFormulario();
 
@@ -27,10 +27,10 @@ const validarRegistroPunto= () => {
         Swal.fire({
             "icon": "warning",
             "title": "El punto de retiro no se puede registrar",
-            "text": "Compruebe que todos los campos estan correctamente llenados"
+            "text": "Compruebe que todos los campos estan correctamente llenos"
         });
 
-    } else { 
+    } else {
 
         let punto = {
             sltSocio: inputnombreCompleto.value,

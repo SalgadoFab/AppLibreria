@@ -19,7 +19,7 @@ const validarRegistroAutor = () => {
         Swal.fire({
             "icon": "warning",
             "title": "El autor no se puede registrar",
-            "text": "Compruebe que todos los campos estan correctamente llenados"
+            "text": "Compruebe que todos los campos estan correctamente llenos"
         });
 
     } else { //Si la variable de error termina en false esto lanza un popup al usuario para indicar registro exitoso
