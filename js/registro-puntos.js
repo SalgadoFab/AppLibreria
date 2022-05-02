@@ -4,7 +4,7 @@ const sltSocios = document.getElementById('slt-socio');
 
 const inicializarSocios = async() => {
     lista_Socios = await obtenerDatos('obtener-socios');
-    for (let i = 0; i < lista_Socios.length ; i++){
+    for (let i = 0; i < lista_Socios.length; i++) {
         let opt = document.createElement('option');
         opt.value = lista_Socios[i].nombre;
         opt.innerHTML = lista_Socios[i].nombre;
@@ -17,7 +17,7 @@ inicializarSocios();
 const txtDireccion = document.getElementById('txt-direccion');
 
 const btnRegistrar = document.getElementById('btnGuardar');
-const validarRegistroPunto= () => {
+const validarRegistroPunto = () => {
 
     let hayError = validarFormulario();
 
@@ -30,14 +30,14 @@ const validarRegistroPunto= () => {
             "text": "Compruebe que todos los campos estan correctamente llenados"
         });
 
-    } else { 
+    } else {
 
         let punto = {
-            sltSocio: inputnombreCompleto.value,
-            nacimiento: inputAnoNacimiento.value,
+            socioComercial: sltSocios.value,
+            direccion: txtDireccion.value,
         };
 
-        registrarDatos('/registrar-autor', autor);
+        registrarDatos('/registrar-punto', punto);
     }
 
 }
