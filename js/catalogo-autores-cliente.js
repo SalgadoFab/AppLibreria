@@ -2,7 +2,7 @@ let totalPaginas;
 const buscar = document.getElementById('txt-buscar');
 
 const inicializar = async() => {
-    
+
     listaAutores = await obtenerDatos('obtener-autores');
     console.log(listaAutores);
 
@@ -72,20 +72,7 @@ const cambiarPagina = (pagina) => {
             </div>
 
             <div class="cardBtns flexContendor">
-                <div class="col-2">
-                    <div class="promPlumas espacioInfoItem">
-                        <span>
-                            Promedio Plumas:
-                        </span>
-                    </div>
-                    <div class="promedioPlumasItem">
-                        <span>
-                            <br>
-                            0
-                        </span>
-                    </div>
-
-                </div>
+               
 
                 <div class="col-2">
                     <div class="librosPublicados espacioInfoItem">

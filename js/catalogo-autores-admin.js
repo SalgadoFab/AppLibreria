@@ -74,16 +74,7 @@ const cambiarPagina = (pagina) => {
                         0
                     </div>
                 </div>
-                <div class="col-3">
-                    <div class="tituloUnidades espacioInfoItem">
-                        <span>
-                            Unidades Vendidas
-                        </span>
-                    </div>
-                    <div class="unidadesVendidas">
-                        0
-                    </div>
-                </div>
+              
 
             </div>
 
@@ -103,19 +94,7 @@ const cambiarPagina = (pagina) => {
                     </button>
                 </div>
             </div>
-
-            <div class="cardInfo-1">
-                <div class="col-1">
-                    <div class="DineroGenerado espacioInfoItem">
-                        <span>
-                            Dinero generado: ₡000.000
-                        </span>
-                    </div>
-
-                </div>
-
-
-            </div>
+            
         </div>`
         }
 

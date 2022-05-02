@@ -1,13 +1,13 @@
 let lista_libros;
-let totalPaginas; 
+let totalPaginas;
 const buscar = document.getElementById('txt-buscar');
 const inicializar = async() => {
     lista_libros = await obtenerDatos('obtener-libros');
     totalPaginas = obtenerNumeroPaginas(lista_libros)
 
     console.log(lista_libros);
-    cambiarPagina(1) 
-    obtenerPaginacion() 
+    cambiarPagina(1)
+    obtenerPaginacion()
     obtenerPaginaActiva()
 };
 
@@ -37,7 +37,7 @@ const cambiarPagina = (pagina) => {
     //Hacemos un for, para cada elemento dentro del rango de la página actual
     for (let i = (pagina - 1) * itemsPorPagina; i < (pagina * itemsPorPagina) && i < lista_libros.length; i++) {
 
-        if (lista_libros[i].nombreLibro.toLowerCase().includes(buscar.value.toLowerCase()) ) {
+        if (lista_libros[i].nombreLibro.toLowerCase().includes(buscar.value.toLowerCase())) {
             //Al contenedor de items le pasamos la estrucutra html para cada item del array
             //Cambiar variables
             contenedorItems.innerHTML += `
@@ -55,12 +55,12 @@ const cambiarPagina = (pagina) => {
                     <div class="col-1">
                         <div class="nombreLibro espacioInfoItem">
                             <span>
-                                Titulo: ${lista_libros[i].titulo}
+                                Titulo: ${lista_libros[i].nombreLibro}
                             </span>
                         </div>
                         <div class="nombreAutor">
                             <span>
-                                Autor: ${lista_libros[i].autor}
+                                Autor: ${lista_libros[i].nombreAutor}
                             </span>
                         </div>
                     </div>
@@ -85,18 +85,7 @@ const cambiarPagina = (pagina) => {
 
                 <div class="cardInfo-2 flexContendor">
 
-                    <div class="col-3">
-                        <div class="dineroGeneradoTitulo espacioInfoItem">
-                            <span>
-                                Dinero Generado
-                            </span>
-                        </div>
-                        <div class="dineroGeneradoItem">
-                            <span>
-                                0
-                            </span>
-                        </div>
-                    </div>
+                    
                     <div class="col-3">
                         <div class="precioUnitarioTitulo espacioInfoItem">
                             <span>
