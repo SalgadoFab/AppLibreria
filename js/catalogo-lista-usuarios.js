@@ -17,6 +17,8 @@ const mostrarTabla = async() => {
         fila.insertCell().innerText = usuario.primerNombre;
         fila.insertCell().innerText = usuario.primerApellido;
         fila.insertCell().innerText = usuario.segundoApellido;
+        fila.insertCell().innerText = usuario.provincia;
+
     });
 
 };
