@@ -217,7 +217,6 @@ let errorRequerimientoPassword = false;
 })();
 
 
-
 // this of eye method
 const mostrarPassword = (input, selector) => {
     if(input.classList.contains('activo')) {
@@ -242,10 +241,8 @@ mostrarPassConfirmacion.onclick = function () {
 }
 
 
-
 //Funcion de Validacion de campos normales
 const validarRegistroUsuario = () => {
-    
     //Creamos la letiable de error y le asignamos el valor que devuelva nuestra funcion de validacion de campos del formulario
     //IMPORTANTE - Esta funcion valida solo si el campo se encuentra vacio, para casos mas espesificos crear una validaciones aparte
     let errorCamposVacios = validarFormulario();
@@ -263,7 +260,6 @@ const validarRegistroUsuario = () => {
         txtPassword.classList.add("inputError");
     }
     
-    
 
     const txtPrimerNombre = document.getElementById('txt-primer-nombre');
     const txtSegundoNombre = document.getElementById('txt-segundo-nombre');
@@ -278,6 +274,11 @@ const validarRegistroUsuario = () => {
     const txtDireccion = document.getElementById('txt-direccion');
     const txtCorreo = document.getElementById('txt-correo');
     //txtPassword
+
+    let sltAutoresFavs = obtenerValoresMultiSelect('slt-autores-favs');
+    let sltGenerosFavs = obtenerValoresMultiSelect('slt-generos-favs');
+
+    let imagen = document.querySelector('#photo');
 
     if ( (errorCamposVacios == true) || (errorRequerimientoPassword == true) ) {
         Swal.fire({
@@ -295,17 +296,20 @@ const validarRegistroUsuario = () => {
             segundoApellido: txtSegundoApellido.value,
             tipoIdentificacion: sltTipoIdentificacion.value,
             identificacion: txtIdentificacion.value,
+            foto: imagen.src,
             provincia: listaProvincias.value,
             canton: listaCantones.value,
             distrito: listaDistritos.value,
             direccion: txtDireccion.value,
             genero: sltGenero.value,
             correo: txtCorreo.value,
-            password: txtPassword.value
-
+            password: txtPassword.value,
+            autoresFavs: sltAutoresFavs,
+            generosFavs: sltGenerosFavs
+            
         }
 
-        registrarDatos('/registrar-usuario', usuario);
+        registrarDatos('registrar-usuario', usuario);
     }
 
 } 

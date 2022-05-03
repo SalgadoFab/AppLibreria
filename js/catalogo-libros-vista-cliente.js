@@ -1,13 +1,13 @@
 let lista_libros;
-let totalPaginas; 
+let totalPaginas;
 const buscar = document.getElementById('txt-buscar');
 const inicializar = async() => {
     lista_libros = await obtenerDatos('obtener-libros');
     totalPaginas = obtenerNumeroPaginas(lista_libros)
 
     console.log(lista_libros);
-    cambiarPagina(1) 
-    obtenerPaginacion() 
+    cambiarPagina(1)
+    obtenerPaginacion()
     obtenerPaginaActiva()
 };
 
@@ -56,7 +56,7 @@ const cambiarPagina = (pagina) => {
                 <div class="col-1">
                     <div class="nombreLibro espacioInfoItem">
                         <span>
-                            Nombre de Libro: ${lista_libros[i].titulo}
+                            Nombre de Libro: ${lista_libros[i].nombreLibro}
                         </span>
                     </div>
 
@@ -65,7 +65,7 @@ const cambiarPagina = (pagina) => {
                 <div class="col-1">
                     <div class="nombreLibro espacioInfoItem">
                         <span>
-                            Género: ${lista_libros[i].genero}
+                            Género: ${lista_libros[i].generoLibro}
                         </span>
                     </div>
 
@@ -74,7 +74,7 @@ const cambiarPagina = (pagina) => {
                 <div class="col-1">
                     <div class="nombreLibro espacioInfoItem">
                         <span>
-                            Autor: ${lista_libros[i].autor}
+                            Autor: ${lista_libros[i].nombreAutor}
                         </span>
                     </div>
 

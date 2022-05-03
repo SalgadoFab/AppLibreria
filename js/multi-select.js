@@ -386,3 +386,15 @@ document.addEventListener('click', () => {
     }
 });
 
+
+
+const obtenerValoresMultiSelect = (id_select) => {
+    let selected = [];
+    for (let option of document.getElementById(id_select).options) {
+        if (option.selected) {
+            selected.push(option.value);
+        }
+    }
+
+    return selected;
+}
