@@ -8,6 +8,7 @@ const btnRegistrar = document.getElementById('btnGuardar');
 const validarRegistroSocio = () => {
 
     let hayError = validarFormulario();
+    let imagen = document.querySelector('#photo');
 
     //Mensaje del resultado de la validacion
     if (hayError == true) {
@@ -20,6 +21,7 @@ const validarRegistroSocio = () => {
     } else { //Si la variable de error termina en false esto lanza un popup al usuario para indicar registro exitoso
         let socio = {
             nombre: inputNombreSocio.value,
+            logo: imagen.src,
             codigo: inputCodigoSocio.value,
             direccion: inputDireccionSocio.value
         };
