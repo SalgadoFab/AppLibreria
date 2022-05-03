@@ -14,7 +14,7 @@ const mostrarTabla = async() => {
         let fila = cuerpoTabla.insertRow();
 
         fila.insertCell().innerText = usuario.identificacion;
-        fila.insertCell().innerText = usuario.nombre;
+        fila.insertCell().innerText = usuario.primerNombre;
         fila.insertCell().innerText = usuario.primerApellido;
         fila.insertCell().innerText = usuario.segundoApellido;
     });
