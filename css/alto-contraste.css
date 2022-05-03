@@ -1,0 +1,38 @@
+.alto-contraste body {
+    background-color: #000;
+}
+
+.alto-contraste h1,
+.alto-contraste h2,
+.alto-contraste h3,
+.alto-contraste h4,
+.alto-contraste h5,
+.alto-contraste h6,
+.alto-contraste a,
+.alto-contraste i,
+.alto-contraste li,
+.alto-contraste ul,
+.alto-contraste ul.texto-ayuda,
+.alto-contraste span {
+    color: white;
+}
+
+.alto-contraste .nav-bar,
+.alto-contraste .navBarAdmin,
+.alto-contraste input {
+    color: white;
+    background-color: black;
+}
+
+.alto-contraste .ctnFlexFooter {
+    color: white;
+    background-color: black;
+}
+
+.alto-contraste #btnEnviarCodigo,
+.alto-contraste .btnIrTienda,
+.alto-contraste .btnIngresar,
+.alto-contraste #btnActualizar {
+    background-color: white;
+    color: black;
+}
