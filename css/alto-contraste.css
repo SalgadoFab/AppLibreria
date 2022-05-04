@@ -1,5 +1,5 @@
-.alto-contraste body {
-    background-color: #000;
+.alto-contraste {
+    background-color: #000!important;
 }
 
 .alto-contraste h1,
@@ -8,31 +8,61 @@
 .alto-contraste h4,
 .alto-contraste h5,
 .alto-contraste h6,
+.alto-contraste header,
+.alto-contraste footer,
 .alto-contraste a,
 .alto-contraste i,
 .alto-contraste li,
 .alto-contraste ul,
 .alto-contraste ul.texto-ayuda,
 .alto-contraste span {
-    color: white;
+    color: white!important;
+    background-color: #000!important;
 }
 
+.alto-contraste #contacto,
+.alto-contraste .ctnContacto,
+.alto-contraste .redirigirDashboard,
+.alto-contraste .ctnFlex,
 .alto-contraste .nav-bar,
 .alto-contraste .navBarAdmin,
-.alto-contraste input {
-    color: white;
-    background-color: black;
+.alto-contraste .container,
+.alto-contraste .formControl,
+.alto-contraste .sct,
+.alto-contraste .sctIrTienda,
+.alto-contraste .sctSombra,
+.alto-contraste .btnIrTienda,
+.alto-contraste .menuItem,
+.alto-contraste .panel,
+.alto-contraste .panel .cerrado,
+.alto-contraste .itemMenuContenido,
+.alto-contraste .indicadoresHeader,
+.alto-contraste .ctnFlexFooter,
+.alto-contraste .item,
+.alto-contraste .itemMenuContenido,
+.alto-contraste .bloques,
+.alto-contraste .input {
+    color: white!important;
+    background-color: black!important;
 }
 
-.alto-contraste .ctnFlexFooter {
-    color: white;
-    background-color: black;
-}
-
-.alto-contraste #btnEnviarCodigo,
+.alto-contraste .btnEnviarCodigo,
+.alto-contraste .btnVolver a,
+.alto-contraste .formControl button,
+.alto-contraste .sctIrTienda button,
 .alto-contraste .btnIrTienda,
 .alto-contraste .btnIngresar,
-.alto-contraste #btnActualizar {
-    background-color: white;
-    color: black;
+.alto-contraste button,
+.alto-contraste .btnActualizar {
+    background-color: white!important;
+    color: black!important;
+}
+
+.alto-contraste a.redirigirDashboard {
+    background: red;
+}
+
+.alto-contraste .btnVolver a {
+    background: black;
+    color: white
 }
