@@ -13,7 +13,7 @@ const validarRegistroGenero = () => {
         Swal.fire({
             "icon": "warning",
             "title": "El género literario no pudo ser registrado",
-            "text": "Compruebe que todos los campos estan correctamente llenados"
+            "text": "Compruebe que todos los campos estan correctamente llenos"
         });
 
     } else { //Si la variable de error termina en false esto lanza un popup al usuario para indicar registro exitoso

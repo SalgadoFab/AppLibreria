@@ -1,0 +1,62 @@
+h1 {
+    font-size: 3rem;
+    margin-top: 6rem;
+    margin-bottom: 1rem;
+}
+h2 {
+    margin-top: 4rem;
+    margin-bottom: 1rem;
+}
+.libro-compra {
+    margin-bottom: 1rem;
+    display: flex;
+}
+.cvv input, 
+.precioFinal input,
+.selecciona select,
+.libro-compra input {
+    width: calc(100% - 4rem);
+    height: 2.5rem;
+    border-radius: 15px;
+    padding: 0 1rem;
+    font-size: 1.2rem;
+    box-shadow: 0px 5px 8px 0px rgb(0 0 0 / 40%);
+    border: none;
+    outline: none;
+}
+
+.selecciona select {
+    width: 20rem;
+}
+
+.cvv input {
+    width: 18rem;
+}
+
+.precioFinal input{
+    width: 14rem;
+}
+.formControl {
+    padding-bottom: 2rem !important;
+}
+
+.disable {
+    display: none;
+}
+
+label {
+    display: block;
+    margin-bottom: 1rem;
+    margin-top: 1.5rem;
+}
+
+#btnComprar {
+    width: 20rem;
+}
+
+
+input.libroAdquiridoCantidad {
+    cursor: default;
+    color: transparent;
+    text-shadow: 0px 0px black;
+}   

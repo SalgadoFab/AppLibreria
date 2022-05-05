@@ -27,7 +27,7 @@ const validarRegistroPunto = () => {
         Swal.fire({
             "icon": "warning",
             "title": "El punto de retiro no se puede registrar",
-            "text": "Compruebe que todos los campos estan correctamente llenados"
+            "text": "Compruebe que todos los campos estan correctamente llenos"
         });
 
     } else {
