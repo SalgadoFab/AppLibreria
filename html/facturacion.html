@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="/css/reset.css">
+    <link rel="stylesheet" href="/css/general.css">
+
+    <link rel="stylesheet" href="/css/facturacion.css">
+
+    <link rel="stylesheet" href="/css/header.css">
+    <link rel="stylesheet" href="/css/footer.css">
+
+    <title>Facturacion</title>
+</head>
+<body>
+    <header>
+        <nav class="nav-bar">
+            <div class="container">
+                <input type="checkbox" id="drop-down-cbox" />
+                <label for="drop-down-cbox">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </label>
+
+                <h1 class="site-logo">Bazar de las Sorpresas</h1>
+
+                <ul class="main-nav small-caps">
+                    <li><a href="/html/index.html">Incio</a></li>
+                    <li><a href="/html/index.html#recomendaciones">Recomendaciones</a></li>
+                    <li><span>Tienda</span>
+                        <ul>
+                            <li><a href="/html/catalogo-libros-vista-cliente.html">Catálogo de Libros</a></li>
+                            <li><a href="/html/catalogo-autores-vista-cliente.html">Catálogo de Autores</a></li>
+                        </ul>
+                    </li>
+                    <li><a class="btnEnlaceDashboard" href="">Dashboard</a></li>
+                    <li><a href="/html/index.html#contacto">Contacto</a></li>
+                </ul>
+
+            </div>
+        </nav>
+    </header>
+
+    <section class="sct">
+
+        <div>
+            <h1>
+                Facturacion
+            </h1>
+
+            <h2>
+                Libros en Carrito
+            </h2>
+        </div>
+
+
+        <div id="contenedor-items-compra">
+        </div>
+
+        <div class="seleccion-punto" >
+            <h2>
+                Escoje tu metodo de retiro:
+            </h2>
+            <div class="selecciona">
+                <select id="metodo-retiro">
+                    <option value="Retiro en Tienda">
+                        Retiro en Tienda
+                    </option>
+                    <option value="Enviar Mediante Correos">
+                        Enviar Mediante Correos
+                    </option>
+                </select>
+            </div>
+
+            <div id="retiro-tienda" class="">
+                <h2>
+                    Selecciona tu punto de Retiro
+                </h2>
+                <div class="selecciona">
+                    <select id="punto-retiro">
+                        <option value="">
+                            ----------
+                        </option>
+                    </select>
+                </div>
+
+            </div>
+            <div id="envio" class="disable">
+                    <h2>
+                        Ingresa la direccion de Envio
+                    </h2>
+                    <div class="formControl flexContendor">
+
+                        <div class="col-2 labelContenedor">
+
+                            <label for="txt-provincia"> Provincia </label>
+                            <input name="input" type="text" id="txt-provincia">
+                            <div class="iconoInput">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                        </div>
+                        <div class="col-2 labelContenedor">
+
+                            <label for="txt-canton"> Cantón </label>
+                            <input name="input" type="text" id="txt-canton">
+                            <div class="iconoInput">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="formControl flexContendor">
+
+                        <div class="col-2 labelContenedor">
+
+                            <label for="txt-distrito"> Distrito </label>
+                            <input name="input" type="text" id="txt-distrito">
+                            <div class="iconoInput">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <!--Componente de textArea-->
+                    <div class="formControl">
+
+                        <div class="labelContenedor">
+
+                            <label for="txt-direccion"> Dirección </label>
+                            <textarea class="height-12" name="input" id="txt-direccion" rows="14"></textarea>
+                            <div class="iconoInput">
+                                <i class="fa-solid fa-location-dot"></i>
+                            </div>
+                        </div>
+
+                    </div>
+            </div>
+
+        </div>
+
+        <div class="facturar flexContendor">
+            <div class="col-2 cmetodo-pago">
+                <h2>
+                    Selecciona tu metodo de Pago
+                </h2>
+                <div class="selecciona">
+                    <select id="metodo-pago">
+                        <option value="">
+                            ----------
+                        </option>
+                    </select>
+                </div>
+            </div>
+    
+            <div class="col-2 precio">
+                <h2>
+                    Total a Pagar
+                </h2>
+                <div class="precioFinal">
+                    <input class="precioTotal" id="precio" type="number" readonly>
+                </div>
+            </div>
+        </div>
+        
+        <div class="ccv">
+            <h2>
+                CCV
+            </h2>
+            <div class="cvv">
+                <input id="cvv" type="number">
+            </div>
+        </div>
+
+        <div class="formControl">
+            <button id="btnComprar" class="btnGuardar" style="margin-top: 5rem;" type="button"> Realizar Compra </button>
+        </div>
+
+    </section>
+
+    <footer>
+        <div class="ctn-footer ctnFlexFooter">
+            <div class="redes col-footer-3 ">
+                <div class="socialMedia">
+                    <ul>
+                        <li>
+                            <a href="#">
+                                <i class="fa-brands fa-whatsapp"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="fa-brands fa-facebook-f"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="fa-brands fa-instagram"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footerText col-footer-3 ">
+                ©2022 Bazar de las Sorpresas. Derechos reservados.
+            </div>
+            <div class="checkout col-footer-3 ">
+                <ul>
+                    <li>
+                        <i class="fa-brands fa-cc-visa"></i>
+                    </li>
+                    <li>
+                        <i class="fa-brands fa-cc-mastercard"></i>
+                    </li>
+                    <li>
+                        <i class="fa-brands fa-cc-amex"></i>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+    
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="/js/servicio-general.js"></script>
+
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <script src="/js/validar-sesion.js"></script>
+    <script src="/js/facturacion.js"></script>
+</body>
+</html>
