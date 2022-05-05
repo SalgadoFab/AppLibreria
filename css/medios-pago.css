@@ -8,7 +8,7 @@
 .tituloMediosDePago {
     font-size: 2rem;
 }
-.ctnMediosPagos {
+.ctnMediosPagosItems {
     padding: 4rem 0rem;
     display: grid;
     grid-gap: 2rem;

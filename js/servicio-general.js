@@ -11,7 +11,10 @@ const registrarDatos = async(endpoint, data) => {
             Swal.fire({
                 text: response.data.mensaje,
                 icon: 'success'
+            }).then(() => {
+                location.reload();
             });
+            
         })
         .catch(error => {
             Swal.fire({
@@ -42,3 +45,23 @@ const obtenerDatos = async(endpoint) => {
     return listaDatos;
 };
 
+
+const obtenerDatosAsociados = async(endpoint, filtro) => {
+    let url = `http://localhost:3000/api/${endpoint}/${filtro}`;
+    let listaDatos = [];
+    await axios({
+            'url': url,
+            'method': 'get',
+            'responseType': 'json'
+        })
+        .then(response => {
+            listaDatos = response.data.lista;
+        }).catch(error => {
+            Swal.fire({
+                icon: 'error',
+                text: error
+            });
+        });
+
+    return listaDatos;
+};

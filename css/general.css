@@ -350,3 +350,8 @@ select[data-multi-select-plugin] {
     max-height: 130px;
     overflow-y: auto;
 }
+
+
+a.abrirLibro {
+    cursor: pointer;
+}

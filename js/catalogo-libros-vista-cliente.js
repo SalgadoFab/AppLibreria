@@ -45,7 +45,9 @@ const cambiarPagina = (pagina) => {
         <div class="cardItem">
             <div class="ctnImagenItem">
                 <div class="cardImagen">
-                    <img src="${lista_libros[i].imagenLibro}" alt="Portada Libro">
+                    <a class="abrirLibro" onclick="abrirLibro('${lista_libros[i].nombreLibro}')">
+                        <img src="${lista_libros[i].portada}" alt="Portada Libro">
+                    </a>
                     <a class="btnFavorito" onclick="">
                         <i class="fa-solid fa-heart"></i>
                     </a>
@@ -193,3 +195,14 @@ const obtenerPaginaActiva = () => {
 }
 
 inicializar();
+
+
+const abrirLibro = async(nombre) => {
+
+    libro = await obtenerDatosAsociados('obtener-libro', nombre);
+    console.log(libro);
+
+    localStorage.setItem('libroAbierto', JSON.stringify(libro));
+    window.location.href = '/html/vista-libro.html';
+
+};
