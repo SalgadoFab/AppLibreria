@@ -180,7 +180,7 @@ const validarMedioPago = () => {
         Swal.fire({
             "icon": "warning",
             "title": "Ups!",
-            "text": "Compruebe que todos los campos estan correctamente llenados"
+            "text": "Compruebe que todos los campos estan correctamente llenos"
         });
 
     } else { //Si la variable de error termina en false esto lanza un popup al usuario para indicar registro exitoso

@@ -15,7 +15,7 @@ const validarRegistroDireccionEnvio = () => {
         Swal.fire({
             "icon": "warning",
             "title": "La direccion no ha sido guardada",
-            "text": "Compruebe que todos los campos estan correctamente llenados"
+            "text": "Compruebe que todos los campos estan correctamente llenos"
         });
 
     } else { //Si la variable de error termina en false esto lanza un popup al usuario para indicar registro exitoso
