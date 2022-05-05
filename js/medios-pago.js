@@ -1,8 +1,9 @@
 const container = document.getElementById('medios-pagos-usuario');
+let usuarioConectado = JSON.parse(localStorage.getItem('usuarioConectado'));
 let tarjetasUsuario = [];
 
 const inicializarTarjetasUsuario = async() => {
-    tarjetasUsuario = await obtenerDatosAsociados('obtener-medio-pago', 'lcorralesm@ucenfotec.ac.cr');
+    tarjetasUsuario = await obtenerDatosAsociados('obtener-medio-pago', usuarioConectado.correo);
     container.innerHTML = await imprimirTarjetas(tarjetasUsuario);
 };
 
