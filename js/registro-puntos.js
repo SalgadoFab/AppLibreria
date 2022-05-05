@@ -33,11 +33,11 @@ const validarRegistroPunto = () => {
     } else {
 
         let punto = {
-            sltSocio: inputnombreCompleto.value,
-            nacimiento: inputAnoNacimiento.value,
+            socioComercial: sltSocios.value,
+            direccion: txtDireccion.value,
         };
 
-        registrarDatos('/registrar-autor', autor);
+        registrarDatos('/registrar-punto', punto);
     }
 
 }

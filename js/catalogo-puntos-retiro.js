@@ -1,3 +1,15 @@
+let listaPuntos;
+let totalPaginas;
+const buscar = document.getElementById('txt-buscar');
+const inicializar = async() => {
+    listaPuntos = await obtenerDatos('obtener-puntos');
+    console.log(listaPuntos);
+    totalPaginas = obtenerNumeroPaginas(listaPuntos)
+    cambiarPagina(1)
+    obtenerPaginacion()
+    obtenerPaginaActiva()
+};
+
 // Items a mostrar por pagina
 let itemsPorPagina = 9;
 
@@ -5,12 +17,10 @@ let itemsPorPagina = 9;
 let paginaActiva = 1;
 
 //Funcion para obtener el numero de paginas, recibe por parametro el array de elementos y lo divide por la cantidad que deseamos mostrar por pagina
+//Devuelve el numero
 const obtenerNumeroPaginas = (listaArray) => {
     return Math.ceil(listaArray.length / itemsPorPagina)
 }
-
-// Obtenemos el numero de paginas para nuestra paginacion
-let totalPaginas = obtenerNumeroPaginas(listaPuntosRetiro)
 
 //Funcion para cambiar entre paginas por cada item de paginacion
 const cambiarPagina = (pagina) => {
@@ -25,55 +35,57 @@ const cambiarPagina = (pagina) => {
     contenedorItems.innerHTML = ""
 
     //Hacemos un for, para cada elemento dentro del rango de la página actual
-    for (let i = (pagina - 1) * itemsPorPagina; i < (pagina * itemsPorPagina) && i < listaPuntosRetiro.length; i++) {
+    for (let i = (pagina - 1) * itemsPorPagina; i < (pagina * itemsPorPagina) && i < listaPuntos.length; i++) {
 
-        //Al contenedor de items le pasamos la estrucutra html para cada item del array
-        //Cambiar variables
-        contenedorItems.innerHTML += `
-        <div class="cardItem">
-        <div class="ctnImagenItem">
-            <div class="cardImagen imgPuntosRetiro">
-                <img src="${listaPuntosRetiro[i].imgSocio}" alt="Portada Libro">
-                <a class="btnEliminarItem" onclick="">
-                    <i class="fa-solid fa-trash-can"></i>
-                </a>
-            </div>
-        </div>
-
-        <div class="cardInfo-1 cardInfoPuntos">
-            <div class="col-1">
-                <div class="nombreLibro espacioInfoItem">
-                    <span>
-                        Nombre:  ${listaPuntosRetiro[i].nombre}
-                    </span>
-                </div>
-                <div class="nombreAutor">
-                    <span>
-                        Dirección: ${listaPuntosRetiro[i].direccion}
-                    </span>
+        if (listaPuntos[i].socioComercial.toLowerCase().includes(buscar.value.toLowerCase())) {
+            //Al contenedor de items le pasamos la estrucutra html para cada item del array
+            //Cambiar variables
+            contenedorItems.innerHTML += `
+                <div class="cardItem">
+            <div class="ctnImagenItem">
+                <div class="cardImagen imgPuntosRetiro">
+                <img src="${listaPuntos[i].imgSocio}">
+                    <a class="btnEliminarItem" onclick="">
+                        <i class="fa-solid fa-trash-can"></i>
+                    </a>
                 </div>
             </div>
-        </div>
 
-        <div class="cardBtns bordesRedondosAbajo flexContendor">
-            <div class="col-2">
-                <button class="btnModificar">
-                    <a onclick="">
-                        <i class="fa-solid fa-pen-to-square"></i> Modificar
-                    </a>
-                </button>
+            <div class="cardInfo-1 cardInfoPuntos">
+                <div class="col-1">
+                    <div class="nombrePunto espacioInfoItem">
+                        <span>
+                            Nombre:  ${listaPuntos[i].socioComercial}
+                        </span>
+                    </div>
+                    <div class="direccion">
+                        <span>
+                            Dirección: ${listaPuntos[i].direccion}
+                        </span>
+                    </div>
+                </div>
             </div>
-            <div class="col-2">
-                <button class="btnOcultar">
-                    <a onclick="">
-                        <i class="fa-solid fa-eye-slash"></i> Ocultar
-                    </a>
-                </button>
+
+            <div class="cardBtns bordesRedondosAbajo flexContendor">
+                <div class="col-2">
+                    <button class="btnModificar">
+                        <a onclick="">
+                            <i class="fa-solid fa-pen-to-square"></i> Modificar
+                        </a>
+                    </button>
+                </div>
+                <div class="col-2">
+                    <button class="btnOcultar">
+                        <a onclick="">
+                            <i class="fa-solid fa-eye-slash"></i> Ocultar
+                        </a>
+                    </button>
+                </div>
             </div>
-        </div>
 
 
-    </div>`
+        </div>`
+        }
     }
 }
 
@@ -142,10 +154,8 @@ const obtenerPaginaActiva = () => {
     }
 
 }
+inicializar();
 
-//Ejecutamos la funciones principales al momento de que la pagina carga por primera vez
-window.onload = function() {
-    cambiarPagina(1) //Establecer página predeterminada
-    obtenerPaginacion() //Generar paginacion
-    obtenerPaginaActiva()
-};
+buscar.addEventListener('keyup', () => {
+    cambiarPagina(paginaActiva);
+});

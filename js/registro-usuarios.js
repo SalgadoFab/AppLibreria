@@ -215,7 +215,6 @@ let errorRequerimientoPassword = false;
 })();
 
 
-
 // this of eye method
 const mostrarPassword = (input, selector) => {
     if (input.classList.contains('activo')) {
@@ -240,7 +239,6 @@ mostrarPassConfirmacion.onclick = function() {
 }
 
 
-
 //Funcion de Validacion de campos normales
 const validarRegistroUsuario = () => {
 
@@ -261,8 +259,6 @@ const validarRegistroUsuario = () => {
         txtPassword.classList.add("inputError");
     }
 
-
-
     const txtPrimerNombre = document.getElementById('txt-primer-nombre');
     const txtSegundoNombre = document.getElementById('txt-segundo-nombre');
     const txtPrimerApellido = document.getElementById('txt-primer-apellido');
@@ -277,7 +273,14 @@ const validarRegistroUsuario = () => {
     const txtCorreo = document.getElementById('txt-correo');
     //txtPassword
 
-    if ((errorCamposVacios == true) || (errorRequerimientoPassword == true)) {
+
+    let sltAutoresFavs = obtenerValoresMultiSelect('slt-autores-favs');
+    let sltGenerosFavs = obtenerValoresMultiSelect('slt-generos-favs');
+
+    let imagen = document.querySelector('#photo');
+
+    if ( (errorCamposVacios == true) || (errorRequerimientoPassword == true) ) {
+
         Swal.fire({
             "icon": "warning",
             "title": "El usuario no se pudo registrar",
@@ -293,17 +296,20 @@ const validarRegistroUsuario = () => {
             segundoApellido: txtSegundoApellido.value,
             tipoIdentificacion: sltTipoIdentificacion.value,
             identificacion: txtIdentificacion.value,
+            foto: imagen.src,
             provincia: listaProvincias.value,
             canton: listaCantones.value,
             distrito: listaDistritos.value,
             direccion: txtDireccion.value,
             genero: sltGenero.value,
             correo: txtCorreo.value,
-            password: txtPassword.value
-
+            password: txtPassword.value,
+            autoresFavs: sltAutoresFavs,
+            generosFavs: sltGenerosFavs
+            
         }
 
-        registrarDatos('/registrar-usuario', usuario);
+        registrarDatos('registrar-usuario', usuario);
     }
 
 }

@@ -29,11 +29,9 @@ inicializarGeneros();
 
 const inputnombreLibro = document.querySelector('#txt-nombre-libro')
 const inputisbn = document.querySelector('#txt-ISBN')
-const inputautores = document.querySelector('#txt-Autores')
 const inputidioma = document.querySelector('#slt-idioma')
 const inputformato = document.querySelector('#slt-formato')
 const inputfechapliblicacion = document.querySelector('#txt-publicacion')
-const inputgeneros = document.querySelector('#slt-Generos')
 const inputpremiosLibro = document.querySelector('#txt-Premios')
 const inputprecio = document.querySelector('#txt-Precio')
 const inputstock = document.querySelector('#txt-stock')
@@ -46,11 +44,17 @@ const btnRegistrar = document.getElementById('btnGuardar');
 const validarRegistroLibros = () => {
 
     let hayError = validarFormulario();
+    
+    let sltAutores = obtenerValoresMultiSelect('slt-autores');
+    sltAutores = sltAutores.join(", ");
 
+    let sltGeneros = obtenerValoresMultiSelect('slt-Generos');
+    sltGeneros = sltGeneros.join(", ");
+
+    let imagen = document.querySelector('#photo');
 
     //Mensaje del resultado de la validacion
     if (hayError == true) {
-        console.log(options_selected)
         Swal.fire({
             "icon": "warning",
             "title": "Error",
@@ -61,10 +65,11 @@ const validarRegistroLibros = () => {
         let libros = {
             nombreLibro: inputnombreLibro.value,
             isbn: inputisbn.value,
-            nombreAutor: inputautores.value,
+            portada: imagen.src,
+            nombreAutor: sltAutores,
             idiomaLibro: inputidioma.value,
             fechaPublicacion: inputfechapliblicacion.value,
-            generoLibro: inputgeneros.value,
+            generoLibro: sltGeneros,
             premios: inputpremiosLibro.value,
             precio: inputprecio.value,
             libroStock: inputstock.value,
@@ -72,7 +77,7 @@ const validarRegistroLibros = () => {
             resennaLibro: inputresenna.value,
 
         };
-        registrarDatos('/registrar-libro', libros);
+        registrarDatos('registrar-libro', libros);
     };
 }
 

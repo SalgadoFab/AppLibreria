@@ -16,6 +16,7 @@
 
     <link rel="stylesheet" href="/css/header.css">
     <link rel="stylesheet" href="/css/footer.css">
+    
 
     <title>Registro Usuarios - Librería</title>
 
@@ -233,11 +234,10 @@
 
                 <div class="formControl ctn-subirFoto">
                     <div class="labelSubiFoto">
-                        <label for="foto-perfil-usuario">Arrastre la imagen de perfil</label>
+                        <label for="foto-portada">Has Click para cargar tu foto de perfil</label>
                     </div>
                     <div class="drop-zone">
-                        <span class="drop-zone__prompt"><i class="far fa-image"></i></span>
-                        <input name="input" type="file" id="foto-perfil-usuario" class="drop-zone__input">
+                        <img id="photo" src="/media/img/img-icon.png" alt="">
                     </div>
                 </div>
 
@@ -332,7 +332,10 @@
     <script src="/js/multi-select.js"></script>
 
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <script src="https://widget.cloudinary.com/v2.0/global/all.js" type="text/javascript"></script>
     <script src="/js/subir-foto.js"></script>
+
     <script src="/js/ubicacion.js"></script>
     <script src="/js/validar-formulario.js"></script>
     <script src="/js/registro-usuarios.js"></script>

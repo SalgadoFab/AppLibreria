@@ -13,6 +13,7 @@ const validarRegistroAutor = () => {
 
     let hayError = validarFormulario();
 
+    let imagen = document.querySelector('#photo');
 
     //Mensaje del resultado de la validacion
     if (hayError == true) {
@@ -26,16 +27,15 @@ const validarRegistroAutor = () => {
         let autor = {
             nombreAutor: inputnombreCompleto.value,
             nacimiento: inputAnoNacimiento.value,
+            foto: imagen.src,
             defuncion: inputAnoDefuncion.value,
             nacionalidad: inputNacionalidad.value,
             bibliografia: inputBiografia.value,
             libros: inputListaObras.value,
             annoNobel: inputAnoPremioNobel.value,
-
-
         };
 
-        registrarDatos('/registrar-autor', autor);
+        registrarDatos('registrar-autor', autor);
     }
 
 };
