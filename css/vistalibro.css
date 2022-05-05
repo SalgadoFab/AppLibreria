@@ -1,163 +1,68 @@
-.cabeceraSeccion {
-    display: flex;
-    padding-bottom: 5rem;
+.sct {
+    padding: 5rem 14em;
+    margin: auto;
 }
 
-.tituloRegistrarse {
-    display: flex;
-    align-items: center;
+.portada {
+    padding-top: 4rem;
+    width: 35%;
+}
+.metadatos {
+    width: 65%;
+    padding-top: 4rem;
 }
 
-.tituloRegistrarse h1 {
-    font-size: 3rem;
-}
-
-.iconoCabecera {
-    font-size: 4rem;
-    padding-right: 1rem;
-}
-
-.indicadorRegistro {
-    padding-top: 2rem;
-    font-size: 1.3rem;
-}
-
-.iniciarSesion {
-    display: flex;
-    flex-direction: column;
-    text-align: right;
-    font-size: 1.3rem;
-    padding-top: 1rem;
-}
-
-.iniciarSesion a {
-    padding-right: 1.5rem;
-    color: #000;
-    padding-top: 2rem;
-}
-
-.sctFormulario form {
-    display: flex;
-    width: 100%;
-}
-
-.labelAutoresFavoritos {
-    padding-bottom: 1rem;
-}
-
-.labelDiv {
-    position: relative;
-}
-
-
-/*CSS Para los chexboxs*/
-
-.formControlChexbox {
-    padding-bottom: 1rem;
-}
-
-.formControl3 {
-    display: flex;
-    font-size: 1.2rem;
-    padding-bottom: 1rem;
-}
-
-.listaChexbox {
-    padding: 1rem 1rem 0;
-    box-shadow: 0px 5px 8px 0px rgb(0 0 0 / 40%);
-    border-radius: 20px;
-}
-
-.ctn-chexboxs {
-    display: flex;
-    flex-wrap: wrap;
-}
-
-.labelDiv {
-    width: 50%;
-    align-items: center;
+.metadatos div {
     padding-bottom: 2rem;
 }
 
-.labelDiv label {
-    padding-bottom: 2rem;
-    display: flex;
-    padding-top: 2.4rem;
-    align-items: center;
-}
-
-.checkbox-container {
-    width: 50%;
-}
-
-input[type="checkbox"] {
-    display: none;
-}
-
-input[type="checkbox"]:hover+label:before {
-    opacity: .5;
-}
-
-.checkbox {
-    display: inline-block;
-    position: relative;
-    padding-left: 2rem;
-    line-height: 2rem;
-    cursor: pointer;
-    font-size: 0.9rem !important;
-    padding-bottom: 0.5rem !important;
-}
-
-.checkbox:before {
-    z-index: 15;
-    content: '';
-    position: absolute;
-    left: 0;
-    top: 0;
-    transition: all 0.3s ease;
-    cursor: pointer;
-    width: 0.9rem;
-    border-width: 4px;
-    border-style: solid;
-    border-color: #444;
-    height: 0.9rem;
-    border-radius: 3px;
-}
-
-input[type="checkbox"]:checked+label {
-    color: #000;
-}
-
-input[type="checkbox"]:checked+label:before {
-    border-color: transparent;
-    border-left-color: #2ecc71;
-    border-bottom-color: #2ecc71;
-    transform: rotate(-50deg);
-    width: 1rem;
-    height: 0.4rem;
-    top: 0.2rem;
-}
-
-ul.texto-ayuda {
-    display: block;
-    margin-top: 2rem;
-    font-size: 0.8rem;
-    line-height: 1.2rem;
-    color: red;
-}
-
-ul.texto-ayuda li.validado {
-    color: blue;
-}
-
-.formControl .btnComprar {
-    width: 200%;
-    border-radius: 10px;
-    height: 3rem;
-    border: none;
-    box-shadow: 0px 5px 8px 0px rgb(0 0 0 / 40%);
-    background: #90b22e;
+.actions button {
+    width: calc(100% - 2rem);
+    height: 2.5rem;
+    font-size: 1rem;
+    background: #008576;
     color: #fff;
-    font-size: 1.1rem;
-    cursor: pointer;
+    border: none;
+    border-radius: 0.3rem;
+    box-shadow: 0 4px 20px 0px rgb(0 0 0 / 14%), 0 7px 10px -5px #006675d1;
+}
+
+.actions button a {
+    width: calc(100% - 2rem);
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.metadatos h2, .metadatos p {
+    display: inline-block;
+}
+.metadatos p {
+    display: inline-block;
+}
+.metadatos p {
+    font-size: 1.2rem;
+    margin-left: 1rem;
+}
+.precio p {
+    margin-left: 0 !important;
+    color: red;
+    font-weight: 800 !important;
+    font-size: 1.4rem !important;
+}
+
+.review h2 {
+    padding-bottom: 1rem;
+}
+.review p {
+    font-size: 1.2rem;
+}
+
+.portada img{
+    width: 21rem;
+    height: 24.5rem;
+    object-fit: cover;
+    image-rendering: -webkit-optimize-contrast;
 }

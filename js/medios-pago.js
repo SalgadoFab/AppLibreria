@@ -1,12 +1,39 @@
-'use strict';
+const container = document.getElementById('medios-pagos-usuario');
+let tarjetasUsuario = [];
+
+const inicializarTarjetasUsuario = async() => {
+    tarjetasUsuario = await obtenerDatosAsociados('obtener-medio-pago', 'lcorralesm@ucenfotec.ac.cr');
+    container.innerHTML = await imprimirTarjetas(tarjetasUsuario);
+};
+
+inicializarTarjetasUsuario();
+
+
+const imprimirTarjetas  = async(tarjetasUsuario) => {
+    console.log(tarjetasUsuario)
+    return "<div class=\"ctnMediosPagosItems\">" + tarjetasUsuario.map(aux => `
+    <div class="itemMedioPago">
+
+        <div class="iconoTarjeta">
+            <i class="fa-regular fa-credit-card"></i>
+        </div>
+        <div class="numTarjeta">
+            Tarjeta: ${aux.numeroTarjeta}
+        </div>
+        <div class="btnEliminarTarjeta">
+            <a onclick=""><i class="fa-solid fa-trash-can"></i></a>
+        </div>
+
+    </div>`).join('') + "</div>";
+}
+
+
+
 
 const inputnumeroTarjeta = document.querySelector('#txt-numero-tarjeta')
 const inputnombreTitular = document.querySelector('#txt-titular')
 const inputfechaExpiracion = document.querySelector('#txt-expiracion')
 const inputccv = document.querySelector('#txt-cv')
-
-
-
 
 const btnRegistrar = document.getElementById('btnGuardar');
 
@@ -146,7 +173,7 @@ ccExpiracionInput.addEventListener('input', ccExpiracionInputHandler);
 const validarMedioPago = () => {
 
     let hayError = validarFormulario();
-
+    let usuarioConectado = JSON.parse(localStorage.getItem('usuarioConectado'));
 
     //Mensaje del resultado de la validacion
     if (hayError == true) {
@@ -158,6 +185,7 @@ const validarMedioPago = () => {
 
     } else { //Si la variable de error termina en false esto lanza un popup al usuario para indicar registro exitoso
         let mediosPago = {
+            usuarioAsociado: usuarioConectado.correo,
             numeroTarjeta: inputnumeroTarjeta.value,
             nombreTitular: inputnombreTitular.value,
             fechaExpiracion: inputfechaExpiracion.value,
