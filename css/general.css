@@ -359,3 +359,8 @@ a.abrirLibro {
 .breadcrum {
     padding-top: 2rem;
 }
+
+.librosPublicadosItem,
+.librosPublicados.espacioInfoItem {
+    display: none;
+}
