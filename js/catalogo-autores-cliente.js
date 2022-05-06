@@ -46,7 +46,7 @@ const cambiarPagina = (pagina) => {
             <div class="cardItem">
             <div class="ctnImagenItem">
                 <div class="cardImagen">
-                    <img src="${listaAutores[i].imagenAutor}" alt="Portada Libro">
+                    <img src="${listaAutores[i].foto}" alt="Portada Libro">
                     <a class="btnEliminarItem" onclick="">
                         <i class="fa-regular fa-heart"></i>
                     </a>
