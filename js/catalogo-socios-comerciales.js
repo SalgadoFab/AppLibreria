@@ -11,8 +11,6 @@ const inicializar = async() => {
 };
 
 
-
-
 // Items a mostrar por pagina
 let itemsPorPagina = 9;
 
