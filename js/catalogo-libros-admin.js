@@ -37,14 +37,16 @@ const cambiarPagina = (pagina) => {
     //Hacemos un for, para cada elemento dentro del rango de la página actual
     for (let i = (pagina - 1) * itemsPorPagina; i < (pagina * itemsPorPagina) && i < lista_libros.length; i++) {
 
-        if (lista_libros[i].nombreLibro.toLowerCase().includes(buscar.value.toLowerCase())) {
+        if ( (lista_libros[i].nombreLibro.toLowerCase().includes(buscar.value.toLowerCase())) || (lista_libros[i].nombreAutor.toLowerCase().includes(buscar.value.toLowerCase())) ) {
             //Al contenedor de items le pasamos la estrucutra html para cada item del array
             //Cambiar variables
             contenedorItems.innerHTML += `
                 <div class="cardItem">
                 <div class="ctnImagenItem">
                     <div class="cardImagen">
-                        <img src="${lista_libros[i].portada}" alt="Portada Libro">
+                        <a class="abrirLibro" onclick="abrirLibro('${lista_libros[i].nombreLibro}')">
+                            <img src="${lista_libros[i].portada}" alt="Portada Libro">
+                        </a>
                         <a class="btnEliminarItem" onclick="">
                             <i class="fa-solid fa-trash-can"></i>
                         </a>
@@ -184,3 +186,12 @@ inicializar();
 buscar.addEventListener('keyup', () => {
     cambiarPagina(paginaActiva);
 });
+
+const abrirLibro = async(nombre) => {
+
+    libro = await obtenerDatosAsociados('obtener-libro', nombre);
+    console.log(libro);
+
+    localStorage.setItem('libroAbierto', JSON.stringify(libro));
+    window.location.href = '/html/vista-libro.html';
+};

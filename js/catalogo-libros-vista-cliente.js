@@ -39,6 +39,8 @@ const cambiarPagina = (pagina) => {
     //Hacemos un for, para cada elemento dentro del rango de la página actual
     for (let i = (pagina - 1) * itemsPorPagina; i < (pagina * itemsPorPagina) && i < lista_libros.length; i++) {
 
+
+        if ( (lista_libros[i].nombreLibro.toLowerCase().includes(buscar.value.toLowerCase())) || (lista_libros[i].nombreAutor.toLowerCase().includes(buscar.value.toLowerCase())) ) {
         //Al contenedor de items le pasamos la estrucutra html para cada item del array
         //Cambiar variables
         contenedorItems.innerHTML += `
@@ -126,6 +128,7 @@ const cambiarPagina = (pagina) => {
             </div>
         </div>`
     }
+    }
 }
 
 //Funcion para el boton de pagina siguiente
@@ -195,7 +198,9 @@ const obtenerPaginaActiva = () => {
 }
 
 inicializar();
-
+buscar.addEventListener('keyup', () => {
+    cambiarPagina(paginaActiva);
+});
 
 const abrirLibro = async(nombre) => {
 
