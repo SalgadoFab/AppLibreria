@@ -19,6 +19,7 @@
 
     <title>Catalogo de Socio Comerciales</title>
 
+    <link rel="stylesheet" href="/css/alto-contraste.css">
 </head>
 
 <body>
@@ -43,6 +44,12 @@
             </div>
         </div>
     </header>
+
+    <div class="btn-alto-contactraste">
+        <a onclick="activarAltoContraste()">
+            Activar Alto Contraste
+        </a>
+    </div>
 
     <nav class="navBarAdmin">
 
@@ -186,6 +193,9 @@
     </nav>
 
     <main class="mainDashboardAdmin">
+        <label for="txt-buscar">Buscar</label>
+        <input type="text" id="txt-buscar">
+
 
         <div id="catalogoLibrosAdminCTN" class="cardContenedor"></div>
 
@@ -242,8 +252,13 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.2/TweenMax.min.js" integrity="sha512-D2J9vHhZDistrNPhgdeuB/MAW4bEDlqddpItoxqhTAeJIOnBEYIkF01AfDOCosWb6KOQSqVgPB5mfrSUTX1BBQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="/js/dashboard-admin.js"></script>
 
-    <script src="/js/socios.js"></script>
+    <!-- <script src="/js/socios.js"></script> -->
+
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="/js/servicio-general.js"></script>
     <script src="/js/catalogo-socios-comerciales.js"></script>
+
+    <script src="/js/alto-constraste.js"></script>
 
 </body>
 

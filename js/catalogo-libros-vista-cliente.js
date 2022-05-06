@@ -232,20 +232,25 @@ const addCarrito = async(nombre) =>{
 
         } else {
 
+            console.log('Libro Añadido Al Carrito Existente');
+            carritoLocal.push(libro);
+            localStorage.setItem('librosCarrito', JSON.stringify(carritoLocal));
+
             Swal.fire({
                 position: 'center',
                 icon: 'success',
                 title: 'Libro agregado al carrito correctamente',
                 showConfirmButton: false,
                 timer: 2000
+            }).then(() => {
+                location.reload();
             });
-
-            console.log('Libro Añadido Al Carrito Existente');
-            carritoLocal.push(libro);
-            localStorage.setItem('librosCarrito', JSON.stringify(carritoLocal));
         }
         
     } else {
+        console.log('Carrito creado con ' + nombre);
+        librosCarritoNuevoItem.push(libro); 
+        localStorage.setItem('librosCarrito', JSON.stringify(librosCarritoNuevoItem));
 
         Swal.fire({
             position: 'center',
@@ -253,11 +258,10 @@ const addCarrito = async(nombre) =>{
             title: 'Libro agregado al carrito correctamente',
             showConfirmButton: false,
             timer: 2000
-        });
+        }).then(() => {
+            location.reload();
+        });;
 
-        console.log('Carrito creado con ' + nombre);
-        librosCarritoNuevoItem.push(libro); 
-        localStorage.setItem('librosCarrito', JSON.stringify(librosCarritoNuevoItem));
     }
 }
 

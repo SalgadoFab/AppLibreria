@@ -14,6 +14,7 @@
 
     <link rel="stylesheet" href="/css/header.css">
     <link rel="stylesheet" href="/css/footer.css">
+    <link rel="stylesheet" href="/css/alto-contraste.css">
 
     <title>Facturacion</title>
 </head>
@@ -46,6 +47,12 @@
             </div>
         </nav>
     </header>
+
+    <div class="btn-alto-contactraste">
+        <a onclick="activarAltoContraste()">
+            Activar Alto Contraste
+        </a>
+    </div>
 
     <section class="sct">
 
@@ -83,7 +90,7 @@
                     Selecciona tu punto de Retiro
                 </h2>
                 <div class="selecciona">
-                    <select id="punto-retiro">
+                    <select name="retiroPunto" id="punto-retiro">
                         <option value="">
                             ----------
                         </option>
@@ -100,7 +107,7 @@
                         <div class="col-2 labelContenedor">
 
                             <label for="txt-provincia"> Provincia </label>
-                            <input name="input" type="text" id="txt-provincia">
+                            <input  name="inputsEnvio"  type="text" id="txt-provincia">
                             <div class="iconoInput">
                                 <i class="fas fa-map-marker-alt"></i>
                             </div>
@@ -108,7 +115,7 @@
                         <div class="col-2 labelContenedor">
 
                             <label for="txt-canton"> Cantón </label>
-                            <input name="input" type="text" id="txt-canton">
+                            <input name="inputsEnvio"  type="text" id="txt-canton">
                             <div class="iconoInput">
                                 <i class="fas fa-map-marker-alt"></i>
                             </div>
@@ -120,7 +127,7 @@
                         <div class="col-2 labelContenedor">
 
                             <label for="txt-distrito"> Distrito </label>
-                            <input name="input" type="text" id="txt-distrito">
+                            <input name="inputsEnvio" type="text" id="txt-distrito">
                             <div class="iconoInput">
                                 <i class="fas fa-map-marker-alt"></i>
                             </div>
@@ -134,7 +141,7 @@
                         <div class="labelContenedor">
 
                             <label for="txt-direccion"> Dirección </label>
-                            <textarea class="height-12" name="input" id="txt-direccion" rows="14"></textarea>
+                            <textarea name="inputsEnvio"  class="height-12" id="txt-direccion" rows="14"></textarea>
                             <div class="iconoInput">
                                 <i class="fa-solid fa-location-dot"></i>
                             </div>
@@ -151,7 +158,7 @@
                     Selecciona tu metodo de Pago
                 </h2>
                 <div class="selecciona">
-                    <select id="metodo-pago">
+                    <select name="input" id="metodo-pago">
                         <option value="">
                             ----------
                         </option>
@@ -161,7 +168,7 @@
     
             <div class="col-2 precio">
                 <h2>
-                    Total a Pagar
+                    Total a Pagar + IVA
                 </h2>
                 <div class="precioFinal">
                     <input class="precioTotal" id="precio" type="number" readonly>
@@ -174,7 +181,7 @@
                 CCV
             </h2>
             <div class="cvv">
-                <input id="cvv" type="number">
+                <input name="input" id="cvv" type="number">
             </div>
         </div>
 
@@ -231,7 +238,9 @@
 
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
+    <script src="/js/validar-formulario.js"></script>
     <script src="/js/validar-sesion.js"></script>
     <script src="/js/facturacion.js"></script>
+    <script src="/js/alto-constraste.js"></script>
 </body>
 </html>
