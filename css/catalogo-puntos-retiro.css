@@ -16,3 +16,6 @@
     font-size: 1rem !important;
 }
 
+.cardImagen.imgPuntosRetiro {
+    display: none;
+}

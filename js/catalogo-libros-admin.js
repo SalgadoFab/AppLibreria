@@ -12,7 +12,7 @@ const inicializar = async() => {
 };
 
 // Items a mostrar por pagina
-let itemsPorPagina = 1;
+let itemsPorPagina = 9;
 
 // Fijamos la pagina 1 activa por defecto
 let paginaActiva = 1;
@@ -44,7 +44,7 @@ const cambiarPagina = (pagina) => {
                 <div class="cardItem">
                 <div class="ctnImagenItem">
                     <div class="cardImagen">
-                        <img src="" alt="Portada Libro">
+                        <img src="${lista_libros[i].portada}" alt="Portada Libro">
                         <a class="btnEliminarItem" onclick="">
                             <i class="fa-solid fa-trash-can"></i>
                         </a>

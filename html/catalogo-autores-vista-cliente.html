@@ -16,7 +16,7 @@
 
     <link rel="stylesheet" href="/css/header.css">
     <link rel="stylesheet" href="/css/footer.css">
-
+    <link rel="stylesheet" href="/css/alto-contraste.css">
 
     <title>Catálogo Vista Cliente</title>
 </head>
@@ -44,6 +44,7 @@
                         </ul>
                     </li>
                     <li><a class="btnEnlaceDashboard" href="">Dashboard</a></li>
+                    <li><a class="carrito" onclick="irCarrito()"><i class="fas fa-shopping-cart"></i></a></li>
                     <li><a href="/html/index.html#contacto">Contacto</a></li>
                 </ul>
 
@@ -51,6 +52,11 @@
         </nav>
     </header>
 
+    <div class="btn-alto-contactraste">
+        <a onclick="activarAltoContraste()">
+            Activar Alto Contraste
+        </a>
+    </div>
 
     <section class="sct">
         <label for="txt-buscar">Buscar</label>
@@ -110,9 +116,12 @@
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <script src="/js/servicio-general.js"></script>
 
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="/js/irCarrito.js"></script>
+
     <script src="/js/validar-sesion.js"></script>
     <script src="/js/catalogo-autores-cliente.js"></script>
-
+    <script src="/js/alto-constraste.js"></script>
 </body>
 
 </html>
