@@ -1,4 +1,10 @@
-
+a.carrito i {
+    font-size: 2rem;
+    padding-top: 0.5rem;
+}
+a.carrito {
+	cursor: pointer;
+}
 
 .small-caps {
 	text-transform: uppercase;

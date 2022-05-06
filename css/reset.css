@@ -60,3 +60,8 @@ table {
 a {
     text-decoration: none;
 }
+
+
+button.btnComprarAhora {
+    display: none;
+}
