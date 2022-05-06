@@ -45,7 +45,7 @@ for (let i=0;i<libros.length; i++) {
                 <input class="libroAdquirido" id="compra-${libros[i][0].nombreLibro}" type="text" readonly value="${libros[i][0].nombreLibro}">
             </div>
         <div class="precioLibro">
-            <label for="precio-${libros[i][0].nombreLibro}">Precio</label>
+            <label for="precio-${libros[i][0].nombreLibro}">Precio ₡</label>
             <input class="libroAdquiridoPrecio" id="precio-${libros[i][0].nombreLibro}" readonly type="number" min="1" value="${libros[i][0].precio - ( (libros[i][0].precio / 100) * libros[i][0].descuento ) }">
         </div>
         <div class="cantidadLibro">

@@ -37,7 +37,7 @@ const cambiarPagina = (pagina) => {
     //Hacemos un for, para cada elemento dentro del rango de la página actual
     for (let i = (pagina - 1) * itemsPorPagina; i < (pagina * itemsPorPagina) && i < listaPuntos.length; i++) {
 
-        if (listaPuntos[i].socioComercial.toLowerCase().includes(buscar.value.toLowerCase())) {
+        if ( (listaPuntos[i].socioComercial.toLowerCase().includes(buscar.value.toLowerCase())) || (listaPuntos[i].direccion.toLowerCase().includes(buscar.value.toLowerCase()))) {
             //Al contenedor de items le pasamos la estrucutra html para cada item del array
             //Cambiar variables
             contenedorItems.innerHTML += `

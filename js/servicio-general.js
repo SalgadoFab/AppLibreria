@@ -94,3 +94,31 @@ const registrarFactura = async(endpoint, data) => {
             });
         });
 };
+
+const registrarUsuario = async(endpoint, data) => {
+    let url = `http://localhost:3000/api/${endpoint}`;
+
+    await axios({
+            'url': url,
+            'method': 'post',
+            'responseType': 'json',
+            'data': data
+        })
+        .then(response => {
+            Swal.fire({
+                text: response.data.mensaje,
+                icon: 'success'
+            }).then(() => {
+                window.localStorage.removeItem('librosCarrito');
+                window.location.href = '/html/inicio-sesion.html';
+            });
+            
+        })
+        .catch(error => {
+            Swal.fire({
+                title: 'No se pudo registrar',
+                text: error,
+                icon: 'error'
+            });
+        });
+};

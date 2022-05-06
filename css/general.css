@@ -320,7 +320,7 @@ select[data-multi-select-plugin] {
     text-align: left;
     padding: 8px 29px 2px 12px;
     border-bottom: 1px solid #ccc;
-    font-size: 14px;
+    font-size: 1.1rem;
     min-height: 31px;
 }
 
@@ -354,4 +354,8 @@ select[data-multi-select-plugin] {
 
 a.abrirLibro {
     cursor: pointer;
+}
+
+.breadcrum {
+    padding-top: 2rem;
 }

@@ -38,7 +38,7 @@ const cambiarPagina = (pagina) => {
     //Hacemos un for, para cada elemento dentro del rango de la página actual
     for (let i = (pagina - 1) * itemsPorPagina; i < (pagina * itemsPorPagina) && i < listaSocios.length; i++) {
 
-        if (listaSocios[i].nombre.toLowerCase().includes(buscar.value.toLowerCase())) {
+        if ( (listaSocios[i].nombre.toLowerCase().includes(buscar.value.toLowerCase())) ) {
             //Al contenedor de items le pasamos la estrucutra html para cada item del array
             //Cambiar variables
             contenedorItems.innerHTML += `
@@ -58,19 +58,6 @@ const cambiarPagina = (pagina) => {
                         <span>
                             Nombre: ${listaSocios[i].nombre}
                         </span>
-                    </div>
-                    <div class="nombreAutor">
-                        <div class="socio-ID">
-                            <span>
-                                ID:
-                            </span>
-                        </div>
-
-                        <div class="socio-codigo">
-                            <span>
-                                Codigo: ${listaSocios[i].codigo}
-                            </span>
-                        </div>
                     </div>
                 </div>
             </div>

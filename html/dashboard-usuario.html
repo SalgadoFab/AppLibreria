@@ -135,79 +135,27 @@
 
         <section class="sct sctFormulario flexContendor">
             <form>
-                <div class="col-60">
+                <div class="">
                     <!--Contenedor de 2 Columnas-->
                     <div class="formControl flexContendor">
 
-                        <div id="content">
-
-                            <table cellspacing="0">
+                        <table id="tbl-facturas">
+                            <thead>
                                 <tr>
-                                    <th>Cantidad </th>
-                                    <th>Autor </th>
-                                    <th>Título</th>
-                                    <th>Formato</th>
-                                    <th>No. de Recibo </th>
-                                    <th>Fecha </th>
-                                    <th>Reenviar </th>
+                                    <th>Código de Facturas</th>
+                                    <th class="items">Items</th>
+                                    <th>Hora</th>
+                                    <th class="fecha">Fecha</th>
+                                    <th>Tipo de Retiro</th>
                                 </tr>
-                                <tr>
-                                    <td>1</td>
-                                    <td> Castellanos, G.</td>
-                                    <td>La historia sin fin de Alissa</i>
-                                    </td>
-                                    <td>Digital</td>
-                                    <td>378976</td>
-                                    <td>23/03/2022</td>
-                                    <td><i class="fa-solid fa-envelope"></i></td>
+                            </thead>
+                            <tbody>
 
-                                </tr>
-                                <tr>
-                                    <td>1</td>
-                                    <td>Ramírez, S.</td>
-                                    <td>Los pájaros que volaron</i>
-                                    </td>
-                                    <td>Físico</td>
-                                    <td>378975</td>
-                                    <td>23/03/2022</td>
-                                    <td><i class="fa-solid fa-envelope"></i></td>
 
-                                </tr>
-                                <tr>
-                                    <td>1</td>
-                                    <td>Darío, R.</td>
-                                    <td>Canción de otoño en primavera</i>
-                                    </td>
-                                    <td>Físico</td>
-                                    <td>35777</td>
-                                    <td>18/03/2022</td>
-                                    <td><i class="fa-solid fa-envelope"></i></td>
+                            </tbody>
+                        </table>
 
-                                </tr>
-                                <tr>
-                                    <td>1</td>
-                                    <td>Cuadra, P.A.</td>
-                                    <td>Agosto</i>
-                                    </td>
-                                    <td>Audio Libro</td>
-                                    <td>34321</td>
-                                    <td>29/02/2022</td>
-                                    <td><i class="fa-solid fa-envelope"></i></td>
 
-                                </tr>
-                                <tr>
-                                    <td>1</td>
-                                    <td>Rowling, J.K.</td>
-                                    <td>Harry Potter: La piedra filosofal</i>
-                                    </td>
-                                    <td>Digital</td>
-                                    <td>26557</td>
-                                    <td>21/02/2022</td>
-                                    <td><i class="fa-solid fa-envelope"></i></td>
-
-                                </tr>
-                            </table>
-                        </div>
                     </div>
                 </div>
             </form>
@@ -257,9 +205,16 @@
         </div>
     </footer>
 
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="/js/servicio-general.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.2/TweenMax.min.js" integrity="sha512-D2J9vHhZDistrNPhgdeuB/MAW4bEDlqddpItoxqhTAeJIOnBEYIkF01AfDOCosWb6KOQSqVgPB5mfrSUTX1BBQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="/js/dashboard-admin.js"></script>
     <script src="/js/alto-constraste.js"></script>
+
+
+
+    <script src="/js/dashboard-cliente.js"></script>
     
 </body>
 

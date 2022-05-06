@@ -37,7 +37,7 @@ const cambiarPagina = (pagina) => {
     //Hacemos un for, para cada elemento dentro del rango de la página actual
     for (let i = (pagina - 1) * itemsPorPagina; i < (pagina * itemsPorPagina) && i < listaAutores.length; i++) {
 
-        if (listaAutores[i].nombreAutor.toLowerCase().includes(buscar.value.toLowerCase())) {
+        if ( (listaAutores[i].nombreAutor.toLowerCase().includes(buscar.value.toLowerCase()))  ) {
             //Al contenedor de items le pasamos la estrucutra html para cada item del array
             //Cambiar variables
             contenedorItems.innerHTML += `
@@ -67,11 +67,11 @@ const cambiarPagina = (pagina) => {
                 <div class="col-3">
                     <div class="cantidadLibros espacioInfoItem">
                         <span>
-                            Cantidad Libros
+                            Libros Publicados
                         </span>
                     </div>
                     <div class="precioUnitarioItem">
-                        0
+                        ${listaAutores[i].libros}
                     </div>
                 </div>
               

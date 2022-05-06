@@ -201,3 +201,14 @@ tr:last-child td.last {
     -webkit-border-bottom-right-radius: 5px;
     /* Saf3-4 */
 }
+
+td,th {
+
+    line-height: 1.2;
+}
+th.items {
+    width: 35%;
+}
+th.fecha {
+    width: 12%;
+}

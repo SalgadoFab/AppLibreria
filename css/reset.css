@@ -83,3 +83,22 @@ button.btnComprarAhora {
 	z-index: 1000;
 }
 
+
+.filtro {
+    padding: 6rem 6rem 0rem;
+}
+.filtro label {
+	font-size: 1.2rem;
+}
+
+.filtro input {
+    width: 24rem;
+    /* width: calc(100% - 4rem); */
+    height: 2.5rem;
+    border-radius: 15px;
+    padding: 0 1rem;
+    font-size: 1.2rem;
+    box-shadow: 0px 5px 8px 0px rgb(0 0 0 / 40%);
+    border: none;
+    outline: none;
+}

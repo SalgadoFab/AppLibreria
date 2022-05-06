@@ -25,6 +25,7 @@
 .indicadoresHeader {
     display: flex;
     margin-right: 2rem;
+    align-items: center;
 }
 
 .btnVolver a {
@@ -193,4 +194,11 @@ footer .ctnFlexFooter {
 
 .sct {
     padding: 2rem 4em !important;
+}
+
+.imgAdmin {
+    margin: 0 1rem;
+}
+.imgAdmin img{
+    width: 3rem;
 }
