@@ -219,8 +219,8 @@ const obtenerCodigo = () => {
         } else {
             Swal.fire({
                 "icon": "success",
-                "title": "Codigo Enviado",
-                "text": "Revisa tu bandeja de entrada"
+                "title": "Codigo Obtenido",
+                "text": codigo
             });
             btnActualizarPassword.classList.remove('btnDesactivado')
         }
