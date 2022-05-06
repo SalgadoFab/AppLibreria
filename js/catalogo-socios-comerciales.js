@@ -1,5 +1,20 @@
+let listaSocios;
+let totalPaginas;
+const buscar = document.getElementById('txt-buscar');
+const inicializar = async() => {
+    listaSocios = await obtenerDatos('obtener-socios');
+    console.log(listaSocios);
+    totalPaginas = obtenerNumeroPaginas(listaSocios)
+    cambiarPagina(1)
+    obtenerPaginacion()
+    obtenerPaginaActiva()
+};
+
+
+
+
 // Items a mostrar por pagina
-let itemsPorPagina = 5;
+let itemsPorPagina = 9;
 
 // Fijamos la pagina 1 activa por defecto
 let paginaActiva = 1;
@@ -9,8 +24,6 @@ const obtenerNumeroPaginas = (listaArray) => {
     return Math.ceil(listaArray.length / itemsPorPagina)
 }
 
-// Obtenemos el numero de paginas para nuestra paginacion
-let totalPaginas = obtenerNumeroPaginas(listaSocios)
 
 //Funcion para cambiar entre paginas por cada item de paginacion
 const cambiarPagina = (pagina) => {
@@ -27,13 +40,14 @@ const cambiarPagina = (pagina) => {
     //Hacemos un for, para cada elemento dentro del rango de la página actual
     for (let i = (pagina - 1) * itemsPorPagina; i < (pagina * itemsPorPagina) && i < listaSocios.length; i++) {
 
-        //Al contenedor de items le pasamos la estrucutra html para cada item del array
-        //Cambiar variables
-        contenedorItems.innerHTML += `
+        if (listaSocios[i].nombre.toLowerCase().includes(buscar.value.toLowerCase())) {
+            //Al contenedor de items le pasamos la estrucutra html para cada item del array
+            //Cambiar variables
+            contenedorItems.innerHTML += `
         <div class="cardItem">
             <div class="ctnImagenItem">
                 <div class="cardImagen">
-                    <img src="${listaSocios[i].imgSocio}" alt="Portada Libro">
+                    <img src="${listaSocios[i].logo}" alt="Portada Libro">
                     <a class="btnEliminarItem" onclick="">
                         <i class="fa-solid fa-trash-can"></i>
                     </a>
@@ -80,6 +94,7 @@ const cambiarPagina = (pagina) => {
                 </div>
             </div>
         </div>`
+        }
     }
 }
 
@@ -149,9 +164,8 @@ const obtenerPaginaActiva = () => {
 
 }
 
-//Ejecutamos la funciones principales al momento de que la pagina carga por primera vez
-window.onload = function() {
-    cambiarPagina(1) //Establecer página predeterminada
-    obtenerPaginacion() //Generar paginacion
-    obtenerPaginaActiva()
-};
+inicializar();
+
+buscar.addEventListener('keyup', () => {
+    cambiarPagina(paginaActiva);
+});
