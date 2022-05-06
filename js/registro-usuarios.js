@@ -309,7 +309,7 @@ const validarRegistroUsuario = () => {
             
         }
 
-        registrarDatos('registrar-usuario', usuario);
+        registrarUsuario('registrar-usuario', usuario);
     }
 
 }
