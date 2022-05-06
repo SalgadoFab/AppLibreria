@@ -51,13 +51,13 @@ const mostrarInformacionLibro  = (libro) => {
                 </div>
                 <div class="precio">
                     <p>
-                        ${aux.precio}
+                    Precio ₡ ${aux.precio}
                     </p>
                 </div>
                 <div class="actions flexContendor">
                     <div class="col-2">
                         <button class="btnAgregar">
-                            <a onclick="">
+                            <a onclick="addCarrito('${aux.nombreLibro}')">
                                 <i class="fa-solid fa-cart-plus"></i> Añadir al carrito
                             </a>
                         </button>
@@ -85,3 +85,92 @@ const mostrarInformacionLibro  = (libro) => {
 }
 
 container.innerHTML = mostrarInformacionLibro(libro);
+
+
+
+let librosCarritoNuevoItem = [];
+const addCarrito = async(nombre) =>{
+    
+    libro = await obtenerDatosAsociados('obtener-libro', nombre);
+
+    if ( validarCarrito() ) {
+        
+
+        let carritoLocal = JSON.parse(localStorage.getItem('librosCarrito'));
+        
+        
+        if (validarLibroEnCarrito(carritoLocal, nombre)) {
+            console.log('Libro En Carrito');
+            
+            Swal.fire({
+                position: 'center',
+                icon: 'warning',
+                title: 'Este producto ya ha sido agregado al carrito',
+                showConfirmButton: false,
+                timer: 2000
+            });
+
+        } else {
+
+            console.log('Libro Añadido Al Carrito Existente');
+            carritoLocal.push(libro);
+            localStorage.setItem('librosCarrito', JSON.stringify(carritoLocal));
+
+            Swal.fire({
+                position: 'center',
+                icon: 'success',
+                title: 'Libro agregado al carrito correctamente',
+                showConfirmButton: false,
+                timer: 2000
+            }).then(() => {
+                location.reload();
+            });
+    
+        }
+        
+    } else {
+        console.log('Carrito creado con ' + nombre);
+        librosCarritoNuevoItem.push(libro); 
+        localStorage.setItem('librosCarrito', JSON.stringify(librosCarritoNuevoItem));
+
+        Swal.fire({
+            position: 'center',
+            icon: 'success',
+            title: 'Libro agregado al carrito correctamente',
+            showConfirmButton: false,
+            timer: 2000
+        }).then(() => {
+            location.reload();
+        });;
+
+
+    }
+}
+
+const validarCarrito = () => {
+    let carrito = JSON.parse(localStorage.getItem('librosCarrito'));
+
+    if (carrito) {
+        return true;
+    } else {
+        return false;
+    }
+}
+
+const validarLibroEnCarrito = (carritoLocal, nombre) => {
+
+    for (let i = 0; i < carritoLocal.length; i++) {
+    
+        if (carritoLocal[i][0].nombreLibro == nombre) {
+            
+            return true;
+        } 
+
+    }
+}
+
+const compraDirecta = async (nombre) => {
+    libro = await obtenerDatosAsociados('obtener-libro', nombre);
+
+    localStorage.setItem('CompraDirecta', JSON.stringify(libro));
+}
