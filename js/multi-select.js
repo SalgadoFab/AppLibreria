@@ -1,12 +1,10 @@
-// Initialize function, create initial tokens with itens that are already selected by the user
 
 function init(element) {
-    // Create div that wroaps all the elements inside (select, elements selected, search div) to put select inside
     const wrapper = document.createElement("div");
     wrapper.addEventListener("click", clickOnWrapper);
     wrapper.classList.add("multi-select-component");
 
-    // Create elements of search
+
     const search_div = document.createElement("div");
     search_div.classList.add("search-container");
     const input = document.createElement("input");
@@ -28,9 +26,8 @@ function init(element) {
     search_div.appendChild(autocomplete_list);
     search_div.appendChild(dropdown_icon);
 
-    // set the wrapper as child (instead of the element)
+  
     element.parentNode.replaceChild(wrapper, element);
-    // set element as child of wrapper
     wrapper.appendChild(element);
     wrapper.appendChild(search_div);
 
@@ -51,7 +48,6 @@ function addPlaceholder(wrapper) {
 }
 
 
-// Function that create the initial set of tokens with the options selected by the users
 function createInitialTokens(select) {
     let {
         options_selected
@@ -62,8 +58,6 @@ function createInitialTokens(select) {
     }
 }
 
-
-// Listener of user search
 function inputChange(e) {
     const wrapper = e.target.parentNode.parentNode;
     const select = wrapper.querySelector("select");
@@ -82,7 +76,6 @@ function inputChange(e) {
 }
 
 
-// Listen for clicks on the wrapper, if click happens focus on the input
 function clickOnWrapper(e) {
     const wrapper = e.target;
     if (wrapper.tagName == "DIV") {
@@ -110,10 +103,8 @@ function openOptions(e) {
 
 }
 
-// Function that create a token inside of a wrapper with the given value
 function createToken(wrapper, value) {
     const search = wrapper.querySelector(".search-container");
-    // Create token wrapper
     const token = document.createElement("div");
     token.classList.add("selected-wrapper");
     const token_span = document.createElement("span");
@@ -133,7 +124,6 @@ function createToken(wrapper, value) {
 }
 
 
-// Listen for clicks in the dropdown option
 function clickDropdown(e) {
 
     const dropdown = e.target;
@@ -159,7 +149,6 @@ function clickDropdown(e) {
 }
 
 
-// Clears the results of the autocomplete list
 function clearAutocompleteList(select) {
     const wrapper = select.parentNode;
 
@@ -167,7 +156,6 @@ function clearAutocompleteList(select) {
     autocomplete_list.innerHTML = "";
 }
 
-// Populate the autocomplete list following a given query from the user
 function populateAutocompleteList(select, query, dropdown = false) {
     const {
         autocomplete_options
@@ -217,7 +205,6 @@ function populateAutocompleteList(select, query, dropdown = false) {
 }
 
 
-// Listener to autocomplete results when clicked set the selected property in the select option 
 function selectOption(e) {
     const wrapper = e.target.parentNode.parentNode.parentNode;
     const input_search = wrapper.querySelector(".selected-input");
@@ -249,9 +236,7 @@ function selectOption(e) {
 }
 
 
-// function that returns a list with the autcomplete list of matches
 function autocomplete(query, options) {
-    // No query passed, just return entire list
     if (!query) {
         return options;
     }
@@ -268,17 +253,14 @@ function autocomplete(query, options) {
 
 let options_selected
 function getOptions(select) {
-    // Select all the options available
     const all_options = Array.from(
         select.querySelectorAll("option")
     ).map(el => el.value);
 
-    // Get the options that are selected from the user
     options_selected = Array.from(
         select.querySelectorAll("option:checked")
     ).map(el => el.value);
 
-    // Create an autocomplete options array with the options that are not selected by the user
     const autocomplete_options = [];
     all_options.forEach(option => {
         if (!options_selected.includes(option)) {
@@ -298,17 +280,15 @@ function getOptions(select) {
 
 }
 
-// Listener for when the user wants to remove a given token.
 function removeToken(e) {
-    // Get the value to remove
+
     const value_to_remove = e.target.dataset.option;
     const wrapper = e.target.parentNode.parentNode;
     const input_search = wrapper.querySelector(".selected-input");
     const dropdown = wrapper.querySelector(".dropdown-icon");
-    // Get the options in the select to be unselected
+
     const option_to_unselect = wrapper.querySelector(`select option[value="${value_to_remove}"]`);
     option_to_unselect.removeAttribute("selected");
-    // Remove token attribute
     e.target.parentNode.remove();
     input_search.focus();
     dropdown.classList.remove("active");
@@ -317,7 +297,7 @@ function removeToken(e) {
     e.stopPropagation();
 }
 
-// Listen for 2 sequence of hits on the delete key, if this happens delete the last token if exist
+
 function deletePressed(e) {
     const wrapper = e.target.parentNode.parentNode;
     const input_search = e.target;
@@ -346,9 +326,7 @@ function deletePressed(e) {
     return true;
 }
 
-// You can call this function if you want to add new options to the select plugin
-// Target needs to be a unique identifier from the select you want to append new option for example #multi-select-plugin
-// Example of usage addOption("#multi-select-plugin", "tesla", "Tesla")
+
 function addOption(target, val, text) {
     const select = document.querySelector(target);
     let opt = document.createElement('option');
@@ -367,7 +345,6 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 document.addEventListener('click', () => {
-    // get select that has the options available
     const select = document.querySelectorAll("[data-multi-select-plugin]");
     for (let i = 0; i < select.length; i++) {
         if (event) {
@@ -377,7 +354,6 @@ document.addEventListener('click', () => {
                 const wrapper = select[i].parentElement.parentElement;
                 const dropdown = wrapper.querySelector(".dropdown-icon");
                 const autocomplete_list = wrapper.querySelector(".autocomplete-list");
-                //the click was outside the specifiedElement, do something
                 dropdown.classList.remove("active");
                 autocomplete_list.innerHTML = "";
                 addPlaceholder(wrapper);
